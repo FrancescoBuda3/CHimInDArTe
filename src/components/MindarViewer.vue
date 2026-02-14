@@ -6,9 +6,10 @@
     mindar-image="imageTargetSrc: ./targets/picture.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;"
     color-space="sRGB"
     embedded
-    renderer="colorManagement: true, physicallyCorrectLights"
+    renderer="colorManagement: true, physicallyCorrectLights, antialias: true, precision: medium"
     vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false"
+    loading-screen="enabled: false"
   >
     <a-assets>
       <img
@@ -44,4 +45,20 @@
   </a-scene>
 </template>
 
-<style scoped></style>
+<style scoped>
+a-scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Ottimizzazioni per dispositivi mobili */
+:deep(canvas) {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+</style>
