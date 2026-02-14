@@ -1,9 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed, onMounted, ref } from "vue";
+
+const sceneRef = ref<HTMLElement | null>(null);
+const baseUrl = import.meta.env.BASE_URL;
+const imageTargetSrc = computed(() => `${baseUrl}targets/picture.mind`);
+
+onMounted(() => {
+  if (sceneRef.value) {
+    sceneRef.value.setAttribute('mindar-image', `imageTargetSrc: ${imageTargetSrc.value}; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;`);
+  }
+});
+</script>
 
 <template>
   <a-scene
     ref="sceneRef"
-    mindar-image="imageTargetSrc: ./targets/picture.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;"
     color-space="sRGB"
     embedded
     renderer="colorManagement: true, physicallyCorrectLights, antialias: true, precision: medium"
