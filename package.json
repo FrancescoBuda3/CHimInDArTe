@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aframe": "^1.7.1",
+    "mind-ar": "^1.2.5",
     "vue": "^3.5.25"
   },
   "devDependencies": {
