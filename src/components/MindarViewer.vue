@@ -10,7 +10,7 @@ onMounted(() => {
   if (sceneRef.value) {
     sceneRef.value.setAttribute(
       "mindar-image",
-      `imageTargetSrc: ${imageTargetSrc.value}; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;`,
+      `imageTargetSrc: ${imageTargetSrc.value}; autoStart: false; uiLoading: no; uiError: no; uiScanning: no; filterMinCF:0.1; filterBeta: 10 warmupTolerance: 10;`,
     );
   }
 });
