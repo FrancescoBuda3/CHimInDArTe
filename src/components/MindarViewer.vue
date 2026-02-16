@@ -37,11 +37,7 @@ onMounted(() => {
         src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"
         crossorigin
       ></a-asset-item> -->
-      <a-asset-item
-        id="avatarModel"
-        :src="modelSrc"
-        crossorigin
-      ></a-asset-item>
+      <a-asset-item id="avatarModel" :src="modelSrc" crossorigin></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -54,10 +50,16 @@ onMounted(() => {
         width="1"
         rotation="0 0 0"
       ></a-plane> -->
-      <a-gltf-model
+      <!--       <a-gltf-model
         rotation="0 90 0"
         position="0 0 0.3"
         scale="3 3 3"
+        src="#avatarModel"
+      ></a-gltf-model> -->
+      <a-gltf-model
+        rotation="0 90 0"
+        scale="3 3 3"
+        animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
         src="#avatarModel"
       ></a-gltf-model>
     </a-entity>
