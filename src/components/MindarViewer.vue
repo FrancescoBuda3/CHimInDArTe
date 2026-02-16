@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from "vue";
 
 const sceneRef = ref<HTMLElement | null>(null);
 const baseUrl = import.meta.env.BASE_URL;
-const imageTargetSrc = computed(() => `${baseUrl}targets/nina.mind`);
+const imageTargetSrc = computed(() => `${baseUrl}targets/test_1.mind`);
 const modelSrc = computed(() => `${baseUrl}3dModels/scene.gltf`);
 
 onMounted(() => {
@@ -50,16 +50,17 @@ onMounted(() => {
         width="1"
         rotation="0 0 0"
       ></a-plane> -->
-      <!--       <a-gltf-model
+       <!--      <a-gltf-model
         rotation="0 90 0"
         position="0 0 0.3"
         scale="3 3 3"
         src="#avatarModel"
       ></a-gltf-model> -->
       <a-gltf-model
-        rotation="0 90 0"
-        scale="3 3 3"
-        animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+        rotation="90 0 0"
+        position="0 0 0.3"
+        scale="5 5 5"
+        animation-mixer="clip: idle; loop: repeat; timeScale: 0.7"
         src="#avatarModel"
       ></a-gltf-model>
     </a-entity>

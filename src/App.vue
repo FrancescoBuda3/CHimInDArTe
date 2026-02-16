@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
+import "aframe-extras/loaders/animation-mixer.js";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 import MindarViewer from "./components/MindarViewer.vue";
 import { ref } from "vue";
