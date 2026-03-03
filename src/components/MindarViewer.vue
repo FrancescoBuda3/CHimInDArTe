@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from "vue";
 
 const sceneRef = ref<HTMLElement | null>(null);
 const baseUrl = import.meta.env.BASE_URL;
-const imageTargetSrc = computed(() => `${baseUrl}targets/test_5.mind`);
+const imageTargetSrc = computed(() => `${baseUrl}targets/nina.mind`);
 const modelSrc = computed(() => `${baseUrl}3dModels/scene.gltf`);
 
 onMounted(() => {
