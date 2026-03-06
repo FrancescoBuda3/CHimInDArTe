@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import "mind-ar/dist/mindar-image.prod.js";
+// import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "aframe-extras/loaders/animation-mixer.js";
-import "mind-ar/dist/mindar-image-aframe.prod.js";
+// import "mind-ar/dist/mindar-image-aframe.prod.js";
 // import MindarViewer from "./components/MindarViewer.vue";
 import {computed} from "vue";
 
@@ -12,7 +12,7 @@ import {computed} from "vue";
 /* const model = "/models/astronaut.glb" */
 
 const baseUrl = import.meta.env.BASE_URL;
-const modelSrc = computed(() => `${baseUrl}3dModels/scene.gltf`);
+const modelSrc = computed(() => `${baseUrl}3dModels/provaDef.gltf`);
 const iframeSrc = computed(
   () => `${baseUrl}ar/arScene.html?model=${encodeURIComponent(modelSrc.value)}`
 );
