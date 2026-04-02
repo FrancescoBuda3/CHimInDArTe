@@ -14,7 +14,8 @@
     "aframe": "^1.7.1",
     "aframe-extras": "^7.6.1",
     "tailwindcss": "^4.2.2",
-    "vue": "^3.5.25"
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
