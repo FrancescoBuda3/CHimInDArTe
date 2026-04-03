@@ -14,8 +14,6 @@ export type ElementData = {
   symbol: string;
   xpos: number;
   ypos: number;
-  wxpos: number;
-  wypos: number;
   block: string;
   electron_affinity: number;
   electronegativity_pauling: number | null;
@@ -37,8 +35,6 @@ export class Element implements ElementData {
   symbol!: string;
   xpos!: number;
   ypos!: number;
-  wxpos!: number;
-  wypos!: number;
   block!: string;
   electron_affinity!: number;
   electronegativity_pauling!: number | null;
