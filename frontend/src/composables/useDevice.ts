@@ -1,8 +1,7 @@
-import { ref, computed, onMounted, onUnmounted, readonly } from "vue";
+import { ref, computed, onMounted, readonly } from "vue";
 import { Device } from "../types/device";
 
 const mode = ref<Device>("mobile");
-let resizeClean: (() => void) | null = null;
 
 export function useDevice() {
 
@@ -25,8 +24,6 @@ export function useDevice() {
   onMounted(() => {
     detect();
   });
-
-  onUnmounted(() => resizeClean?.());
 
   const isTotem = computed(() => mode.value === Device.Kiosk);
   const isMobile = computed(() => mode.value === Device.Mobile);

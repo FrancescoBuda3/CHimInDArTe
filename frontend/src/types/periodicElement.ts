@@ -1,4 +1,4 @@
-export type ElementData = {
+export type PeriodicElementData = {
   name: string;
   atomic_mass: number;
   category: string;
@@ -19,7 +19,7 @@ export type ElementData = {
   electronegativity_pauling: number | null;
 };
 
-export class Element implements ElementData {
+export class PeriodicElement implements PeriodicElementData {
   name!: string;
   atomic_mass!: number;
   category!: string;
@@ -39,19 +39,24 @@ export class Element implements ElementData {
   electron_affinity!: number;
   electronegativity_pauling!: number | null;
 
-  constructor(data: ElementData) {
+  constructor(data: PeriodicElementData) {
     Object.assign(this, data);
   }
 }
 
 export class ElementFactory {
-  static async loadElements(): Promise<Element[]> {
-    const FILE_PATH = "/CHimInDArTe/periodic_table.json";
+  static async loadElements(): Promise<PeriodicElement[]> {
+    const FILE_PATH = "/periodic_table.json";
     const response = await fetch(FILE_PATH);
+    
+    if (!response.ok) {
+      throw new Error(`Errore fetch periodicElement: ${response.status} ${response.statusText}`);
+    }
+    
     const data = await response.json();
     
-    return data.elements.map((elementData: ElementData) =>
-      new Element(elementData)
+    return data.elements.map((elementData: PeriodicElementData) =>
+      new PeriodicElement(elementData)
     );
   }
 }
