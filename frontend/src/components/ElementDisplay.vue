@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDevice } from "../composables/useDevice";
 import type { PeriodicElement } from "../types/periodicElement";
-import { computed, ref } from "vue";
+import { computed } from "vue";
 
 const { isTotem } = useDevice();
 

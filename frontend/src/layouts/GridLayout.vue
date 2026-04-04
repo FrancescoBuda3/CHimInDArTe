@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
   <div
-    :class="`grid grid-cols-[repeat(${props.columns},max-content)] grid-rows-[repeat(${props.rows},max-content)] gap-2 overflow-auto`"
+    :class="`grid grid-cols-[repeat(${props.columns},max-content)] grid-rows-[repeat(${props.rows},max-content)] gap-2`"
   >
     <slot></slot>
   </div>
