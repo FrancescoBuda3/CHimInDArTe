@@ -25,11 +25,11 @@ export function useDevice() {
     detect();
   });
 
-  const isTotem = computed(() => mode.value === Device.Kiosk);
+  const isKiosk = computed(() => mode.value === Device.Kiosk);
   const isMobile = computed(() => mode.value === Device.Mobile);
 
   return {
-    isTotem,
+    isKiosk,
     isMobile,
     mode: readonly(mode),
   };
