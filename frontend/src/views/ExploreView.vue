@@ -7,6 +7,7 @@ import type { PeriodicElement } from "../types/periodicElement";
 import { useDevice } from "../composables/useDevice";
 
 const periodicElements = useData().elements;
+const works = useData().works;
 const { isMobile } = useDevice();
 const centeredElement = ref<PeriodicElement | undefined>(undefined);
 let animationFrameId: number | null = null;
@@ -77,6 +78,7 @@ onUnmounted(() => {
           v-for="element in periodicElements"
           :key="element.number"
           :element="element"
+          :work="works.find(w => w.id === element.number)"
           :data-element-number="element.number"
           :is-focused="
             centeredElement && centeredElement.number === element.number

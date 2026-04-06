@@ -1,19 +1,21 @@
 export type WorkData = {
-    id: string;
+    id: number;
     title: string;
-    alternativeTitle: string;
+    alternative_title: string;
     author: string;
     description: string;
     materials: [string];
+    picture_file: string;
 };
 
 export class Work implements WorkData {
-    id!: string;
+    id!: number;
     title!: string;
-    alternativeTitle!: string;
+    alternative_title!: string;
     author!: string;
     description!: string;
     materials!: [string];
+    picture_file!: string;
   
 
   constructor(data: WorkData) {
