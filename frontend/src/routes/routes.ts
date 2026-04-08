@@ -35,7 +35,7 @@ const routes: RouteRecordRaw[] = [
     name: "WorkDetails",
     component: WorkDetailsView,
     props: (route) => ({
-      id: route.params.id as string
+      id: Number(route.params.id)
     })
   },
   {
