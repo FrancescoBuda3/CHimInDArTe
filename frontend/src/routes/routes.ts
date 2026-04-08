@@ -14,7 +14,8 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "Home",
-    component: HomeView
+    /* component: HomeView */
+    component: ExploreView
     /* props: (route) => ({
       notebookId: route.query.notebookId as string | undefined
     }), */
