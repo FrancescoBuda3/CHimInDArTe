@@ -1,0 +1,294 @@
+{
+  "works": [
+    {
+      "id": 83,
+      "title": "Bismuto",
+      "author": "Marta Alberoni",
+      "author_class": "5Q",
+      "description_file": "bi_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "bi_picture.png"
+    },
+    {
+      "id": 61,
+      "title": "Promezio",
+      "author": "Francesco Armieri",
+      "author_class": "5Q",
+      "description_file": "pm_description.txt",
+      "materials": ["Terracotta", "Ferro", "Pasta modellabile"],
+      "picture_file": "pm_picture.png"
+    },
+    {
+      "id": 80,
+      "title": "Mercurio",
+      "author": "Jennifer Oneyda Attanasio",
+      "author_class": "5Q",
+      "description_file": "hg_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "hg_picture.png"
+    },
+    {
+      "id": 27,
+      "title": "Cobalto",
+      "author": "Benjlilou Meriem",
+      "author_class": "5Q",
+      "description_file": "co_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "co_picture.png"
+    },
+    {
+      "id": 13,
+      "title": "Alluminio",
+      "author": "Veronica Budriesi",
+      "author_class": "5Q",
+      "description_file": "al_description.txt",
+      "materials": ["Terracotta patinata", "Fogli di alluminio"],
+      "picture_file": "al_picture.png"
+    },
+    {
+      "id": 7,
+      "title": "Azoto",
+      "author": "Giuditta Campolo",
+      "author_class": "5Q",
+      "description_file": "n_description.txt",
+      "materials": ["Terracotta patinata", "Fiori secchi"],
+      "picture_file": "n_picture.png"
+    },
+    {
+      "id": 10,
+      "title": "Neon",
+      "author": "Sveva Capobianco",
+      "author_class": "5Q",
+      "description_file": "ne_description.txt",
+      "materials": ["Terracotta"],
+      "picture_file": "ne_picture.png"
+    },
+    {
+      "id": 77,
+      "title": "Iridio",
+      "author": "Olivia Casini",
+      "author_class": "5Q",
+      "description_file": "ir_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "ir_picture.png"
+    },
+    {
+      "id": 79,
+      "title": "Oro",
+      "author": "Margherita M. De Risi",
+      "author_class": "5Q",
+      "description_file": "au_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "au_picture.png"
+    },
+    {
+      "id": 12,
+      "title": "Magnesio",
+      "author": "Sofia Del Prete",
+      "author_class": "5Q",
+      "description_file": "mg_description.txt",
+      "materials": ["Terracotta patinata", "Ferro", "Fili di cotone"],
+      "picture_file": "mg_picture.png"
+    },
+    {
+      "id": 1,
+      "title": "Idrogeno",
+      "author": "Jamara Fenara",
+      "author_class": "5Q",
+      "description_file": "h_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "h_picture.png"
+    },
+    {
+      "id": 24,
+      "title": "Cromo",
+      "author": "Anita Ghini",
+      "author_class": "5Q",
+      "description_file": "cr_description.txt",
+      "materials": ["Materiali misti"],
+      "picture_file": "cr_picture.png"
+    },
+    {
+      "id": 16,
+      "title": "Zolfo",
+      "alternative_title": "Ofloz",
+      "author": "Alex Muliero",
+      "author_class": "5Q",
+      "description_file": "s_description.txt",
+      "materials": ["Materiali misti"],
+      "picture_file": "s_picture.png"
+    },
+    {
+      "id": 29,
+      "title": "Rame",
+      "alternative_title": "Nobile Cavaliere Errante",
+      "author": "Gioia Nicoletti",
+      "author_class": "5Q",
+      "description_file": "cu_description.txt",
+      "materials": ["Fili di rame", "Fili di cotone"],
+      "picture_file": "cu_picture.png"
+    },
+    {
+      "id": 92,
+      "title": "Urano",
+      "author": "Susanna Rizzo",
+      "author_class": "5Q",
+      "description_file": "u_description.txt",
+      "materials": ["Terracotta"],
+      "picture_file": "u_picture.png"
+    },
+    {
+      "id": 28,
+      "title": "Nichel",
+      "author": "Elena Sinesi",
+      "author_class": "5Q",
+      "description_file": "ni_description.txt",
+      "materials": ["Gesso lucidato", "Orecchini in metallo"],
+      "picture_file": "ni_picture.png"
+    },
+    {
+      "id": 20,
+      "title": "Calcio",
+      "author": "Matilde Tedesco",
+      "author_class": "5Q",
+      "description_file": "ca_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "ca_picture.png"
+    },
+    {
+      "id": 23,
+      "title": "Vanadio",
+      "author": "Sofia Tonioni",
+      "author_class": "5Q",
+      "description_file": "v_description.txt",
+      "materials": ["Materiali misti"],
+      "picture_file": "v_picture.png"
+    },
+    {
+      "id": 74,
+      "title": "Tungsteno",
+      "author": "Brogna Margherita",
+      "author_class": "4E",
+      "description_file": "w_description.txt",
+      "materials": ["Ceramica smaltata"],
+      "picture_file": "w_picture.png"
+    },
+    {
+      "id": 6,
+      "title": "Carbonio",
+      "author": "Viola Carboni",
+      "author_class": "4E",
+      "description_file": "c_description.txt",
+      "materials": ["Argilla", "Vetro"],
+      "picture_file": "c_picture.png"
+    },
+    {
+      "id": 35,
+      "title": "Bromo",
+      "author": "Margherita Carzan",
+      "author_class": "4E",
+      "description_file": "br_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "br_picture.png"
+    },
+    {
+      "id": 53,
+      "title": "Iodio",
+      "author": "Anna Miglianti Cavalletti",
+      "author_class": "4E",
+      "description_file": "i_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "i_picture.png"
+    },
+    {
+      "id": 82,
+      "title": "Piombo",
+      "author": "Iride Chiarini",
+      "author_class": "4E",
+      "description_file": "pb_description.txt",
+      "materials": ["Terracotta patinata", "Ferro"],
+      "picture_file": "pb_picture.png"
+    },
+    {
+      "id": 58,
+      "title": "Cerio",
+      "author": "Kristen Galeone",
+      "author_class": "4E",
+      "description_file": "ce_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "ce_picture.png"
+    },
+    {
+      "id": 43,
+      "title": "Tecnezio",
+      "author": "Giorgia Langella",
+      "author_class": "4E",
+      "description_file": "tc_description.txt",
+      "materials": ["Gesso", "Terracotta patinata", "Fili elettrici"],
+      "picture_file": "tc_picture.png"
+    },
+    {
+      "id": 8,
+      "title": "Ossigeno",
+      "author": "Elisa Lento",
+      "author_class": "4E",
+      "description_file": "o_description.txt",
+      "materials": ["Argilla", "Resina"],
+      "picture_file": "o_picture.png"
+    },
+    {
+      "id": 88,
+      "title": "Radio",
+      "author": "Polina Marchenko",
+      "author_class": "4E",
+      "description_file": "ra_description.txt",
+      "materials": ["Ceramica smaltata"],
+      "picture_file": "ra_picture.png"
+    },
+    {
+      "id": 86,
+      "title": "Radon",
+      "author": "Alessandro Rangoni",
+      "author_class": "4E",
+      "description_file": "rn_description.txt",
+      "materials": ["Terracotta bianca e nera"],
+      "picture_file": "rn_picture.png"
+    },
+    {
+      "id": 31,
+      "title": "Gallio",
+      "author": "Giulia Rossi",
+      "author_class": "4E",
+      "description_file": "ga_description.txt",
+      "materials": ["Terracotta smaltata a freddo con acrilico"],
+      "picture_file": "ga_picture.png"
+    },
+    {
+      "id": 47,
+      "title": "Argento",
+      "author": "Fabiana Russo",
+      "author_class": "4E",
+      "description_file": "ag_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "ag_picture.png"
+    },
+    {
+      "id": 34,
+      "title": "Selenio",
+      "author": "Francesca Sabattini",
+      "author_class": "4E",
+      "description_file": "se_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "se_picture.png"
+    },
+    {
+      "id": 87,
+      "title": "Francio",
+      "author": "Agata Sorrentino",
+      "author_class": "4E",
+      "description_file": "fr_description.txt",
+      "materials": ["Ceramica con cristallina"],
+      "picture_file": "fr_picture.png"
+    }
+  ]
+}
