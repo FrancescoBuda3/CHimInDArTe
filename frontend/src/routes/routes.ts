@@ -33,6 +33,9 @@ const routes: RouteRecordRaw[] = [
     path: "/works/:id",
     name: "WorkDetails",
     component: WorkDetailsView,
+    props: (route) => ({
+      id: route.params.id as string
+    })
   },
   {
     path: "/:catchAll(.*)",

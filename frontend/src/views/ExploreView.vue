@@ -5,12 +5,16 @@ import { useData } from "../composables/useData";
 import GridLayout from "../layouts/GridLayout.vue";
 import type { PeriodicElement } from "../types/periodicElement";
 import { useDevice } from "../composables/useDevice";
+import NavigationModal from "../components/NavigationModal.vue";
 
 const periodicElements = useData().elements;
 const works = useData().works;
 const { isMobile } = useDevice();
 const centeredElement = ref<PeriodicElement | undefined>(undefined);
+const isScrolling = ref(false);
+const showNavigation = ref(false);
 let animationFrameId: number | null = null;
+let scrollTimeoutId: ReturnType<typeof setTimeout> | null = null;
 
 const findCenteredElement = () => {
   const centerX = window.innerWidth / 2;
@@ -44,6 +48,19 @@ const scheduleUpdate = () => {
   if (animationFrameId !== null) {
     cancelAnimationFrame(animationFrameId);
   }
+  
+  isScrolling.value = true;
+  showNavigation.value = false;
+  
+  if (scrollTimeoutId !== null) {
+    clearTimeout(scrollTimeoutId);
+  }
+  
+  scrollTimeoutId = setTimeout(() => {
+    isScrolling.value = false;
+    showNavigation.value = true;
+  }, 500);
+  
   animationFrameId = requestAnimationFrame(findCenteredElement);
 };
 
@@ -61,10 +78,18 @@ onUnmounted(() => {
   if (animationFrameId !== null) {
     cancelAnimationFrame(animationFrameId);
   }
+  if (scrollTimeoutId !== null) {
+    clearTimeout(scrollTimeoutId);
+  }
 });
 </script>
 
 <template>
+  <Transition name="fade" mode="out-in">
+    <div v-if="showNavigation && centeredElement && works.find((w) => w.id === centeredElement?.number)" key="modal" class="fixed bottom-0 left-1/2 -translate-x-1/2 z-20 py-4">
+      <NavigationModal :title="centeredElement?.name" :id="centeredElement?.number" />
+    </div>
+  </Transition>
   <div
     class="w-screen h-screen overflow-auto hide-scrollbar items-center justify-center"
     :class="isMobile ? '' : 'flex'"
@@ -78,7 +103,7 @@ onUnmounted(() => {
           v-for="element in periodicElements"
           :key="element.number"
           :element="element"
-          :work="works.find(w => w.id === element.number)"
+          :work="works.find((w) => w.id === element.number)"
           :data-element-number="element.number"
           :is-focused="
             centeredElement && centeredElement.number === element.number
@@ -97,5 +122,15 @@ onUnmounted(() => {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

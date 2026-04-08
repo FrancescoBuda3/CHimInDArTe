@@ -4,7 +4,7 @@ import type { PeriodicElement } from "../types/periodicElement";
 import { computed } from "vue";
 import type { Work } from "../types/work";
 
-const { isKiosk } = useDevice();
+const { elementWidthVW } = useDevice();
 
 const props = defineProps<{
   element: PeriodicElement;
@@ -37,25 +37,28 @@ const getCategoryClass = (): string => {
 <template>
   <div
     :style="{
-      '--element-vw': isKiosk ? `${100 / 25}vw` : `${100 / 4}vw`,
+      '--element-vw': elementWidthVW,
       ...elementStyle,
     }"
     :class="[
-      'w-[calc(var(--element-vw)-0.6rem)]',
-      'aspect-[1/1.21] transition-transform duration-400 cursor-pointer rounded-xl p-[clamp(0.3rem,calc(var(--element-vw)*0.15),0.6rem)] flex flex-col justify-between relative font-montserrat box-border overflow-hidden',
+      'w-[calc(var(--element-vw))]',
+      'aspect-[1/1.21] transition-transform duration-400 cursor-pointer rounded-xl p-[calc(var(--element-vw)*0.10)] flex flex-col justify-between relative font-montserrat box-border overflow-hidden',
       getCategoryClass(),
       isFocused ? 'scale-150 z-10' : 'scale-100',
     ]"
   >
-    <div v-if="work" class="absolute inset-0 pb-6 p-3 flex items-center justify-center">
-      <img 
-          :src="`/pictures/${work.picture_file}`"
-          :alt="work.title"
-          class="w-full h-full object-contain"
-        />
+    <div
+      v-if="work"
+      class="absolute inset-0 pb-[calc(var(--element-vw)*0.25)] p-[calc(var(--element-vw)*0.15)] flex items-center justify-center"
+    >
+      <img
+        :src="`/pictures/${work.picture_file}`"
+        :alt="work.title"
+        class="w-full h-full object-contain"
+      />
     </div>
     <div
-      class="flex text-white text-right font-medium text-[clamp(0.4rem,calc(var(--element-vw)*0.10),0.875rem)]"
+      class="flex text-white text-right font-medium text-[clamp(0.4rem,calc(var(--element-vw)*0.10),3rem)]"
     >
       <div v-if="work">
         {{ element.symbol }}
@@ -68,16 +71,16 @@ const getCategoryClass = (): string => {
 
     <div class="flex-1 flex items-center justify-center">
       <div
-        class="text-white font-medium leading-none text-[clamp(1.2rem,calc(var(--element-vw)*0.40),3rem)]"
+        class="text-white font-medium leading-none text-[clamp(1.2rem,calc(var(--element-vw)*0.40),5rem)]"
       >
-      <div v-if="!work">
-        {{ element.symbol }}
-      </div>
+        <div v-if="!work">
+          {{ element.symbol }}
+        </div>
       </div>
     </div>
 
     <div
-      class="text-white text-center font-medium font-light text-[clamp(0.4rem,calc(var(--element-vw)*0.10),0.875rem)]"
+      class="text-white text-center font-medium font-light text-[clamp(0.4rem,calc(var(--element-vw)*0.10),3rem)]"
     >
       {{ element.name }}
     </div>
