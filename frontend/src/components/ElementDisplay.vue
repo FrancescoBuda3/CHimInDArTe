@@ -12,6 +12,8 @@ const props = defineProps<{
   isFocused?: boolean;
 }>();
 
+const baseUrl = computed(() => import.meta.env.BASE_URL);
+
 const elementStyle = computed(() => ({
   gridColumn: props.element.xpos,
   gridRow: props.element.ypos,
@@ -52,7 +54,7 @@ const getCategoryClass = (): string => {
       class="absolute inset-0 pb-[calc(var(--element-vw)*0.25)] p-[calc(var(--element-vw)*0.15)] flex items-center justify-center"
     >
       <img
-        :src="`${import.meta.env.BASE_URL}/pictures/${work.picture_file}`"
+        :src="`${baseUrl}pictures/${work.picture_file}`"
         :alt="work.title"
         class="w-full h-full object-contain"
       />
