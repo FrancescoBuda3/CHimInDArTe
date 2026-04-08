@@ -25,7 +25,7 @@ export class Work implements WorkData {
 
 export class WorkFactory {
   static async loadElements(): Promise<Work[]> {
-    const FILE_PATH = "/works.json";
+    const FILE_PATH = `${import.meta.env.BASE_URL}works.json`;
     const response = await fetch(FILE_PATH);
     
     if (!response.ok) {

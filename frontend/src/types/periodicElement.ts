@@ -46,7 +46,7 @@ export class PeriodicElement implements PeriodicElementData {
 
 export class ElementFactory {
   static async loadElements(): Promise<PeriodicElement[]> {
-    const FILE_PATH = "/periodic_table.json";
+    const FILE_PATH = `${import.meta.env.BASE_URL}periodic_table.json`;
     const response = await fetch(FILE_PATH);
     
     if (!response.ok) {
