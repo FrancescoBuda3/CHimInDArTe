@@ -52,7 +52,7 @@ const getCategoryClass = (): string => {
       class="absolute inset-0 pb-[calc(var(--element-vw)*0.25)] p-[calc(var(--element-vw)*0.15)] flex items-center justify-center"
     >
       <img
-        :src="`/pictures/${work.picture_file}`"
+        :src="`${import.meta.env.BASE_URL}/pictures/${work.picture_file}`"
         :alt="work.title"
         class="w-full h-full object-contain"
       />
