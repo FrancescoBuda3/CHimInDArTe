@@ -27,12 +27,10 @@ export function useDevice() {
 
   const isKiosk = computed(() => mode.value === Device.Kiosk);
   const isMobile = computed(() => mode.value === Device.Mobile);
-  const elementWidthVW = computed(() => { return isKiosk.value ? `calc(100vw / 25)` : `calc(100vw / 4)` });
 
   return {
     isKiosk,
     isMobile,
-    elementWidthVW,
     mode: readonly(mode),
   };
 }
