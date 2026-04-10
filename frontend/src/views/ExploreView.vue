@@ -1,21 +1,44 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import { useRouter } from "vue-router";
+import arrowIcon from "../assets/arrow.svg";
 import ElementDisplay from "../components/ElementDisplay.vue";
 import { useData } from "../composables/useData";
 import GridLayout from "../layouts/GridLayout.vue";
 import type { PeriodicElement } from "../types/periodicElement";
 import { useDevice } from "../composables/useDevice";
-import NavigationModal from "../components/NavigationModal.vue";
 import AppHeader from "../components/AppHeader.vue";
+import AppModal from "../components/AppModal.vue";
 
+const router = useRouter();
+const { isKiosk } = useDevice();
 const periodicElements = useData().elements;
 const works = useData().works;
 const { isMobile } = useDevice();
-const centeredElement = ref<PeriodicElement | undefined>(undefined);
+const focusedElement = ref<PeriodicElement | undefined>(undefined);
 const isScrolling = ref(false);
 const showNavigation = ref(false);
 let animationFrameId: number | null = null;
 let scrollTimeoutId: ReturnType<typeof setTimeout> | null = null;
+
+const modalCoordinates = computed(() => {
+  if (!focusedElement.value) {
+    return { x: 0, y: 0 };
+  }
+
+  const element = document.querySelector(
+    `[data-element-number="${focusedElement.value.number}"]`,
+  );
+  if (!element) {
+    return { x: 0, y: 0 };
+  }
+
+  const rect = element.getBoundingClientRect();
+  return {
+    x: rect.left + rect.width / 2 - 140,
+    y: rect.bottom + 40,
+  };
+});
 
 const findCenteredElement = () => {
   const centerX = window.innerWidth / 2;
@@ -35,14 +58,14 @@ const findCenteredElement = () => {
       const elementNumber = parseInt(
         el.getAttribute("data-element-number") || "0",
       );
-      centeredElement.value =
+      focusedElement.value =
         periodicElements.value.find((e) => e.number === elementNumber) ||
         undefined;
       return;
     }
   }
 
-  centeredElement.value = undefined;
+  focusedElement.value = undefined;
 };
 
 const scheduleUpdate = () => {
@@ -89,22 +112,34 @@ onUnmounted(() => {
   <Transition name="fade" mode="out-in">
     <div
       v-if="
-        showNavigation &&
-        centeredElement &&
-        works.find((w) => w.id === centeredElement?.number)
+        (isKiosk || showNavigation) &&
+        focusedElement &&
+        works.find((w) => w.id === focusedElement?.number)
       "
       key="modal"
-      class="fixed bottom-0 left-1/2 -translate-x-1/2 z-20 py-4"
+      :class="isKiosk ? 'fixed z-20 u-w-3x' : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'"
     >
-      <NavigationModal
-        :title="centeredElement?.name"
-        :id="centeredElement?.number"
-      />
+      <AppModal :coordinates="modalCoordinates">
+        <span class="text-white u-text-sm u-pstart-lg font-medium">{{
+          focusedElement?.name
+        }}</span>
+        <div :class="isKiosk ? 'u-w-md' : 'w-full'" />
+        <button
+          class="bg-white rounded-full p-8 flex-shrink-0 hover:bg-gray-200 transition-colors cursor-pointer"
+          @click="router.push(`/works/${focusedElement?.number}`)"
+        >
+          <img :src="arrowIcon" alt="arrow" class="w-7 h-7" />
+        </button>
+      </AppModal>
     </div>
   </Transition>
 
   <Transition name="fade" mode="out-in">
-    <div v-if="!isScrolling" key="header" class="fixed top-0 left-1/2 -translate-x-1/2 z-20">
+    <div
+      v-if="!isScrolling"
+      key="header"
+      class="fixed top-0 left-1/2 -translate-x-1/2 z-20"
+    >
       <AppHeader :title="'Esplora'" />
     </div>
   </Transition>
@@ -125,8 +160,9 @@ onUnmounted(() => {
           :work="works.find((w) => w.id === element.number)"
           :data-element-number="element.number"
           :is-focused="
-            centeredElement && centeredElement.number === element.number
+            focusedElement && focusedElement.number === element.number
           "
+          @click="focusedElement = element"
         />
       </GridLayout>
     </div>

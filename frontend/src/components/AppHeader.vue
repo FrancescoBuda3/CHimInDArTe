@@ -10,24 +10,24 @@ const props = defineProps<{
 
 <template>
   <header
-    class="w-[100vw] flex items-center px-[calc(var(--element-vw)*0.095)] py-[calc(var(--element-vw)*0.10)] text-black font-montserrat font-medium transition-colors"
+    class="w-[100vw] flex items-center u-px-xs u-py-xs text-black font-montserrat font-medium transition-colors"
     :style="{
       '--element-vw': elementWidthVW,
     }"
   >
     <div class="flex-1">
       <div
-        class="bg-white/90 rounded-full size-[calc(var(--element-vw)*0.6)] cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
+        class="bg-white/90 rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
         @click="$router.back()"
       >
         <img :src="back" alt="arrow"
-        :class="isKiosk ? 'size-[calc(var(--element-vw)*0.4)]' : 'size-[calc(var(--element-vw)*0.2)] -ml-[calc(var(--element-vw)*0.05)]'"
+        :class="isKiosk ? 'u-size-md' : 'u-size-sm -ml-[calc(var(--u)*0.04)]'"
          />
       </div>
     </div>
     <h1
-      class="h-[calc(var(--element-vw)*0.6)] px-[calc(var(--element-vw)*0.2)] bg-white/90 rounded-full items-center justify-center flex"
-      :class="isKiosk ? 'text-[clamp(1rem,calc(var(--element-vw)*0.8),3rem)]' : 'text-[clamp(1.2rem,calc(var(--element-vw)*0.25),5rem)]'"
+      class="u-h-lg u-px-sm bg-white/90 rounded-full items-center justify-center flex"
+      :class="isKiosk ? 'u-text-lg' : 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]'"
     >
       {{ props.title || "CHIMINDARTE" }}
     </h1>

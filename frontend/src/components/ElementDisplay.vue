@@ -4,6 +4,7 @@ import type { PeriodicElement } from "../types/periodicElement";
 import { computed } from "vue";
 import type { Work } from "../types/work";
 
+const baseUrl = computed(() => import.meta.env.BASE_URL);
 const { elementWidthVW } = useDevice();
 
 const props = defineProps<{
@@ -11,8 +12,6 @@ const props = defineProps<{
   work?: Work;
   isFocused?: boolean;
 }>();
-
-const baseUrl = computed(() => import.meta.env.BASE_URL);
 
 const elementStyle = computed(() => ({
   gridColumn: props.element.xpos,
@@ -38,20 +37,18 @@ const getCategoryClass = (): string => {
 
 <template>
   <div
-    :style="{
-      '--element-vw': elementWidthVW,
-      ...elementStyle,
-    }"
+    :style="elementStyle"
     :class="[
-      'w-[calc(var(--element-vw))]',
-      'aspect-[1/1.21] transition-transform duration-400 cursor-pointer rounded-xl p-[calc(var(--element-vw)*0.10)] flex flex-col justify-between relative font-montserrat box-border overflow-hidden',
+      'u-w-tile aspect-[1/1.21] flex flex-col justify-between relative box-border overflow-hidden',
+      'u-rounded-xs u-p-xs font-montserrat',
+      'cursor-pointer transition-transform duration-400',
       getCategoryClass(),
       isFocused ? 'scale-150 z-10' : 'scale-100',
     ]"
   >
     <div
       v-if="work"
-      class="absolute inset-0 pb-[calc(var(--element-vw)*0.25)] p-[calc(var(--element-vw)*0.15)] flex items-center justify-center"
+      class="absolute inset-0 pb-[calc(var(--u)*0.25)] p-[calc(var(--u)*0.15)] flex items-center justify-center"
     >
       <img
         :src="`${baseUrl}pictures/${work.picture_file}`"
@@ -59,9 +56,8 @@ const getCategoryClass = (): string => {
         class="w-full h-full object-contain"
       />
     </div>
-    <div
-      class="flex text-white text-right font-medium text-[clamp(0.4rem,calc(var(--element-vw)*0.10),3rem)]"
-    >
+
+    <div class="flex text-white text-right font-medium u-text-xs">
       <div v-if="work">
         {{ element.symbol }}
       </div>
@@ -72,19 +68,16 @@ const getCategoryClass = (): string => {
     </div>
 
     <div class="flex-1 flex items-center justify-center">
-      <div
-        class="text-white font-medium leading-none text-[clamp(1.2rem,calc(var(--element-vw)*0.40),5rem)]"
-      >
+      <div class="text-white font-medium leading-none u-text-md">
         <div v-if="!work">
           {{ element.symbol }}
         </div>
       </div>
     </div>
 
-    <div
-      class="text-white text-center font-medium font-light text-[clamp(0.4rem,calc(var(--element-vw)*0.10),3rem)]"
-    >
+    <div class="text-white text-center font-medium font-light u-text-xs">
       {{ element.name }}
     </div>
+    
   </div>
 </template>
