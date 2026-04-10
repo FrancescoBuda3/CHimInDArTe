@@ -2,7 +2,7 @@
 import back from "../assets/back.svg";
 import { useDevice } from "../composables/useDevice";
 
-const { elementWidthVW, isKiosk } = useDevice();
+const { isKiosk } = useDevice();
 const props = defineProps<{
   title?: string;
 }>();
@@ -11,9 +11,6 @@ const props = defineProps<{
 <template>
   <header
     class="w-[100vw] flex items-center u-px-xs u-py-xs text-black font-montserrat font-medium transition-colors"
-    :style="{
-      '--element-vw': elementWidthVW,
-    }"
   >
     <div class="flex-1">
       <div

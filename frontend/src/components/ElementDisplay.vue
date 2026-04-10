@@ -5,7 +5,6 @@ import { computed } from "vue";
 import type { Work } from "../types/work";
 
 const baseUrl = computed(() => import.meta.env.BASE_URL);
-const { elementWidthVW } = useDevice();
 
 const props = defineProps<{
   element: PeriodicElement;
