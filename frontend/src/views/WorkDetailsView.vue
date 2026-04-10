@@ -1,23 +1,77 @@
 <script setup lang="ts">
-import { useData } from '../composables/useData';
-import AppHeader from '../components/AppHeader.vue';
-
+import { computed, ref, watch } from "vue";
+import { useData } from "../composables/useData";
+import AppHeader from "../components/AppHeader.vue";
+import Description from "../components/Description.vue";
+import { useDevice } from "../composables/useDevice";
 
 const props = defineProps<{
   id: Number;
 }>();
 
+const { isKiosk } = useDevice();
+const baseUrl = computed(() => import.meta.env.BASE_URL);
 const works = useData().works;
+const elements = useData().elements;
+const work = computed(() => works.value.find((w) => w.id === Number(props.id)));
+const element = computed(() =>
+  elements.value.find((e) => e.number === Number(props.id)),
+);
+const description = ref("Nessuna descrizione disponibile.");
 
+watch(
+  () => work.value,
+  async (newWork) => {
+    if (!newWork) {
+      description.value = "Nessuna descrizione disponibile.";
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.BASE_URL}descriptions/${newWork.description_file}`,
+      );
+      if (!response.ok) throw new Error("File not found");
+      description.value = await response.text();
+    } catch (error) {
+      console.error("Errore nel caricamento della descrizione:", error);
+      description.value = "Nessuna descrizione disponibile.";
+    }
+  },
+);
 </script>
 
 <template>
-    <div class = "fixed top-0 left-1/2 -translate-x-1/2 z-20">
-        <AppHeader :title="works.find((w) => w.id === Number(props.id))?.title || 'Dettagli'" />
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 z-20">
+    <AppHeader :title="work?.title || 'Dettagli'" />
+  </div>
+  <div class="u-p-sm flex justify-center items-center"
+    :class="isKiosk ? 'flex-row' : 'flex-col'">
+    <div class="u-size-3x flex items-center justify-center">
+      <img
+        :src="`${baseUrl}pictures/${work?.picture_file}`"
+        :alt="work?.title"
+        class="w-full h-full object-contain"
+      />
     </div>
-
+    <div>
+      <div>
+        <h3 :class="isKiosk ? 'text-2xl' : 'text-base'" class="u-pstart-xs">Opera realizzata da</h3>
+        <p
+          :class="isKiosk ? 'text-[clamp(0.8rem,calc(var(--u)*0.4),6rem)]' : 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]'"
+          class="font-medium u-pstart-xs"
+        >
+          {{ work?.author }}
+        </p>
+      </div>
+      <div class="u-p-sm" />
+      <Description
+        :text="description"
+        :category="element?.category || ''"
+        :maxLength="300"
+      />
+    </div>
+  </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

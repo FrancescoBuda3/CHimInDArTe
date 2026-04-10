@@ -4,6 +4,9 @@ import plugin from "tailwindcss/plugin";
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
+    fontFamily: {
+      sans: ["Montserrat", "sans-serif"],
+    },
     extend: {
       fontFamily: {
         montserrat: "Montserrat",
@@ -19,6 +22,10 @@ module.exports = {
         tile: "1", // 1u esatto → dimensione cella tavola periodica
         "2x": "2", // utilità a moltiplicatori interi se servono
         "3x": "3",
+        "4x": "4",
+        "5x": "5",
+        "6x": "6",
+        "7x": "7",
       },
       backgroundImage: {
         "element-nonmetal": "linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%)",

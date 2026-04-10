@@ -3,7 +3,7 @@ export type WorkData = {
     title: string;
     alternative_title: string;
     author: string;
-    description: string;
+    description_file: string;
     materials: [string];
     picture_file: string;
 };
@@ -13,7 +13,7 @@ export class Work implements WorkData {
     title!: string;
     alternative_title!: string;
     author!: string;
-    description!: string;
+    description_file!: string;
     materials!: [string];
     picture_file!: string;
   
