@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useDevice } from "../composables/useDevice";
 import type { PeriodicElement } from "../types/periodicElement";
 import { computed } from "vue";
 import type { Work } from "../types/work";
