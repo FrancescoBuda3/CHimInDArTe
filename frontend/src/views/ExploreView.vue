@@ -88,6 +88,19 @@ const scheduleUpdate = () => {
   animationFrameId = requestAnimationFrame(findCenteredElement);
 };
 
+const handleElementClick = (element: PeriodicElement) => {
+  focusedElement.value = element;
+
+  if (isMobile.value) {
+    const el = document.querySelector(
+      `[data-element-number="${element.number}"]`,
+    );
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    }
+  }
+};
+
 onMounted(() => {
   window.addEventListener("scroll", scheduleUpdate);
   window.addEventListener("resize", findCenteredElement);
@@ -162,7 +175,7 @@ onUnmounted(() => {
           :is-focused="
             focusedElement && focusedElement.number === element.number
           "
-          @click="focusedElement = element"
+          @click="handleElementClick(element)"
         />
       </GridLayout>
     </div>
