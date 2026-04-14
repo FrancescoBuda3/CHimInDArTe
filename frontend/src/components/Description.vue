@@ -10,21 +10,22 @@ const props = defineProps<{
 }>();
 
 const MAX_LENGTH = computed(() => props.maxLength ?? 120);
-const isExpanded = ref(false);
+const isModalOpen = ref(false);
 
 const { isKiosk } = useDevice();
 const { colorBackgroundMap } = useElementCategory();
 const backgroundClass = computed(() => colorBackgroundMap[props.colorGroup] || 'bg-gray-200');
 
 const isTruncated = computed(() => props.text.length > MAX_LENGTH.value);
+
 const displayText = computed(() =>
-  isTruncated.value && !isExpanded.value
+  isTruncated.value
     ? props.text.slice(0, MAX_LENGTH.value).trimEnd() + '…'
     : props.text
 );
 
-function open() { isExpanded.value = true; }
-function close() { isExpanded.value = false; }
+function open() { isModalOpen.value = true; }
+function close() { isModalOpen.value = false; }
 </script>
 
 <template>
@@ -41,12 +42,11 @@ function close() { isExpanded.value = false; }
     <p>{{ displayText }}</p>
 
     <button
-      v-if="isTruncated && !isExpanded"
+      v-if="isTruncated"
       @click="open"
       aria-label="Leggi descrizione completa"
       class="absolute bottom-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-white/20 hover:bg-white/40 transition-colors"
     >
-
       <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="6 9 12 15 18 9" />
@@ -54,11 +54,10 @@ function close() { isExpanded.value = false; }
     </button>
   </div>
 
-
   <Teleport to="body">
     <Transition name="fade">
       <div
-        v-if="isExpanded"
+        v-if="isModalOpen"
         class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
         @click.self="close"
       >
@@ -88,5 +87,12 @@ function close() { isExpanded.value = false; }
 </template>
 
 <style scoped>
-
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
