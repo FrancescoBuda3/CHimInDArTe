@@ -96,7 +96,11 @@ const handleElementClick = (element: PeriodicElement) => {
       `[data-element-number="${element.number}"]`,
     );
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
     }
   }
 };
@@ -130,7 +134,11 @@ onUnmounted(() => {
         works.find((w) => w.id === focusedElement?.number)
       "
       key="modal"
-      :class="isKiosk ? 'fixed z-20 u-w-3x' : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'"
+      :class="
+        isKiosk
+          ? 'fixed z-20 u-w-3x'
+          : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'
+      "
     >
       <AppModal :coordinates="modalCoordinates">
         <span class="text-white u-text-sm u-pstart-lg font-medium">{{
@@ -177,6 +185,22 @@ onUnmounted(() => {
           "
           @click="handleElementClick(element)"
         />
+        <ElementDisplay
+          :alternative-text="'57-71'"
+          :xpos="3"
+          :ypos="6"
+          v-if="periodicElements.find((el) => el.number == 57)"
+          :element="periodicElements.find((el) => el.number == 57)!"
+        />
+        <ElementDisplay
+          :alternative-text="'89-103'"
+          :xpos="3"
+          :ypos="7"
+          v-if="periodicElements.find((el) => el.number == 89)"
+          :element="periodicElements.find((el) => el.number == 89)!"
+        />
+        <div class="u-p-xs" :style="{ gridColumn: '1 / span 18', gridRow: '8' }" />
+
       </GridLayout>
     </div>
   </div>

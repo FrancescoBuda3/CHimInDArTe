@@ -67,7 +67,7 @@ watch(
       <div class="u-p-sm" />
       <Description
         :text="description"
-        :category="element?.category || ''"
+        :colorGroup="element?.colorGroup || ''"
         :maxLength="300"
       />
     </div>

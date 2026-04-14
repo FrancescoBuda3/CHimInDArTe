@@ -2,6 +2,7 @@ export type PeriodicElementData = {
   name: string;
   atomic_mass: number;
   category: string;
+  colorGroup: string;
   density: number;
   discovered_by: string;
   molar_heat: number | null;
@@ -23,6 +24,7 @@ export class PeriodicElement implements PeriodicElementData {
   name!: string;
   atomic_mass!: number;
   category!: string;
+  colorGroup!: string;
   density!: number;
   discovered_by!: string;
   molar_heat!: number | null;

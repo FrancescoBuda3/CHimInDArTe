@@ -1,25 +1,25 @@
 import type { PeriodicElement } from "../types/periodicElement";
 
-const categoryMap: Record<string, string> = {
-  "diatomic nonmetal": "bg-element-diatomic-nonmetal",
-  "polyatomic nonmetal": "bg-element-polyatomic-nonmetal",
-  "noble gas": "bg-element-noble-gas",
+const colorBackgroundMap: Record<string, string> = {
+  "transition metal": "bg-element-transition-metal",
   "alkali metal": "bg-element-alkali-metal",
   "alkaline earth metal": "bg-element-alkaline-earth",
-  "transition metal": "bg-element-transition-metal",
-  lanthanide: "bg-element-lanthanide",
-  actinide: "bg-element-actinide",
-  semimetal: "bg-element-semimetal",
-  halogen: "bg-element-halogen",
+  "noble gas": "bg-element-noble-gas",
+  "biogenic element": "bg-element-biogenic",
+  "halogen": "bg-element-halogen",
+  "semimetal": "bg-element-semimetal",
+  "post-transition metal": "bg-element-post-transition-metal",
+  "lanthanide": "bg-element-lanthanide",
+  "actinide": "bg-element-actinide",
 };
 
 export function useElementCategory() {
-  const getCategoryClass = (element: PeriodicElement): string => {
-    return categoryMap[element.category] || "bg-element-nonmetal";
+  const getColorBackground = (element: PeriodicElement): string => {
+    return colorBackgroundMap[element.colorGroup] || "bg-element-nonmetal";
   };
 
   return {
-    getCategoryClass,
-    categoryMap,
+    getColorBackground,
+    colorBackgroundMap,
   };
 }

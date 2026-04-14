@@ -5,7 +5,7 @@ import { useDevice } from "../composables/useDevice";
 
 const props = defineProps<{
   text: string;
-  category: string;
+  colorGroup: string;
   maxLength?: number;
 }>();
 
@@ -13,8 +13,8 @@ const MAX_LENGTH = computed(() => props.maxLength ?? 120);
 const isExpanded = ref(false);
 
 const { isKiosk } = useDevice();
-const { categoryMap } = useElementCategory();
-const categoryClass = computed(() => categoryMap[props.category] || 'bg-gray-200');
+const { colorBackgroundMap } = useElementCategory();
+const backgroundClass = computed(() => colorBackgroundMap[props.colorGroup] || 'bg-gray-200');
 
 const isTruncated = computed(() => props.text.length > MAX_LENGTH.value);
 const displayText = computed(() =>
@@ -30,7 +30,7 @@ function close() { isExpanded.value = false; }
 <template>
   <div
     :class="[
-      categoryClass,
+      backgroundClass,
       'u-rounded-sm u-p-sm text-white relative',
       isKiosk ? 'u-w-7x' : '',
     ]"
@@ -63,7 +63,7 @@ function close() { isExpanded.value = false; }
         @click.self="close"
       >
         <div
-          :class="[categoryClass, 'u-rounded-sm u-p-sm text-white relative max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl']"
+          :class="[backgroundClass, 'u-rounded-sm u-p-sm text-white relative max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl']"
         >
           <h3 class="font-medium text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)] pr-8">
             Descrizione dell'opera

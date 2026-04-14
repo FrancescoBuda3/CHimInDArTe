@@ -29,24 +29,16 @@ module.exports = {
       },
       backgroundImage: {
         "element-nonmetal": "linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%)",
-        "element-noble-gas":
-          "linear-gradient(135deg, #4ECDC4 0%, #45B7AA 100%)",
-        "element-alkali-metal":
-          "linear-gradient(135deg, #FFD93D 0%, #FFC93D 100%)",
-        "element-alkaline-earth":
-          "linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%)",
-        "element-transition-metal":
-          "linear-gradient(135deg, #A78BFA 0%, #C4B5FD 100%)",
-        "element-lanthanide":
-          "linear-gradient(135deg, #F472B6 0%, #EC4899 100%)",
-        "element-actinide": "linear-gradient(135deg, #34D399 0%, #10B981 100%)",
-        "element-semimetal":
-          "linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)",
-        "element-diatomic-nonmetal":
-          "linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%)",
-        "element-polyatomic-nonmetal":
-          "linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%)",
-        "element-halogen": "linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)",
+        "element-alkali-metal": "linear-gradient(135deg, #EE7203 0%, #F59640 100%)",
+        "element-alkaline-earth": "linear-gradient(135deg, #ECC200 0%, #ECD047 100%)",
+        "element-noble-gas": "linear-gradient(135deg, #EA4E64 0%, #F07A8C 100%)",
+        "element-biogenic": "linear-gradient(135deg, #6250AD 0%, #8274C4 100%)",
+        "element-halogen": "linear-gradient(135deg, #C06088 0%, #D485A4 100%)",
+        "element-semimetal": "linear-gradient(135deg, #3382D1 0%, #60A2DF 100%)",
+        "element-transition-metal": "linear-gradient(135deg, #76C3B1 0%, #9AD3C8 100%)",
+        "element-post-transition-metal": "linear-gradient(135deg, #3EB4E8 0%, #72CAF0 100%)",
+        "element-lanthanide": "linear-gradient(135deg, #71BE95 0%, #95D0AE 100%)",
+        "element-actinide": "linear-gradient(135deg, #23B5B5 0%, #52C8C8 100%)",
       },
     },
   },
