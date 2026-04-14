@@ -45,7 +45,7 @@ watch(
   <div class="fixed top-0 left-1/2 -translate-x-1/2 z-20">
     <AppHeader :title="work?.title || 'Dettagli'" />
   </div>
-  <div class="u-p-sm flex justify-center items-center"
+  <div class="u-p-sm u-pt-lg flex justify-center items-center"
     :class="isKiosk ? 'flex-row' : 'flex-col'">
     <div class="u-size-3x flex items-center justify-center">
       <img
