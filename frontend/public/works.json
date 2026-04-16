@@ -37,6 +37,15 @@
       "picture_file": "co_picture.png"
     },
     {
+      "id": 33,
+      "title": "Arsenico",
+      "author": "Cleopatra Simms",
+      "author_class": "5Q",
+      "description_file": "as_description.txt",
+      "materials": ["Terracotta patinata"],
+      "picture_file": "as_picture.png"
+    },
+    {
       "id": 13,
       "title": "Alluminio",
       "author": "Veronica Budriesi",
