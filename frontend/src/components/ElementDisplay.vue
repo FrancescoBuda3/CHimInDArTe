@@ -11,22 +11,15 @@ const props = defineProps<{
   element: PeriodicElement;
   work?: Work;
   alternativeText?: string;
-  xpos?: number;
-  ypos?: number;
   isFocused?: boolean;
 }>();
 
-const elementStyle = computed(() => ({
-  gridColumn: props.xpos ?? props.element.xpos,
-  gridRow: props.ypos ?? props.element.ypos,
-}));
 
 const categoryClass = computed(() => getColorBackground(props.element));
 </script>
 
 <template>
   <div
-    :style="elementStyle"
     :class="[
       'u-w-tile aspect-[1/1.21] flex flex-col justify-between relative box-border overflow-hidden',
       'u-rounded-xs u-p-xs',
