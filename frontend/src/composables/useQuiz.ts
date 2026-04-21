@@ -94,11 +94,12 @@ export function useQuiz(rand: randFn = Math.random) {
      * questions is included
      */
     function chooseRandomQuestions() {
-        const maxLength = Math.min(QUESTIONS_NUMBER, elementQuestions.value.length);
+        const sortedElementQuestions = [...elementQuestions.value].sort((a, b) => a.game_order - b.game_order);
+        const maxLength = Math.min(QUESTIONS_NUMBER, sortedElementQuestions.length);
         const selectedIndices = new Set<number>();
         const memoryQuestionIndices = new Set<number>();
         while (selectedIndices.size < maxLength) {
-            const randomIndex = randInt(0, elementQuestions.value.length);
+            const randomIndex = randInt(0, sortedElementQuestions.length);
             selectedIndices.add(randomIndex);
             if (memoryQuestionIndices.size < MEMORY_QUESTIONS_NUMBER) {
                 memoryQuestionIndices.add(randomIndex);
@@ -106,7 +107,7 @@ export function useQuiz(rand: randFn = Math.random) {
         }
         const indicesArray = Array.from(selectedIndices).sort((a, b) => a - b);
         for (const index of indicesArray) {
-            const elementQuestion = elementQuestions.value[index];
+            const elementQuestion = sortedElementQuestions[index];
             if (!elementQuestion) continue;
             const questionIndex = randInt(0, elementQuestion.questions.length);
             const element = elements.value.find((e) => e.number === elementQuestion.element_id);
@@ -119,7 +120,6 @@ export function useQuiz(rand: randFn = Math.random) {
             } else {
                 gameQuestions.value.push(elementQuestion.questions[questionIndex]);
             }
-            gameZones.value.push(elementQuestion.game_zone);
             gamePathPositions.value.push(elementQuestion.game_order);
         }
     }
