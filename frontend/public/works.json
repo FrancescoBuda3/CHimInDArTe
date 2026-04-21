@@ -298,6 +298,15 @@
       "description_file": "fr_description.txt",
       "materials": ["Ceramica con cristallina"],
       "picture_file": "fr_picture.png"
+    },
+    {
+      "id": 26,
+      "title": "Ferro",
+      "author": "Sconosciuto",
+      "author_class": "4E",
+      "description_file": "fe_description.txt",
+      "materials": ["Sconosciuto"],
+      "picture_file": "fe_picture.png"
     }
   ]
 }
