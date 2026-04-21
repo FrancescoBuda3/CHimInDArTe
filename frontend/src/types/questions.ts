@@ -30,6 +30,10 @@ export class WorkMemoryQuestion implements Question {
   options!: Record<number, Work>;
   answer!: number;
 
+  constructor(data: { options: Record<number, Work>; answer: number }) {
+    Object.assign(this, data);
+  }
+
   tryAnswer(answer: number): boolean {
     return this.answer === answer;
   }
