@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "@google/model-viewer": "^4.2.0",
@@ -20,9 +21,12 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
+    "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
+    "happy-dom": "^20.9.0",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
+    "vitest": "^4.1.4",
     "vue-tsc": "^3.1.5"
   }
 }

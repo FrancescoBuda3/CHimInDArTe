@@ -13,7 +13,8 @@
                         "3": "Gassoso",
                         "4": "Plasma"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico dell'idrogeno?",
@@ -23,7 +24,8 @@
                         "3": "19",
                         "4": "7"
                     },
-                    "answer": "1"
+                    "answer": "1",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -40,7 +42,8 @@
                         "3": "Cr",
                         "4": "C"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Quale delle seguenti è una forma allotropica del carbonio?",
@@ -50,7 +53,8 @@
                         "3": "Corindone",
                         "4": "Pirite"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -67,7 +71,8 @@
                         "3": "7",
                         "4": "8"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Quale percentuale approssimativa dell'atmosfera terrestre è composta da azoto?",
@@ -77,7 +82,8 @@
                         "3": "78%",
                         "4": "99%"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -94,7 +100,8 @@
                         "3": "Ox",
                         "4": "Og"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "In quale gruppo della tavola periodica si trova l'ossigeno?",
@@ -104,7 +111,8 @@
                         "3": "Gruppo 18 (gas nobili)",
                         "4": "Gruppo 16 (calcogeni)"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -121,7 +129,8 @@
                         "3": "Gas nobile",
                         "4": "Metalloide"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico del neon?",
@@ -131,7 +140,8 @@
                         "3": "12",
                         "4": "18"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -148,7 +158,8 @@
                         "3": "Mg",
                         "4": "Me"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il magnesio è un metallo appartenente al gruppo dei:",
@@ -158,7 +169,8 @@
                         "3": "Metalli di transizione",
                         "4": "Lantanidi"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -175,7 +187,8 @@
                         "3": "13",
                         "4": "14"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "L'alluminio è il metallo più abbondante nella crosta terrestre. Qual è il suo simbolo chimico?",
@@ -185,7 +198,8 @@
                         "3": "Ar",
                         "4": "Au"
                     },
-                    "answer": "1"
+                    "answer": "1",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -202,7 +216,8 @@
                         "3": "Sr",
                         "4": "S"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "A temperatura ambiente, in quale stato fisico si trova lo zolfo?",
@@ -212,7 +227,8 @@
                         "3": "Solido",
                         "4": "Plasma"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -229,7 +245,8 @@
                         "3": "20",
                         "4": "21"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il calcio è essenziale per la formazione di quale tessuto nel corpo umano?",
@@ -239,7 +256,8 @@
                         "3": "Pelle",
                         "4": "Sangue"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -256,7 +274,8 @@
                         "3": "V",
                         "4": "Vd"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico del vanadio?",
@@ -266,7 +285,8 @@
                         "3": "23",
                         "4": "24"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -283,7 +303,8 @@
                         "3": "Cu",
                         "4": "Cs"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Per quale proprietà è particolarmente noto il cromo nei materiali metallici?",
@@ -293,7 +314,8 @@
                         "3": "Riduce il peso dei metalli",
                         "4": "Aumenta la trasparenza"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -310,7 +332,8 @@
                         "3": "27",
                         "4": "28"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il simbolo chimico del cobalto?",
@@ -320,7 +343,8 @@
                         "3": "Co",
                         "4": "Ct"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -337,7 +361,8 @@
                         "3": "Nc",
                         "4": "Ne"
                     },
-                    "answer": "1"
+                    "answer": "1",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico del nichel?",
@@ -347,7 +372,8 @@
                         "3": "28",
                         "4": "29"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -364,7 +390,8 @@
                         "3": "Cu",
                         "4": "Rp"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il rame è ampiamente usato nell'industria elettrica principalmente perché:",
@@ -374,7 +401,8 @@
                         "3": "È trasparente alle onde radio",
                         "4": "È resistente alle alte temperature"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -391,7 +419,8 @@
                         "3": "Gn",
                         "4": "Ge"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il gallio è famoso per avere un punto di fusione molto basso: a circa quanti gradi Celsius fonde?",
@@ -401,7 +430,8 @@
                         "3": "100 °C",
                         "4": "250 °C"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -418,7 +448,8 @@
                         "3": "Ac",
                         "4": "At"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "L'arsenico è classificato come:",
@@ -428,7 +459,8 @@
                         "3": "Metalloide",
                         "4": "Alogeno"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -445,7 +477,8 @@
                         "3": "34",
                         "4": "35"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il simbolo chimico del selenio?",
@@ -455,7 +488,8 @@
                         "3": "Sn",
                         "4": "Se"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -472,7 +506,8 @@
                         "3": "Gassoso",
                         "4": "Plasma"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il simbolo chimico del bromo?",
@@ -482,7 +517,8 @@
                         "3": "Br",
                         "4": "Ba"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -499,7 +535,8 @@
                         "3": "Tc",
                         "4": "Tk"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il tecnezio è noto per essere il primo elemento ad essere stato:",
@@ -509,7 +546,8 @@
                         "3": "Utilizzato come carburante nucleare",
                         "4": "Isolato dall'acqua di mare"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -526,7 +564,8 @@
                         "3": "Av",
                         "4": "Si"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico dell'argento?",
@@ -536,7 +575,8 @@
                         "3": "47",
                         "4": "48"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -553,7 +593,8 @@
                         "3": "I",
                         "4": "In"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Lo iodio è fondamentale per il corretto funzionamento di quale ghiandola nel corpo umano?",
@@ -563,7 +604,8 @@
                         "3": "Tiroide",
                         "4": "Surrene"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -580,7 +622,8 @@
                         "3": "Cr",
                         "4": "Co"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il cerio appartiene alla famiglia dei:",
@@ -590,7 +633,8 @@
                         "3": "Lantanidi (terre rare)",
                         "4": "Attinidi"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -607,7 +651,8 @@
                         "3": "Pm",
                         "4": "Pt"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il promezio è l'unico lantanide che non ha isotopi stabili. Tutti i suoi isotopi sono:",
@@ -617,7 +662,8 @@
                         "3": "Superconduttori",
                         "4": "Ferromagnetici"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -634,7 +680,8 @@
                         "3": "Tn",
                         "4": "W"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il tungsteno detiene il record tra tutti i metalli per:",
@@ -644,7 +691,8 @@
                         "3": "Avere la maggiore conduttività elettrica",
                         "4": "Essere il più abbondante in natura"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -661,7 +709,8 @@
                         "3": "Ii",
                         "4": "In"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "L'iridio è noto per essere uno dei metalli più:",
@@ -671,7 +720,8 @@
                         "3": "Densi e resistenti alla corrosione",
                         "4": "Reattivi con l'acqua"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -688,7 +738,8 @@
                         "3": "Go",
                         "4": "Au"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico dell'oro?",
@@ -698,7 +749,8 @@
                         "3": "79",
                         "4": "80"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -715,7 +767,8 @@
                         "3": "Mc",
                         "4": "Mr"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "A temperatura ambiente, il mercurio si trova in quale stato fisico?",
@@ -725,7 +778,8 @@
                         "3": "Liquido",
                         "4": "Plasma"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -742,7 +796,8 @@
                         "3": "Pl",
                         "4": "Po"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Qual è il numero atomico del piombo?",
@@ -752,7 +807,8 @@
                         "3": "82",
                         "4": "83"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -769,7 +825,8 @@
                         "3": "Bi",
                         "4": "Bu"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il bismuto è il metallo pesante più pesante ad essere considerato praticamente non radioattivo. Qual è il suo numero atomico?",
@@ -779,7 +836,8 @@
                         "3": "83",
                         "4": "84"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -796,7 +854,8 @@
                         "3": "Rn",
                         "4": "Ry"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il radon è un gas nobile radioattivo. Come si forma principalmente in natura?",
@@ -806,7 +865,8 @@
                         "3": "Dall'evaporazione dell'acqua marina",
                         "4": "Dalla fotosintesi clorofilliana"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -823,7 +883,8 @@
                         "3": "Fr",
                         "4": "Fa"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il francio appartiene al gruppo dei metalli alcalini ed è noto per essere uno degli elementi più rari e instabili in natura. Qual è il suo numero atomico?",
@@ -833,7 +894,8 @@
                         "3": "87",
                         "4": "88"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -850,7 +912,8 @@
                         "3": "Ri",
                         "4": "Rb"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il radio è un elemento radioattivo scoperto da Marie e Pierre Curie nel 1898. A quale gruppo appartiene?",
@@ -860,7 +923,8 @@
                         "3": "Metalli alcalino-terrosi",
                         "4": "Lantanidi"
                     },
-                    "answer": "3"
+                    "answer": "3",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -877,7 +941,8 @@
                         "3": "Ua",
                         "4": "U"
                     },
-                    "answer": "4"
+                    "answer": "4",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "L'uranio è principalmente utilizzato come combustibile in quale settore?",
@@ -887,7 +952,8 @@
                         "3": "Industria alimentare",
                         "4": "Industria tessile"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         },
@@ -904,7 +970,8 @@
                         "3": "27",
                         "4": "28"
                     },
-                    "answer": "2"
+                    "answer": "2",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     "question": "Il ferro è un metallo di transizione ampiamente utilizzato. Qual è il suo simbolo chimico?",
@@ -914,7 +981,8 @@
                         "3": "Fr",
                         "4": "Fo"
                     },
-                    "answer": "1"
+                    "answer": "1",
+                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
             ]
         }
