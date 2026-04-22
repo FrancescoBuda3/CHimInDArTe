@@ -67,7 +67,7 @@ export function useQuiz(rand: randFn = Math.random) {
      * generate a WorkMemoryQuestion for a given element,
      * ensuring the correct answer is included and the options are unique
      * @param element 
-     * @returns 
+     * @returns a WorkMemoryQuestion instance related to the given element 
      */
     function generateWorkMemoryQuestion(element: PeriodicElement): Question {
         const options: Record<number, Work> = {};
@@ -125,23 +125,45 @@ export function useQuiz(rand: randFn = Math.random) {
     }
 
     /**
-     * 
+     * Handle the player's answer to the current question,
+     * updating the game state accordingly
      * @param answer 
      */
-    function handleAnswer(answer: number) { }
+    function handleAnswer(answer: number) {
+        const currentQuestion = gameQuestions.value[gameCursor.value];
+        if (currentQuestion?.tryAnswer(answer)) {
+            gameState.value = GameState.ShowingSuccess;
+            const conqueredElement = gameElements.value[gameCursor.value];
+            conqueredElement ? gameConqueredElements.value.push(conqueredElement) : null;
+        } else {
+            gameState.value = GameState.ShowingFailure;
+        }
+    }
 
     /**
-     * 
+     * Checks if the game is over
      */
-    function isGameOver(): boolean { return false }
+    function isGameOver(): boolean {
+        return gameCursor.value >= gameQuestions.value.length - 1;
+    }
 
     /**
-     * 
+     * Checks if the current zone is completed, 
+     * i.e. if the next question belongs to a different
+     * zone or if there are no more questions
      */
-    function isZoneCompleted(): boolean { return false }
+    function isZoneCompleted(): boolean {
+        const currentZone = gameZones.value[gameCursor.value];
+        const nextCursor = gameCursor.value + 1;
+        if (nextCursor >= gameZones.value.length || gameZones.value[nextCursor] !== currentZone) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
-     * 
+     * Handle the player's input, updating the game state accordingly
      * @param answer 
      */
     function handleInput(answer?: number, playAgain?: boolean) {
@@ -154,16 +176,19 @@ export function useQuiz(rand: randFn = Math.random) {
                 break;
             case GameState.ShowingSuccess:
             case GameState.ShowingFailure:
-                if (isGameOver()) {
-                    gameState.value = GameState.GameOver;
-                } else if (isZoneCompleted()) {
+                if (isZoneCompleted()) {
                     gameState.value = GameState.ShowingZoneSummary;
                 } else {
                     gameState.value = GameState.ShowingQuestion;
                 }
+                gameCursor.value += 1;
                 break;
             case GameState.ShowingZoneSummary:
-                gameState.value = GameState.ShowingQuestion;
+                if (isGameOver()) {
+                    gameState.value = GameState.GameOver;
+                } else {
+                    gameState.value = GameState.ShowingQuestion;
+                }
                 break;
             case GameState.GameOver:
                 if (playAgain) {

@@ -39,6 +39,26 @@ describe('useQuiz', () => {
         quiz.resetGame()
     })
 
+    function answerCurrentQuestionCorrectly() {
+        const currentQuestion = quiz.gameQuestions.value[quiz.gameCursor.value]
+        const correctAnswer = currentQuestion instanceof ClassicQuestion
+            ? currentQuestion.answer
+            : currentQuestion instanceof WorkMemoryQuestion
+                ? currentQuestion.answer
+                : 0
+        quiz.handleInput(correctAnswer)
+    }
+
+    function answerCurrentQuestionWrongly() {
+        const currentQuestion = quiz.gameQuestions.value[quiz.gameCursor.value]
+        const wrongAnswer = currentQuestion instanceof ClassicQuestion
+            ? (currentQuestion.answer + 1) % Object.keys(currentQuestion.options).length
+            : currentQuestion instanceof WorkMemoryQuestion
+                ? (currentQuestion.answer + 1) % Object.keys(currentQuestion.options).length
+                : 0
+        quiz.handleInput(wrongAnswer)
+    }
+
     it('starts from GameState.Starting', () => {
         expect(quiz.gameState.value).toBe(GameState.Starting)
     })
@@ -89,5 +109,75 @@ describe('useQuiz', () => {
         expect(gameZones).toStrictEqual(gameZones.slice().sort((a, b) => a - b))
     })
 
+    it('goes to GameState.ShowingSuccess after a correct answer', () => {
+        quiz.startGame()
+        answerCurrentQuestionCorrectly()
+        expect(quiz.gameState.value).toBe(GameState.ShowingSuccess)
+    })
 
+    it('goes to GameState.ShowingFailure after a wrong answer', () => {
+        quiz.startGame()
+        answerCurrentQuestionWrongly()
+        expect(quiz.gameState.value).toBe(GameState.ShowingFailure)
+    })
+
+    it('conquers the element after a correct answer', () => {
+        quiz.startGame()
+        answerCurrentQuestionCorrectly()
+        expect(quiz.gameConqueredElements.value.length).toBe(1)
+    })
+
+    it('does not conquer the element after a wrong answer', () => {
+        quiz.startGame()
+        answerCurrentQuestionWrongly()
+        expect(quiz.gameConqueredElements.value.length).toBe(0)
+    })
+
+    it('increments the game cursor after handling input in ShowingSuccess or ShowingFailure if not game over', () => {
+        quiz.startGame()
+        const initialCursor = quiz.gameCursor.value
+        answerCurrentQuestionCorrectly()
+        quiz.handleInput()
+        expect(quiz.gameCursor.value).toBe(initialCursor + 1)
+    })
+
+
+    it('goes to GameState.ShowingQuestion after handling input in ShowingSuccess if not game over and not zone completed', () => {
+        quiz.startGame()
+        answerCurrentQuestionCorrectly()
+        expect(quiz.gameState.value).toBe(GameState.ShowingSuccess)
+        quiz.handleInput()
+        expect(quiz.gameState.value).toBe(GameState.ShowingQuestion)
+    })
+
+    it('goes to GameState.ShowingQuestion after handling input in ShowingFailure if not zone completed', () => {
+        quiz.startGame()
+        answerCurrentQuestionWrongly()
+        expect(quiz.gameState.value).toBe(GameState.ShowingFailure)
+        quiz.handleInput()
+        expect(quiz.gameState.value).toBe(GameState.ShowingQuestion)
+    })
+
+    it('goes to GameState.ShowingZoneSummary after handling input in ShowingSuccess or ShowingFailure if zone completed', () => {
+        quiz.startGame()
+        console.log(quiz.gameZones.value)
+        const firstZoneQuestions = quiz.gameQuestions.value.filter((q, index) => quiz.gameZones.value[index] === 1)
+        console.log(firstZoneQuestions.length)
+        for (let i = 0; i < firstZoneQuestions.length; i++) {
+            answerCurrentQuestionCorrectly()
+            quiz.handleInput()
+        }
+        expect(quiz.gameState.value).toBe(GameState.ShowingZoneSummary)
+    })
+
+    it('goes to GameState.GameOver after handling input in ShowingZoneSummary if game over', () => {
+        quiz.startGame()
+        const totalQuestions = quiz.gameQuestions.value.length
+        for (let i = 0; i < totalQuestions; i++) {
+            answerCurrentQuestionCorrectly()
+            quiz.handleInput()
+        }
+        quiz.handleInput()
+        expect(quiz.gameState.value).toBe(GameState.GameOver)
+    })
 })
