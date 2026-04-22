@@ -55,6 +55,7 @@ watch(
         :alt="element.name"
         auto-rotate
         camera-controls
+        loading="lazy"
         ar
         ar-modes="webxr scene-viewer quick-look"
         :ios-src="`${baseUrl}models/${work?.model_file}`"

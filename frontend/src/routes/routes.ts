@@ -4,7 +4,7 @@ import {
   type RouteRecordRaw,
 } from "vue-router";
 
-// import HomeView from "../views/HomeView.vue";
+import HomeView from "../views/HomeView.vue";
 import ExploreView from "../views/ExploreView.vue";
 import NotFoundView from "../views/NotFoundView.vue";
 import QuizView from "../views/QuizView.vue";
@@ -14,11 +14,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "Home",
-    /* component: HomeView */
-    component: ExploreView
-    /* props: (route) => ({
-      notebookId: route.query.notebookId as string | undefined
-    }), */
+    component: HomeView,
   },
   {
     path: "/explore",

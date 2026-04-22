@@ -19,8 +19,9 @@ module.exports = {
         xl: "0.80",
         icon: "0.40",
         btn: "0.60",
-        tile: "1", // 1u esatto → dimensione cella tavola periodica
-        "2x": "2", // utilità a moltiplicatori interi se servono
+        gameTile: "0.80",
+        tile: "1",
+        "2x": "2",
         "3x": "3",
         "4x": "4",
         "5x": "5",
