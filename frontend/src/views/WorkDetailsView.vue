@@ -4,6 +4,7 @@ import { useData } from "../composables/useData";
 import AppHeader from "../components/AppHeader.vue";
 import Description from "../components/Description.vue";
 import { useDevice } from "../composables/useDevice";
+import "@google/model-viewer";
 
 const props = defineProps<{
   id: Number;
@@ -48,11 +49,17 @@ watch(
   <div class="u-p-sm u-pt-lg flex justify-center items-center"
     :class="isKiosk ? 'flex-row' : 'flex-col'">
     <div class="u-size-3x flex items-center justify-center">
-      <img
-        :src="`${baseUrl}pictures/${work?.picture_file}`"
-        :alt="work?.title"
-        class="w-full h-full object-contain"
-      />
+      <model-viewer
+        v-if="element"
+        :src="`${baseUrl}models/${work?.model_file}`"
+        :alt="element.name"
+        auto-rotate
+        camera-controls
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        :ios-src="`${baseUrl}models/${work?.model_file}`"
+        style="width: 100%; height: 100%;"
+      ></model-viewer>
     </div>
     <div>
       <div>
