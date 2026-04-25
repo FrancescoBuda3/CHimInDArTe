@@ -6,26 +6,26 @@
             "game_zone": 1,
             "questions": [
                 {
-                    "question": "A temperatura e pressione ambiente, in quale stato si presenta l'idrogeno elementare?",
+                    "question": "Qual è la caratteristica principale dell'idrogeno?",
                     "options": {
-                        "1": "Solido",
-                        "2": "Liquido",
-                        "3": "Gassoso",
-                        "4": "Plasma"
+                        "1": "È l'elemento più pesante",
+                        "2": "È l'elemento più leggero",
+                        "3": "È liquido",
+                        "4": "È radioattivo"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "L'idrogeno, quando si trova sotto forma di molecole H₂, è così leggero che è stato utilizzato per riempire i primi palloni aerostatici e dirigibili"
                 },
                 {
-                    "question": "Qual è il numero atomico dell'idrogeno?",
+                    "question": "2. In quale composto si trova comunemente l'idrogeno?",
                     "options": {
-                        "1": "1",
-                        "2": "24",
-                        "3": "19",
-                        "4": "7"
+                        "1": "Sale marino",
+                        "2": "Acqua",
+                        "3": "Ferro",
+                        "4": "Sabbia"
                     },
-                    "answer": "1",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "L'idrogeno è l'elemento più abbondante nell'universo!"
                 }
             ]
         },
@@ -35,26 +35,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del carbonio?",
+                    "question": "Il carbonio è protagonista di un celebre racconto. In quale opera è contenuto?",
                     "options": {
-                        "1": "Ca",
-                        "2": "Co",
-                        "3": "Cr",
-                        "4": "C"
+                        "1": "Il sistema degli elementi",
+                        "2": "La struttura periodica",
+                        "3": "Il sistema periodico",
+                        "4": "Il sistema chimico"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "3",
+                    "curiosity": "Si tratta di un'opera di Primo Levi edita nel 1975, nella quale ogni racconto è dedicato a un elemento chimico. “Carbonio”, l'ultimo racconto, segue il viaggio di un atomo attraverso natura e vita umana."
                 },
                 {
-                    "question": "Quale delle seguenti è una forma allotropica del carbonio?",
+                    "question": "Quale tra le seguenti affermazioni descrive correttamente il carbonio?",
                     "options": {
-                        "1": "Quarzo",
-                        "2": "Diamante",
-                        "3": "Corindone",
-                        "4": "Pirite"
+                        "1": "Si trova solo sotto forma di gas come l'anidride carbonica",
+                        "2": "Può esistere sia come diamante sia come grafite",
+                        "3": "È presente solo nei metalli e nelle leghe",
+                        "4": "Esiste solo in forma liquida a temperatura ambiente"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Sia il diamante che la grafite sono formati esclusivamente da atomi di carbonio. La loro diversa durezza dipende dalla diversa organizzazione degli atomi al loro interno."
                 }
             ]
         },
@@ -64,26 +64,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico dell'azoto?",
+                    "question": "L'azoto si trova principalmente",
                     "options": {
-                        "1": "5",
-                        "2": "6",
-                        "3": "7",
-                        "4": "8"
+                        "1": "Nell'acqua",
+                        "2": "Nell'aria",
+                        "3": "Nel ferro",
+                        "4": "Nel vetro"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Sotto forma di N2 costituisce circa il 78% dell'aria che respiriamo."
                 },
                 {
-                    "question": "Quale percentuale approssimativa dell'atmosfera terrestre è composta da azoto?",
+                    "question": "Qual è il ruolo principale dell'azoto negli esseri viventi?",
                     "options": {
-                        "1": "21%",
-                        "2": "50%",
-                        "3": "78%",
-                        "4": "99%"
+                        "1": "è il principale componente della clorofilla",
+                        "2": "è l'elemento chiave nella composizione dei denti",
+                        "3": "serve per il trasporto dell'ossigeno nel sangue",
+                        "4": "è un componente fondamentale delle proteine"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "4",
+                    "curiosity": "L'azoto è un elemento fondamentale delle proteine perché è presente negli amminoacidi, i “mattoni” che le compongono. L'amminoacido più semplice si chiama glicina."
                 }
             ]
         },
@@ -93,26 +93,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'ossigeno?",
+                    "question": "Per cosa è fondamentale l'ossigeno negli esseri viventi?",
                     "options": {
-                        "1": "Os",
-                        "2": "O",
-                        "3": "Ox",
-                        "4": "Og"
+                        "1": "Respirare",
+                        "2": "Dormire",
+                        "3": "Mangiare",
+                        "4": "Scaldarsi"
                     },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Circa il 21% dell'aria che respiriamo è composto da ossigeno, che si trova sotto forma di molecola biatomica (O2), (due atomi di ossigeno legati insieme)."
                 },
                 {
-                    "question": "In quale gruppo della tavola periodica si trova l'ossigeno?",
+                    "question": "In quale reazione chimica è fondamentale la presenza di ossigeno?",
                     "options": {
-                        "1": "Gruppo 14 (calcogeni)",
-                        "2": "Gruppo 17 (alogeni)",
-                        "3": "Gruppo 18 (gas nobili)",
-                        "4": "Gruppo 16 (calcogeni)"
+                        "1": "Fermentazione lattica",
+                        "2": "Pirolisi",
+                        "3": "Combustione",
+                        "4": "Fermentazione alcolica"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "3",
+                    "curiosity": "Nella maggior parte degli incendi terrestri, l'ossigeno dell'aria è il comburente principale: l'ossigeno interagisce con il combustibile, consentendo la reazione di ossidazione che porta alla combustione."
                 }
             ]
         },
@@ -122,26 +122,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Il neon è classificato come:",
+                    "question": "Il neon è usato per",
                     "options": {
-                        "1": "Metallo alcalino",
-                        "2": "Alogeno",
-                        "3": "Gas nobile",
-                        "4": "Metalloide"
+                        "1": "luci pubblicitarie",
+                        "2": "insaporire cibi",
+                        "3": "lavare i vestiti",
+                        "4": "additivare i carburanti"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Molte “luci al neon” non contengono affatto neon: i diversi colori delle insegne derivano spesso da altri gas o da rivestimenti interni, mentre il neon puro produce solo la sua tipica luce rosso-arancione."
                 },
                 {
-                    "question": "Qual è il numero atomico del neon?",
+                    "question": "Il neon è",
                     "options": {
-                        "1": "8",
-                        "2": "10",
-                        "3": "12",
-                        "4": "18"
+                        "1": "un Gas nobile",
+                        "2": "un Metallo",
+                        "3": "Liquido",
+                        "4": "Radioattivo"
                     },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Il neon è un gas nobile quasi inerte, incolore, insapore, inodore e più leggero dell'aria. Sebbene sulla terra sia molto raro, il neon è il quinto elemento per abbondanza nell'Universo."
                 }
             ]
         },
@@ -151,26 +151,26 @@
             "game_zone": 1,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del magnesio?",
+                    "question": "Il magnesio brucia producendo",
                     "options": {
-                        "1": "Mn",
-                        "2": "Mo",
-                        "3": "Mg",
-                        "4": "Me"
-                    },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il magnesio è un metallo appartenente al gruppo dei:",
-                    "options": {
-                        "1": "Metalli alcalini",
-                        "2": "Metalli alcalino-terrosi",
-                        "3": "Metalli di transizione",
-                        "4": "Lantanidi"
+                        "1": "Fumo nero",
+                        "2": "Luce bianca intensa",
+                        "3": "Gas verde",
+                        "4": "Liquido blu"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Brucia con una luce così intensa che veniva usato nei flash fotografici."
+                },
+                {
+                    "question": "Il magnesio è importante per",
+                    "options": {
+                        "1": "I muscoli e il corpo umano",
+                        "2": "Il colore dei metalli",
+                        "3": "I profumi",
+                        "4": "I combustibili"
+                    },
+                    "answer": "1",
+                    "curiosity": "Aiuta a rilassare i muscoli: la sua carenza può provocare spasmi e crampi"
                 }
             ]
         },
@@ -180,26 +180,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico dell'alluminio?",
+                    "question": "L'alluminio è:",
                     "options": {
-                        "1": "11",
-                        "2": "12",
-                        "3": "13",
-                        "4": "14"
+                        "1": "Pesante",
+                        "2": "Malleabile",
+                        "3": "Fragile",
+                        "4": "Isolante"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Grazie ad un'eccezionale malleabilità e duttilità, i fogli di alluminio alimentari (carta stagnola) sono imballaggi versatili e ideali per conservare e cuocere cibi, grazie all'elevata barriera contro luce, ossigeno, umidità e batteri."
                 },
                 {
-                    "question": "L'alluminio è il metallo più abbondante nella crosta terrestre. Qual è il suo simbolo chimico?",
+                    "question": "L'alluminio è usato per:",
                     "options": {
-                        "1": "Al",
-                        "2": "Am",
-                        "3": "Ar",
-                        "4": "Au"
+                        "1": "Lattine e vaschette",
+                        "2": "Profumi",
+                        "3": "Tessuti",
+                        "4": "Carburanti"
                     },
                     "answer": "1",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "È uno dei metalli più riciclati al mondo: è riciclabile al 100% all'infinito senza perdere qualità."
                 }
             ]
         },
@@ -209,26 +209,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dello zolfo?",
+                    "question": "Lo zolfo ha colore",
                     "options": {
-                        "1": "Z",
-                        "2": "Zn",
-                        "3": "Sr",
-                        "4": "S"
+                        "1": "Giallo",
+                        "2": "Blu",
+                        "3": "Rosso",
+                        "4": "Incolore"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Lo zolfo si presenta comunemente come un solido cristallino di colore giallo intenso e in natura, allo stato nativo, si trova principalmente nei pressi di vulcani attivi e sorgenti calde"
                 },
                 {
-                    "question": "A temperatura ambiente, in quale stato fisico si trova lo zolfo?",
+                    "question": "Lo zolfo è noto per",
                     "options": {
-                        "1": "Gassoso",
-                        "2": "Liquido",
-                        "3": "Solido",
-                        "4": "Plasma"
+                        "1": "Essere maleodorante",
+                        "2": "Essere dolce",
+                        "3": "Essere invisibile",
+                        "4": "Essere liquido"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Lo zolfo puro è inodore. L'odore caratteristico di \"uova marce\" è causato in realtà dall'acido solfidrico (H2S), un suo derivato quando si lega con l'idrogeno "
                 }
             ]
         },
@@ -238,26 +238,26 @@
             "game_zone": 1,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico del calcio?",
+                    "question": "Il calcio è essenziale per",
                     "options": {
-                        "1": "18",
-                        "2": "19",
-                        "3": "20",
-                        "4": "21"
-                    },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il calcio è essenziale per la formazione di quale tessuto nel corpo umano?",
-                    "options": {
-                        "1": "Muscoli",
+                        "1": "La vista",
                         "2": "Ossa e denti",
-                        "3": "Pelle",
-                        "4": "Sangue"
+                        "3": "Il gusto",
+                        "4": "L'olfatto"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il corpo umano adulto contiene circa 1 kg di calcio, corrispondente a circa l'1.6% del suo peso totale!"
+                },
+                {
+                    "question": "Dove si trova molto il calcio?",
+                    "options": {
+                        "1": "Latte e latticini",
+                        "2": "Banane",
+                        "3": "Carne di pollo",
+                        "4": "Zucchero"
+                    },
+                    "answer": "1",
+                    "curiosity": "I formaggi stagionati contengono più calcio rispetto a quelli freschi"
                 }
             ]
         },
@@ -267,26 +267,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del vanadio?",
+                    "question": "Perché il vanadio viene aggiunto all'acciaio?",
                     "options": {
-                        "1": "Va",
-                        "2": "Vn",
-                        "3": "V",
-                        "4": "Vd"
+                        "1": "Per renderlo più leggero ma fragile",
+                        "2": "Per migliorarne resistenza e durezza",
+                        "3": "Per cambiarne il colore",
+                        "4": "Per renderlo liquido"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Anche in piccolissime quantità, il vanadio può cambiare drasticamente le proprietà di una lega: per esempio, meno dell'1% di vanadio nell'acciaio è sufficiente per renderlo molto più resistente e durevole, motivo per cui viene usato in strumenti, molle e persino in alcune parti di aerei e automobili."
                 },
                 {
-                    "question": "Qual è il numero atomico del vanadio?",
+                    "question": "Dove si trova il vanadio in natura?",
                     "options": {
-                        "1": "21",
-                        "2": "22",
-                        "3": "23",
-                        "4": "24"
+                        "1": "Solo nell'aria",
+                        "2": "In minerali e, in piccole quantità, nel petrolio",
+                        "3": "Solo nell'acqua pura",
+                        "4": "Solo nei gas nobili"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Il vanadio non si trova mai “puro” in natura: è spesso disperso in molti minerali diversi, come la vanadinite, ma anche in piccole quantità in rocce, carbone e perfino nel petrolio. Proprio questa diffusione “sparsa” lo rende più difficile da estrarre rispetto ad altri metalli!"
                 }
             ]
         },
@@ -296,26 +296,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del cromo?",
+                    "question": "Quale proprietà del cromo lo rende utile nelle cromature decorative?",
                     "options": {
-                        "1": "Co",
-                        "2": "Cr",
-                        "3": "Cu",
-                        "4": "Cs"
+                        "1": "Elevata fragilità",
+                        "2": "Aspetto lucido e resistenza all'ossidazione",
+                        "3": "Bassa temperatura di fusione",
+                        "4": "Capacità di evaporare facilmente"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il cromo protegge i metalli formando un sottilissimo strato invisibile di ossido sulla superficie: è proprio questo film che impedisce alla ruggine di svilupparsi, rendendo l'acciaio “inossidabile”."
                 },
                 {
-                    "question": "Per quale proprietà è particolarmente noto il cromo nei materiali metallici?",
+                    "question": "Perché i composti del cromo possono avere colori molto diversi?",
                     "options": {
-                        "1": "Aumenta la conduttività elettrica",
-                        "2": "Conferisce resistenza alla corrosione (es. acciaio inox)",
-                        "3": "Riduce il peso dei metalli",
-                        "4": "Aumenta la trasparenza"
+                        "1": "Per la pressione",
+                        "2": "Per i diversi stati di ossidazione",
+                        "3": "Per la temperatura",
+                        "4": "Per la massa atomica"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il nome “cromo” deriva dal greco chroma (colore), proprio perché i suoi composti possono assumere colori molto vivaci e diversi, dal verde intenso all'arancione brillante."
                 }
             ]
         },
@@ -325,26 +325,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico del cobalto?",
+                    "question": "Il famoso “Blu di Cobalto” è un pigmento amato dai pittori. Qual è la sua caratteristica principale?",
                     "options": {
-                        "1": "25",
-                        "2": "26",
-                        "3": "27",
-                        "4": "28"
+                        "1": "È estremamente stabile e resistente alla luce e agli agenti atmosferici",
+                        "2": "Sbiadisce dopo pochi giorni se esposto alla luce",
+                        "3": "Viene estratto tritando pietre preziose come gli zaffiri",
+                        "4": "Cambia colore alla luce del sole"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Prima di diventare il colore preferito di artisti come Van Gogh (che lo usò per il cielo della Notte Stellata), il cobalto veniva usato per colorare le pregiatissime porcellane cinesi della dinastia Ming. Era così costoso che Van Gogh si lamentava spesso nelle lettere al fratello del prezzo proibitivo di questo pigmento."
                 },
                 {
-                    "question": "Qual è il simbolo chimico del cobalto?",
+                    "question": "In quale fondamentale vitamina si trova un atomo di Cobalto?",
                     "options": {
-                        "1": "Ca",
-                        "2": "Cb",
-                        "3": "Co",
-                        "4": "Ct"
+                        "1": "Vitamina A",
+                        "2": "Vitamina B",
+                        "3": "Vitamina B12",
+                        "4": "Vitamina D"
                     },
                     "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "La vitamina B12 è chiamata anche cobalamina. È l'unica vitamina a contenere un atomo metallico ed è essenziale al funzionamento del nostro sistema nervoso e per la formazione dei globuli rossi."
                 }
             ]
         },
@@ -354,26 +354,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del nichel?",
+                    "question": "Il nichel è importante per la produzione di monete (come l'euro) perché",
                     "options": {
-                        "1": "Ni",
-                        "2": "Nk",
-                        "3": "Nc",
-                        "4": "Ne"
+                        "1": "Rende le monete fluorescenti al buio",
+                        "2": "Per la sua eccellente resistenza alla corrosione e all'usura",
+                        "3": "è l'unico metallo che non può essere contraffatto",
+                        "4": "è un metallo estremamente morbido"
                     },
-                    "answer": "1",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Nonostante molte persone siano allergiche al Nichel, esso è fondamentale nel conio. Ad esempio, le monete da 1 e 2 euro utilizzano una struttura a strati (\"sandwich\") che include il Nichel per garantire che la moneta mantenga la sua forma e lucentezza anche dopo anni di passaggi di mano in mano."
                 },
                 {
-                    "question": "Qual è il numero atomico del nichel?",
+                    "question": "Il nichel è presente negli acciai inox (forchette, pentole,..) perchè",
                     "options": {
-                        "1": "26",
-                        "2": "27",
-                        "3": "28",
-                        "4": "29"
+                        "1": "impedisce all'acciaio di arrugginire e ne mantiene la brillantezza",
+                        "2": "lo rende più leggero e facile da maneggiare",
+                        "3": "impedisce al cibo di attaccarsi alla superficie",
+                        "4": "rende l'acciaio magnetico per poter usare le calamite"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "L'acciaio inox più comune è il cosiddetto “18/10”: questo significa che contiene il 18% di Cromo e il 10% di Nichel. Il Nichel cambia la struttura cristallina del ferro, rendendolo non solo resistente alla ruggine, ma anche esteticamente lucido e \"argentato\" nel tempo."
                 }
             ]
         },
@@ -383,26 +383,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del rame?",
+                    "question": "Perché la Statua della Libertà è verde se è fatta di Rame?",
                     "options": {
-                        "1": "Rm",
-                        "2": "Ra",
-                        "3": "Cu",
-                        "4": "Rp"
-                    },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il rame è ampiamente usato nell'industria elettrica principalmente perché:",
-                    "options": {
-                        "1": "È molto leggero",
-                        "2": "È un ottimo conduttore di elettricità",
-                        "3": "È trasparente alle onde radio",
-                        "4": "È resistente alle alte temperature"
+                        "1": "È stata dipinta per mimetizzarsi con il mare",
+                        "2": "A causa dell'ossidazione e della formazione di un \"patina\"",
+                        "3": "Il Rame diventa verde quando viene colpito dai fulmini",
+                        "4": "A causa del guano degli uccelli"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "La maggior parte dei metalli, quando esposti all'ambiente, si ossida spontaneamente formando prodotti di corrosione (patina) la cui composizione dipende dal metallo e dai composti presenti nell'ambiente. Nel caso della Statua della Libertà la patina contiene solfati e cloruri di Cu(II) di colore verde."
+                },
+                {
+                    "question": "Sapevi che non tutti gli esseri viventi hanno il sangue rosso? Quale animale usa il Rame per trasportare ossigeno?",
+                    "options": {
+                        "1": "Il polpo",
+                        "2": "Il leone africano",
+                        "3": "Lo squalo bianco",
+                        "4": "L'aquila reale"
+                    },
+                    "answer": "1",
+                    "curiosity": "Mentre il nostro sangue è rosso perché per trasportare l'ossigeno usa il Ferro (emoglobina), quello del polpo è blu perché utilizza l'emocianina, una proteina a base di Rame. Questo sistema è molto più efficiente del nostro nel trasportare ossigeno in ambienti gelidi e a bassa pressione come i fondali oceanici."
                 }
             ]
         },
@@ -412,26 +412,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del gallio?",
+                    "question": "Il gallio:",
                     "options": {
-                        "1": "Gl",
-                        "2": "Ga",
-                        "3": "Gn",
-                        "4": "Ge"
+                        "1": "È di colore nero",
+                        "2": "Ha un basso punto di fusione",
+                        "3": "È durissimo",
+                        "4": "È invisibile"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Fonde (passa cioè dallo stato solido a quello liquido) semplicemente tenendolo in mano, ma per bollire e trasformarsi in gas deve raggiungere i 2400 °C."
                 },
                 {
-                    "question": "Il gallio è famoso per avere un punto di fusione molto basso: a circa quanti gradi Celsius fonde?",
+                    "question": "Il gallio è usato:",
                     "options": {
-                        "1": "0 °C",
-                        "2": "30 °C",
-                        "3": "100 °C",
-                        "4": "250 °C"
+                        "1": "Nell'elettronica",
+                        "2": "Nei cibi",
+                        "3": "Nei vestiti",
+                        "4": "Nei profumi"
                     },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Alcuni composti del gallio si illuminano se attraversati dall'elettricità. Sono dunque l'ingrediente chiave dei LED, i minuscoli dispositivi che illuminano gli schermi di computer, cellulari e televisori."
                 }
             ]
         },
@@ -441,26 +441,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'arsenico?",
+                    "question": "Quale proprietà distingue i semimetalli come l'arsenico?",
                     "options": {
-                        "1": "Ar",
-                        "2": "As",
-                        "3": "Ac",
-                        "4": "At"
+                        "1": "Sono sempre liquidi",
+                        "2": "Hanno proprietà intermedie tra metalli e non metalli",
+                        "3": "Sono sempre radioattivi",
+                        "4": "Non reagiscono mai"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": " L'arsenico può bloccare la produzione di energia nelle cellule interferendo con i processi bio-chimici: è per questo che è stato storicamente usato come veleno difficile da individuare."
                 },
                 {
-                    "question": "L'arsenico è classificato come:",
+                    "question": "L'arsenico è utilizzato in piccole quantità in",
                     "options": {
-                        "1": "Metallo alcalino",
-                        "2": "Gas nobile",
-                        "3": "Metalloide",
-                        "4": "Alogeno"
+                        "1": "Tessuti",
+                        "2": "Semiconduttori ed elettronica",
+                        "3": "Carburanti",
+                        "4": "Bevande"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "In alcune aree (come parti del Bangladesh e dell'India), l'arsenico naturale nelle acque sotterranee rappresenta un serio problema sanitario, mostrando come un elemento naturale possa diventare pericoloso quando entra nella catena dell'acqua potabile."
                 }
             ]
         },
@@ -470,26 +470,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico del selenio?",
+                    "question": "Perché il selenio è stato utilizzato in dispositivi elettronici come le fotocellule?",
                     "options": {
-                        "1": "32",
-                        "2": "33",
-                        "3": "34",
-                        "4": "35"
+                        "1": "Perché è molto leggero",
+                        "2": "Perché reagisce al calore",
+                        "3": "Perché la sua conducibilità aumenta quando viene illuminato",
+                        "4": "Perché è colorato"
                     },
                     "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il selenio è stato fondamentale nei primi sistemi di trasmissione di immagini: grazie alla sua fotoconduttività, ha contribuito allo sviluppo delle prime tecnologie di scansione e televisione."
                 },
                 {
-                    "question": "Qual è il simbolo chimico del selenio?",
+                    "question": "Perché il selenio è importante per il corpo umano?",
                     "options": {
-                        "1": "Sl",
-                        "2": "Si",
-                        "3": "Sn",
-                        "4": "Se"
+                        "1": "Produce energia direttamente",
+                        "2": "È componente di enzimi con funzione antiossidante",
+                        "3": "Rafforza le ossa",
+                        "4": "È il principale componente del sangue"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "I benefici del selenio per la salute umana sono riconosciuti dall'EFSA (Autorità Europea Per La Sicurezza Alimentare) in quanto supporta la normale funzione del sistema immunitario, favorisce la funzione tiroidea e protegge le cellule dallo stress ossidativo."
                 }
             ]
         },
@@ -499,26 +499,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "A temperatura ambiente, in quale stato fisico si trova il bromo?",
+                    "question": "Il bromo è",
                     "options": {
-                        "1": "Solido",
-                        "2": "Liquido",
-                        "3": "Gassoso",
-                        "4": "Plasma"
+                        "1": "un gas",
+                        "2": "un liquido rossastro",
+                        "3": "un solido",
+                        "4": "trasparente"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il bromo è uno dei due soli elementi che esistono come liquido a temperatura ambiente. I composti del bromo sono utilizzati principalmente nei ritardanti di fiamma, nei pesticidi, nei prodotti chimici per il trattamento delle acque e nella sintesi di farmaci."
                 },
                 {
-                    "question": "Qual è il simbolo chimico del bromo?",
+                    "question": "Il bromo appartiene al gruppo:",
                     "options": {
-                        "1": "B",
-                        "2": "Bi",
-                        "3": "Br",
-                        "4": "Ba"
+                        "1": "degli Alogeni",
+                        "2": "dei Gas nobili",
+                        "3": "dei Metalli",
+                        "4": "dei Liquidi"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Alcuni composti del bromo sono utilizzati come ritardanti di fiamma perché possono interrompere le reazioni chimiche della combustione, rendendo molti materiali più sicuri contro gli incendi."
                 }
             ]
         },
@@ -528,26 +528,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del tecnezio?",
+                    "question": "Il tecnezio è noto per essere:",
                     "options": {
-                        "1": "Te",
-                        "2": "Tn",
-                        "3": "Tc",
-                        "4": "Tk"
-                    },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il tecnezio è noto per essere il primo elemento ad essere stato:",
-                    "options": {
-                        "1": "Scoperto in natura in grandi quantità",
-                        "2": "Prodotto artificialmente in laboratorio",
-                        "3": "Utilizzato come carburante nucleare",
-                        "4": "Isolato dall'acqua di mare"
+                        "1": "Un elemento molto abbondante in natura",
+                        "2": "Il primo elemento ottenuto artificialmente",
+                        "3": "Un gas nobile",
+                        "4": "Un elemento stabile e non radioattivo"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il nome “tecnezio” deriva dal greco technetos, che significa “artificiale”, proprio perché è stato il primo elemento prodotto dall'uomo in laboratorio."
+                },
+                {
+                    "question": "2. Il tecnezio è utilizzato soprattutto in",
+                    "options": {
+                        "1": "Industria tessile",
+                        "2": "Medicina nucleare",
+                        "3": "Produzione alimentare",
+                        "4": "Gioielleria"
+                    },
+                    "answer": "2",
+                    "curiosity": "Il tecnezio-99m è uno degli isotopi più usati al mondo in medicina: ogni giorno viene impiegato in milioni di esami diagnostici, perché la sua radiazione è sufficiente per ottenere immagini senza restare a lungo nel corpo e quindi non è pericolosa."
                 }
             ]
         },
@@ -557,26 +557,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'argento?",
+                    "question": "Quale ruolo aveva l'argento nella fotografia analogica tradizionale?",
                     "options": {
-                        "1": "Ar",
-                        "2": "Ag",
-                        "3": "Av",
-                        "4": "Si"
+                        "1": "Serviva per lucidare gli obiettivi delle macchine fotografiche",
+                        "2": "Veniva usato per rendere le foto profumate",
+                        "3": "Serviva a riscaldare la pellicola durante lo sviluppo",
+                        "4": "Impressionava la pellicola attraverso le reazioni dei suoi sali, sensibili alla luce"
                     },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "4",
+                    "curiosity": "I cristalli di alogenuro di argento (es: AgCl, AgBr, AgI) sono fotosensibili, ovvero quando sono colpiti dalla luce si riducono ad argento metallico permettendo la formazione dell'immagine. È letteralmente grazie all'argento che abbiamo potuto conservare i ricordi visivi per oltre un secolo!"
                 },
                 {
-                    "question": "Qual è il numero atomico dell'argento?",
+                    "question": "L'argento tra i metalli è noto per quale sua caratteristica principale",
                     "options": {
-                        "1": "45",
-                        "2": "46",
-                        "3": "47",
-                        "4": "48"
+                        "1": "Durezza",
+                        "2": "Alta conducibilità elettrica",
+                        "3": "Resistenza al calore",
+                        "4": "Prezzo di mercato"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "L'Argento è il miglior conduttore di elettricità esistente, superando persino Rame e Oro. Tuttavia, non viene usato nei cavi domestici perché è troppo costoso e tende a ossidarsi (annerirsi) in superficie."
                 }
             ]
         },
@@ -586,26 +586,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dello iodio?",
+                    "question": "L'assunzione di iodio è utile per",
                     "options": {
-                        "1": "Id",
-                        "2": "Io",
-                        "3": "I",
-                        "4": "In"
+                        "1": "il corretto funzionamento della Tiroide",
+                        "2": "rinforzare le ossa",
+                        "3": "sviluppare i muscoli",
+                        "4": "migliorare la vista"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "La tiroide utilizza lo iodio per produrre ormoni che regolano il metabolismo: per questo motivo molti paesi aggiungono iodio al sale da cucina, creando il cosiddetto sale iodato."
                 },
                 {
-                    "question": "Lo iodio è fondamentale per il corretto funzionamento di quale ghiandola nel corpo umano?",
+                    "question": "Quando lo iodio passa direttamente da solido a gas, il processo si chiama",
                     "options": {
-                        "1": "Pancreas",
-                        "2": "Ipofisi",
-                        "3": "Tiroide",
-                        "4": "Surrene"
+                        "1": "Fusione",
+                        "2": "Evaporazione",
+                        "3": "Sublimazione",
+                        "4": "Condensazione"
                     },
                     "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Quando lo iodio sublima, produce un caratteristico vapore viola intenso, un fenomeno spesso usato nei laboratori per dimostrare i cambiamenti di stato senza passare per la fase liquida."
                 }
             ]
         },
@@ -615,26 +615,26 @@
             "game_zone": 4,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del cerio?",
+                    "question": "Perché il cerio è utilizzato nelle marmitte catalitiche delle automobili?",
                     "options": {
-                        "1": "Cs",
-                        "2": "Ce",
-                        "3": "Cr",
-                        "4": "Co"
+                        "1": "Per aumentare il peso del veicolo",
+                        "2": "Per migliorare la combustione e ridurre le emissioni nocive",
+                        "3": "Per raffreddare il motore",
+                        "4": "Per produrre energia"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "L'ossido di cerio è così efficace nella lucidatura che viene usato per rendere perfettamente lisce superfici molto delicate, come quelle degli schermi e delle lenti ottiche di precisione."
                 },
                 {
-                    "question": "Il cerio appartiene alla famiglia dei:",
+                    "question": "In quale applicazione quotidiana si sfrutta la reattività del cerio?",
                     "options": {
-                        "1": "Metalli alcalini",
-                        "2": "Metalli di transizione",
-                        "3": "Lantanidi (terre rare)",
-                        "4": "Attinidi"
+                        "1": "Batterie",
+                        "2": "Accendini (pietrine)",
+                        "3": "Tessuti",
+                        "4": "Profumi"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Le “pietrine” degli accendini contengono una lega ricca di cerio: quando viene sfregata, il materiale produce scintille molto calde grazie alla sua elevata reattività con l'ossigeno."
                 }
             ]
         },
@@ -644,26 +644,26 @@
             "game_zone": 4,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del promezio?",
+                    "question": "Il promezio appartiene alla serie dei",
                     "options": {
-                        "1": "Pr",
-                        "2": "Po",
-                        "3": "Pm",
-                        "4": "Pt"
-                    },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il promezio è l'unico lantanide che non ha isotopi stabili. Tutti i suoi isotopi sono:",
-                    "options": {
-                        "1": "Fluorescenti",
-                        "2": "Radioattivi",
-                        "3": "Superconduttori",
-                        "4": "Ferromagnetici"
+                        "1": "Metalli alcalini",
+                        "2": "Lantanidi",
+                        "3": "Gas nobili",
+                        "4": "Alogeni"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il nome “promezio” deriva da Prometeo, il titano che rubò il fuoco agli dei: un riferimento simbolico alla sua origine artificiale e al fatto che è stato scoperto studiando i prodotti della fissione nucleare."
+                },
+                {
+                    "question": "Perché il promezio può essere usato in dispositivi luminosi?",
+                    "options": {
+                        "1": "È un fluorescente naturale",
+                        "2": "Emette radiazioni che possono generare luce in materiali fosforescenti",
+                        "3": "Riflette la luce",
+                        "4": "È trasparente"
+                    },
+                    "answer": "2",
+                    "curiosity": "Il promezio è stato usato in alcune batterie nucleari compatte, capaci di funzionare per anni senza manutenzione, sfruttando la sua radioattività come fonte continua di energia."
                 }
             ]
         },
@@ -673,26 +673,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del tungsteno?",
+                    "question": "Il tungsteno",
                     "options": {
-                        "1": "Tu",
-                        "2": "Tg",
-                        "3": "Tn",
-                        "4": "W"
-                    },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "Il tungsteno detiene il record tra tutti i metalli per:",
-                    "options": {
-                        "1": "Essere il più leggero",
-                        "2": "Avere il punto di fusione più alto",
-                        "3": "Avere la maggiore conduttività elettrica",
-                        "4": "Essere il più abbondante in natura"
+                        "1": "Ha una bassa temperatura di fusione",
+                        "2": "È molto denso",
+                        "3": "Si estrae dalla bauxite",
+                        "4": "È di colore rosso"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Un pezzo di tungsteno grande come una pallina da tennis peserebbe 3Kg, più di un mattone!"
+                },
+                {
+                    "question": "Il tungsteno era usato nella produzione di",
+                    "options": {
+                        "1": "Profumi per armadi",
+                        "2": "Bevande gassate",
+                        "3": "Tessuti elasticizzati",
+                        "4": "Lampadine tradizionali"
+                    },
+                    "answer": "4",
+                    "curiosity": "Il tungsteno ha giocato un ruolo centrale nella storia dell'illuminazione: le prime lampadine producevano luce facendo passare elettricità attraverso un filamento di tungsteno che brillava quando riscaldato. Oggi da noi queste lampadine, dette “a incandescenza”, sono andate in disuso perché producono più calore che luce, sprecando energia."
                 }
             ]
         },
@@ -702,26 +702,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'iridio?",
+                    "question": "L'iridio è famoso in geologia perché ha fornito la prova di cosa?",
                     "options": {
-                        "1": "Id",
-                        "2": "Ir",
-                        "3": "Ii",
-                        "4": "In"
-                    },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "L'iridio è noto per essere uno dei metalli più:",
-                    "options": {
-                        "1": "Abbondanti nella crosta terrestre",
-                        "2": "Leggeri esistenti",
-                        "3": "Densi e resistenti alla corrosione",
-                        "4": "Reattivi con l'acqua"
+                        "1": "Della nascita della Luna",
+                        "2": "Della deriva dei continenti",
+                        "3": "Dell'impatto dell'asteroide che estinse i dinosauri",
+                        "4": "Dell'esistenza di antiche civiltà tecnologiche"
                     },
                     "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "L'Iridio è rarissimo sulla crosta terrestre ma abbondante negli asteroidi. Uno strato di Iridio trovato in tutto il mondo (al confine K-Pg) ha confermato che un enorme impatto cosmico avvenne circa 66 milioni di anni fa."
+                },
+                {
+                    "question": "Qual è una delle caratteristiche fisiche più importanti dell'Iridio?",
+                    "options": {
+                        "1": "È il metallo più resistente alla corrosione conosciuto",
+                        "2": "È il metallo che fonde alla temperatura più bassa",
+                        "3": "È il metallo più elastico",
+                        "4": "Può galleggiare nell'acqua salata"
+                    },
+                    "answer": "1",
+                    "curiosity": "L'Iridio è così resistente che nemmeno gli acidi più aggressivi a temperature elevate riescono a intaccarlo facilmente. Per questo motivo, fu scelto insieme al Platino per realizzare il “Chilogrammo campione Internazionale”, garantendo la massima stabilità chimica e di massa nel tempo."
                 }
             ]
         },
@@ -731,26 +731,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'oro?",
+                    "question": "Quale di queste affermazioni sull'oro è falsa?",
                     "options": {
-                        "1": "Or",
-                        "2": "Og",
-                        "3": "Go",
-                        "4": "Au"
+                        "1": "Non arrugginisce",
+                        "2": "Non si può mangiare",
+                        "3": "Non è magnetico",
+                        "4": "Non ha odore"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Data la sua inerzia, anche per l'organismo, si può mangiare: l'oro alimentare (foglia o polvere) è puro (23-24 carati) ed insapore, viene utilizzato in cucina come decorazione di lusso."
                 },
                 {
-                    "question": "Qual è il numero atomico dell'oro?",
+                    "question": "L'oro può essere usato:",
                     "options": {
-                        "1": "77",
-                        "2": "78",
-                        "3": "79",
-                        "4": "80"
+                        "1": "Nei gioielli",
+                        "2": "In medicina",
+                        "3": "In elettronica",
+                        "4": "Sono vere tutte le risposte"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "4",
+                    "curiosity": "Oltre al classico uso nell'industria orafa, l'oro è fondamentale nelle applicazioni moderne grazie a conducibilità, resistenza alla corrosione e biocompatibilità, trovando impiego massiccio in elettronica (smartphone, computer) e in medicina diagnostica."
                 }
             ]
         },
@@ -760,26 +760,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del mercurio?",
+                    "question": "Quale caratteristica fisica rende unico il mercurio tra i metalli comuni?",
                     "options": {
-                        "1": "Me",
-                        "2": "Hg",
-                        "3": "Mc",
-                        "4": "Mr"
-                    },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                    "question": "A temperatura ambiente, il mercurio si trova in quale stato fisico?",
-                    "options": {
-                        "1": "Solido",
-                        "2": "Gassoso",
-                        "3": "Liquido",
-                        "4": "Plasma"
+                        "1": "È un solido a temperatura ambiente",
+                        "2": "È un gas a temperatura ambiente",
+                        "3": "È un liquido a temperatura ambiente",
+                        "4": "È un metallo trasparente"
                     },
                     "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il mercurio è noto storicamente come argento vivo, dal latino hydrargyrum, \"argento liquido\" da cui deriva il simbolo Hg. La sua scorrevolezza e mobilità hanno portato gli antichi ad associarlo al dio romano Mercurio, il messaggero alato"
+                },
+                {
+                    "question": "Quale tra questi effetti sulla salute è associato al mercurio?",
+                    "options": {
+                        "1": "Rafforza le ossa",
+                        "2": "È neurotossico",
+                        "3": "È generalmente innocuo",
+                        "4": "Migliora la vista"
+                    },
+                    "answer": "2",
+                    "curiosity": "Dal 2009 in Italia e Unione Europea è vietata la vendita dei termometri a mercurio per la sua pericolosità per salute e ambiente. Oggi, i classici termometri in vetro sono sostituiti dal termometro al galinstan, una lega atossica di gallio, indio e stagno."
                 }
             ]
         },
@@ -789,26 +789,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del piombo?",
+                    "question": "Perché il piombo è stato storicamente usato nelle tubature?",
                     "options": {
-                        "1": "Pi",
-                        "2": "Pb",
-                        "3": "Pl",
-                        "4": "Po"
+                        "1": "Perché è molto fragile",
+                        "2": "Perché è facile da modellare e resistente alla corrosione",
+                        "3": "Perché è leggerissimo",
+                        "4": "Perché è radioattivo"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Le batterie al piombo-acido sono ancora oggi tra le più utilizzate al mondo, soprattutto nelle auto, perché sono affidabili e facilmente riciclabili nonostante la tossicità del metallo."
                 },
                 {
-                    "question": "Qual è il numero atomico del piombo?",
+                    "question": "Perché l'uso del piombo nelle vernici e nella benzina è stato ridotto o vietato?",
                     "options": {
-                        "1": "80",
-                        "2": "81",
-                        "3": "82",
-                        "4": "83"
+                        "1": "Perché è troppo costoso",
+                        "2": "Perché è tossico e si accumula nell'organismo",
+                        "3": "Perché è raro",
+                        "4": "Perché è instabile"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Nell'antica Roma il piombo era molto usato nelle tubature (da cui “plumbing”): alcuni storici ipotizzano che l'esposizione cronica al piombo possa aver contribuito a problemi di salute diffusi nella popolazione."
                 }
             ]
         },
@@ -818,26 +818,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del bismuto?",
+                    "question": "Il bismuto forma:",
                     "options": {
-                        "1": "Bs",
-                        "2": "Bm",
-                        "3": "Bi",
-                        "4": "Bu"
+                        "1": "Cristalli colorati",
+                        "2": "Gas",
+                        "3": "Liquidi",
+                        "4": "Plastica"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Alcune leghe contenenti bismuto si fondono a temperature così basse da sciogliersi in acqua calda, motivo per cui vengono usate in sistemi di sicurezza che si attivano con il calore, come gli sprinkler antincendio."
                 },
                 {
-                    "question": "Il bismuto è il metallo pesante più pesante ad essere considerato praticamente non radioattivo. Qual è il suo numero atomico?",
+                    "question": "Il bismuto è noto per la sua struttura cristallina particolare perché:",
                     "options": {
-                        "1": "81",
-                        "2": "82",
-                        "3": "83",
-                        "4": "84"
+                        "1": "È completamente amorfo",
+                        "2": "Forma strutture a scalini geometrici regolari",
+                        "3": "È sempre liquido",
+                        "4": "Non forma cristalli"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Il bismuto è uno dei pochi metalli che si espande quando solidifica, un comportamento raro (simile a quello dell'acqua), che lo rende utile in leghe progettate per riempire perfettamente gli stampi."
                 }
             ]
         },
@@ -847,26 +847,26 @@
             "game_zone": 3,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del radon?",
+                    "question": "Il radon è",
                     "options": {
-                        "1": "Ra",
-                        "2": "Rd",
-                        "3": "Rn",
-                        "4": "Ry"
+                        "1": "un gas radioattivo",
+                        "2": "un metallo",
+                        "3": "liquido",
+                        "4": "una plastica"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Il radon è inodore, incolore e insapore, quindi non è percepibile dai nostri sensi. Se inalato, è considerato molto pericoloso per la salute umana poiché le particelle alfa che emette possono danneggiare il DNA delle cellule e causare cancro al polmone."
                 },
                 {
-                    "question": "Il radon è un gas nobile radioattivo. Come si forma principalmente in natura?",
+                    "question": "Il radon si trova",
                     "options": {
-                        "1": "Per combustione del carbone",
-                        "2": "Dal decadimento radioattivo del radio e dell'uranio nel suolo",
-                        "3": "Dall'evaporazione dell'acqua marina",
-                        "4": "Dalla fotosintesi clorofilliana"
+                        "1": "Nel sottosuolo",
+                        "2": "Nel sole",
+                        "3": "Nei mari",
+                        "4": "Nei metalli"
                     },
-                    "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "1",
+                    "curiosity": "Il radon può infiltrarsi nelle abitazioni attraverso crepe e fondamenta: essendo un gas invisibile e inodore, può accumularsi senza essere percepito, motivo per cui in alcuni paesi viene monitorato con appositi sensori domestici."
                 }
             ]
         },
@@ -876,26 +876,26 @@
             "game_zone": 1,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del francio?",
+                    "question": "Il francio è",
                     "options": {
-                        "1": "Fn",
-                        "2": "Fc",
-                        "3": "Fr",
-                        "4": "Fa"
+                        "1": "Un gas",
+                        "2": "Un metallo alcalino",
+                        "3": "Un metallo prezioso",
+                        "4": "Un liquido"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "è un metallo alcalino molto instabile. Fu scoperto da Marguerite Perey che lo chiamò così in onore della Francia, suo paese d'origine."
                 },
                 {
-                    "question": "Il francio appartiene al gruppo dei metalli alcalini ed è noto per essere uno degli elementi più rari e instabili in natura. Qual è il suo numero atomico?",
+                    "question": "Il francio è noto perché",
                     "options": {
-                        "1": "85",
-                        "2": "86",
-                        "3": "87",
-                        "4": "88"
+                        "1": "È molto diffuso",
+                        "2": "È altamente radioattivo",
+                        "3": "È usato nei gioielli",
+                        "4": "È commestibile"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Si forma continuamente dal decadimento dell'uranio ma, a causa della sua instabilità, in ogni momento in natura ne esiste pochissimo: se lo si raccogliesse tutto peserebbe come un sacchettino di patatine."
                 }
             ]
         },
@@ -905,26 +905,26 @@
             "game_zone": 1,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico del radio?",
+                    "question": "Il radio è",
                     "options": {
-                        "1": "Rd",
-                        "2": "Ra",
-                        "3": "Ri",
-                        "4": "Rb"
+                        "1": "Gassoso",
+                        "2": "Radioattivo",
+                        "3": "Trasparente",
+                        "4": "Commestibile"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il radio fu scoperto da Marie Curie e Pierre Curie nel 1898. Ciò che colpì di più fu la sua misteriosa capacità di emettere luce spontaneamente: Marie Curie raccontò che le provette contenenti radio brillavano debolmente al buio, un fenomeno affascinante ma anche pericoloso, di cui all'epoca non si conoscevano ancora i rischi."
                 },
                 {
-                    "question": "Il radio è un elemento radioattivo scoperto da Marie e Pierre Curie nel 1898. A quale gruppo appartiene?",
+                    "question": "In passato il radio veniva usato:",
                     "options": {
-                        "1": "Metalli alcalini",
-                        "2": "Metalli di transizione",
-                        "3": "Metalli alcalino-terrosi",
-                        "4": "Lantanidi"
+                        "1": "Nei cibi",
+                        "2": "In vernici luminose",
+                        "3": "Nei vestiti",
+                        "4": "Nei carburanti"
                     },
-                    "answer": "3",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "2",
+                    "curiosity": "Ha reso possibile lo sviluppo delle prime radiografie mediche grazie alla sua intensa emissione di radiazioni."
                 }
             ]
         },
@@ -934,26 +934,26 @@
             "game_zone": 4,
             "questions": [
                 {
-                    "question": "Qual è il simbolo chimico dell'uranio?",
+                    "question": "L'uranio è classificato come",
                     "options": {
-                        "1": "Ur",
-                        "2": "Un",
-                        "3": "Ua",
-                        "4": "U"
+                        "1": "Metallo alcalino",
+                        "2": "Metallo di transizione",
+                        "3": "Attinide",
+                        "4": "Gas nobile"
                     },
-                    "answer": "4",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "answer": "3",
+                    "curiosity": "Una singola piccola quantità di uranio-235 può liberare un'enorme quantità di energia: pochi grammi possono produrre tanta energia quanto tonnellate di combustibile fossile."
                 },
                 {
-                    "question": "L'uranio è principalmente utilizzato come combustibile in quale settore?",
+                    "question": "Perché l'uranio deve essere “arricchito” per alcuni usi?",
                     "options": {
-                        "1": "Industria automobilistica",
-                        "2": "Centrali nucleari",
-                        "3": "Industria alimentare",
-                        "4": "Industria tessile"
+                        "1": "Per renderlo più leggero",
+                        "2": "Per aumentare la percentuale dell'isotopo fissile (U-235)",
+                        "3": "Per cambiarne il colore",
+                        "4": "Per renderlo stabile"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Prima di essere usato per l’energia nucleare, l’uranio veniva impiegato per colorare vetri e ceramiche: alcuni oggetti antichi contenenti uranio brillano sotto luce ultravioletta, grazie alle sue proprietà chimiche."
                 }
             ]
         },
@@ -963,26 +963,26 @@
             "game_zone": 2,
             "questions": [
                 {
-                    "question": "Qual è il numero atomico del ferro?",
+                    "question": "Qual è il ruolo principale del ferro nel corpo umano?",
                     "options": {
-                        "1": "25",
-                        "2": "26",
-                        "3": "27",
-                        "4": "28"
+                        "1": "Rafforzare le ossa",
+                        "2": "Trasportare ossigeno nel sangue",
+                        "3": "Regolare la temperatura",
+                        "4": "Produrre energia direttamente"
                     },
                     "answer": "2",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "Il colore rosso del sangue è dovuto proprio al ferro contenuto nell'emoglobina: quando lega l'ossigeno, il sangue diventa di un rosso brillante."
                 },
                 {
-                    "question": "Il ferro è un metallo di transizione ampiamente utilizzato. Qual è il suo simbolo chimico?",
+                    "question": "Il ferro arrugginisce quando",
                     "options": {
-                        "1": "Fe",
-                        "2": "Fi",
-                        "3": "Fr",
-                        "4": "Fo"
+                        "1": "È esposto a ossigeno e acqua",
+                        "2": "È riscaldato",
+                        "3": "È compresso",
+                        "4": "È raffreddato"
                     },
                     "answer": "1",
-                    "curiosity": "Lo sapevi che lorem ipsum dolor sit amet, consectetur adipiscing elit? Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    "curiosity": "La maggior parte del ferro sulla Terra si trova nel nucleo del pianeta: si pensa che il campo magnetico terrestre sia in gran parte dovuto proprio al movimento del ferro fuso al suo interno."
                 }
             ]
         }
