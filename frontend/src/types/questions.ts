@@ -65,7 +65,7 @@ export class ElementQuestionsFactory {
     const FILE_PATH = `${import.meta.env.BASE_URL}quizzes.json`;
     const response = await fetch(FILE_PATH);
     const data = await response.json();
-    return data.map(
+    return data.element_questions.map(
       (elementData: ElementQuestionsData) => new ElementQuestions(elementData),
     );
   }

@@ -2,17 +2,16 @@
 import { useData } from "../composables/useData";
 import GridLayout from "../layouts/GridLayout.vue";
 import { useDevice } from "../composables/useDevice";
+import { useQuiz } from "../composables/useQuiz";
 import AppHeader from "../components/AppHeader.vue";
 import AppModal from "../components/AppModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
-import { useContainerSize } from "../composables/useContainerSize";
 import SvgOverlay from "../components/SvgOverlay.vue";
-import merlonSvg from "../assets/back.svg?url";
 import castleSvg from "../assets/castle.svg?url";
 
-const periodicElements = useData().elements;
+const { elements: periodicElements, elementQuestions, isLoading } = useData();
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
@@ -25,6 +24,33 @@ const {
   handleElementClick,
   registerElement,
 } = useElementFocus(periodicElements, modalRef);
+
+const {
+  gameQuestions,
+  gameCursor,
+  gameConqueredElements,
+  gameZones,
+  gameElements,
+  gamePathPositions,
+  gameState,
+  QUESTIONS_NUMBER,
+  MEMORY_QUESTIONS_NUMBER,
+  handleInput,
+  startGame,
+  resetGame,
+} = useQuiz();
+
+// Avvia il gioco solo quando i dati sono caricati
+watch(
+  () => isLoading.value,
+  (loading) => {
+    if (!loading && elementQuestions.value.length > 0) {
+      startGame();
+      console.log("Game  elements:", gameElements.value);
+    }
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
@@ -84,6 +110,7 @@ const {
                 :element="element"
                 :work="works.find((w) => w.id === element.number)"
                 :is-focused="focusedElement?.number === element.number"
+                :is-in-game="gameElements.some((el) => el.number === element.number)"
                 @click="handleElementClick(element)"
               />
             </div>

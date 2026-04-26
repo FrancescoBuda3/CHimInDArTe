@@ -11,6 +11,12 @@ module.exports = {
       fontFamily: {
         montserrat: "Montserrat",
       },
+      backgroundColor: {
+        "zone-1": "#ECC200",
+        "zone-2": "#76C3B1",
+        "zone-3": "#3382D1",
+        "zone-4": "#23B5B5",
+      },
       uScale: {
         xs: "0.10",
         sm: "0.20",
