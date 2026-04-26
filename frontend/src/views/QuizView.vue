@@ -110,7 +110,6 @@ watch(
                 :element="element"
                 :work="works.find((w) => w.id === element.number)"
                 :is-focused="focusedElement?.number === element.number"
-                :is-in-game="gameElements.some((el) => el.number === element.number)"
                 @click="handleElementClick(element)"
               />
             </div>

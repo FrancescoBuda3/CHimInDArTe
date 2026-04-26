@@ -3,7 +3,6 @@ import { useData } from "./useData";
 import { WorkMemoryQuestion, type Question } from "../types/questions";
 import type { PeriodicElement } from "../types/periodicElement";
 import type { Work } from "../types/work";
-import type { ElementQuestions } from "../types/questions";
 
 const GameState = {
     Starting: "starting",

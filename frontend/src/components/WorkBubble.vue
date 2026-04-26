@@ -7,6 +7,7 @@ const baseUrl = computed(() => import.meta.env.BASE_URL);
 defineProps<{
   work: Work;
   isFocused: boolean;
+  isHidden?: boolean;
 }>();
 </script>
 
@@ -17,13 +18,15 @@ defineProps<{
       style="top: 0; transform: translateX(-50%) translateY(-50%); margin-top: -12px;"
     >
       <div
-        class="relative u-w-gameTile u-h-lg u-p-xs bg-gray-700/90 rounded-2xl shadow-lg"
+        class="relative u-w-gameTile u-h-lg u-p-xs bg-gray-700/90 rounded-2xl shadow-lg flex items-center justify-center"
       >
         <img
+          v-if="!isHidden"
           :src="`${baseUrl}pictures/${work.picture_file}`"
           :alt="work.title"
           class="w-full h-full object-contain"
         />
+        <span v-else class="text-white u-text-md">?</span>
         
         <div
           class="absolute left-1/2 -translate-x-1/2 w-0 h-0"

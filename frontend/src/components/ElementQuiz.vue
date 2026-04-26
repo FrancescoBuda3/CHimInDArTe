@@ -4,17 +4,20 @@ import windowSvg from "../assets/window.svg?url";
 import { computed } from "vue";
 import type { Work } from "../types/work";
 import WorkBubble from "./WorkBubble.vue";
+import { useQuiz } from "../composables/useQuiz";
+import { WorkMemoryQuestion } from "../types/questions";
 
 const props = defineProps<{
   element: PeriodicElement;
   work?: Work;
   isFocused?: boolean;
-  isInGame?: boolean;
 }>();
 
 defineEmits<{
   click: [];
 }>();
+
+const { gameElements, gameQuestions, gameCursor, gameElements: gameElementsList } = useQuiz();
 
 const zoneColors: Record<number, string> = {
   1: "#FFD201",
@@ -26,6 +29,19 @@ const zoneColors: Record<number, string> = {
 const backgroundColor = computed(() => 
   props.element.gameZone ? zoneColors[props.element.gameZone] : ""
 );
+
+const isInGame = computed(() =>
+  gameElements.value.some((el) => el.number === props.element.number)
+);
+
+const isHidden = computed(() => {
+  const elementIndex = gameElementsList.value.findIndex(
+    (el) => el.number === props.element.number
+  );
+  if (elementIndex === -1) return false;
+  const question = gameQuestions.value[elementIndex];
+  return question instanceof WorkMemoryQuestion;
+});
 </script>
 
 <template>
@@ -34,6 +50,7 @@ const backgroundColor = computed(() =>
       v-if="isInGame && work"
       :work="work"
       :is-focused="isFocused"
+      :is-hidden="isHidden"
     />
     <div
       :class="[
