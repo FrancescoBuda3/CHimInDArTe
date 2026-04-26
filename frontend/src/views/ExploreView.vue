@@ -14,7 +14,8 @@ const router = useRouter();
 const periodicElements = useData().elements;
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
-const modalRef = ref<HTMLElement | null>(null)
+const modalRef = ref<HTMLElement | null>(null);
+const containerRef = ref<HTMLElement | null>(null);
 
 const {
   focusedElement,
@@ -23,7 +24,7 @@ const {
   modalPosition,
   handleElementClick,
   registerElement,
-} = useElementFocus(periodicElements, modalRef);
+} = useElementFocus(periodicElements, modalRef, containerRef);
 </script>
 
 <template>
@@ -40,7 +41,11 @@ const {
           ? 'fixed z-20 u-w-3x'
           : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'
       "
-      :style="isKiosk ? { left: `${modalPosition.x}px`, top: `${modalPosition.y}px` } : {}"
+      :style="
+        isKiosk
+          ? { left: `${modalPosition.x}px`, top: `${modalPosition.y}px` }
+          : {}
+      "
     >
       <AppModal>
         <span class="text-white u-text-sm u-pstart-lg font-medium">{{
@@ -74,6 +79,7 @@ const {
     <div
       class="w-fit h-fit"
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
+      ref="containerRef"
     >
       <GridLayout :columns="18" :rows="7">
         <div

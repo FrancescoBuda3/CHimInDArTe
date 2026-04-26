@@ -160,9 +160,7 @@ describe('useQuiz', () => {
 
     it('goes to GameState.ShowingZoneSummary after handling input in ShowingSuccess or ShowingFailure if zone completed', () => {
         quiz.startGame()
-        console.log(quiz.gameZones.value)
         const firstZoneQuestions = quiz.gameQuestions.value.filter((q, index) => quiz.gameZones.value[index] === 1)
-        console.log(firstZoneQuestions.length)
         for (let i = 0; i < firstZoneQuestions.length; i++) {
             answerCurrentQuestionCorrectly()
             quiz.handleInput()

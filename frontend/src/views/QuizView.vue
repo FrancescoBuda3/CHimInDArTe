@@ -4,26 +4,27 @@ import GridLayout from "../layouts/GridLayout.vue";
 import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 import AppHeader from "../components/AppHeader.vue";
-import AppModal from "../components/AppModal.vue";
+import QuizModal from "../components/QuizModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
 import { ref, watch } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
 import SvgOverlay from "../components/SvgOverlay.vue";
 import castleSvg from "../assets/castle.svg?url";
+import GameIntro from "../components/GameIntro.vue";
 
 const { elements: periodicElements, elementQuestions, isLoading } = useData();
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
+const containerRef = ref<HTMLElement | null>(null);
 
 const {
   focusedElement,
   isScrolling,
   showNavigation,
-  modalPosition,
   handleElementClick,
   registerElement,
-} = useElementFocus(periodicElements, modalRef);
+} = useElementFocus(periodicElements, modalRef, containerRef);
 
 const {
   gameQuestions,
@@ -46,7 +47,6 @@ watch(
   (loading) => {
     if (!loading && elementQuestions.value.length > 0) {
       startGame();
-      console.log("Game  elements:", gameElements.value);
     }
   },
   { immediate: true }
@@ -59,21 +59,19 @@ watch(
       v-if="
         (isKiosk || showNavigation) &&
         focusedElement &&
-        works.find((w) => w.id === focusedElement?.number)
+        works.find((w) => w.id === focusedElement?.number) &&
+        gameElements[gameCursor]?.number == focusedElement.number
       "
       ref="modalRef"
       :class="
         isKiosk
-          ? 'fixed z-20 u-w-3x'
+          ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20'
           : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'
       "
-      :style="
-        isKiosk
-          ? { left: `${modalPosition.x}px`, top: `${modalPosition.y}px` }
-          : {}
-      "
     >
-      <AppModal> </AppModal>
+      <QuizModal> 
+        <GameIntro></GameIntro>
+      </QuizModal>
     </div>
   </Transition>
 
@@ -93,6 +91,7 @@ watch(
   >
     <div
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
+      ref="containerRef"
     >
       <div class="relative w-fit">
         <div class="u-p-2x">
@@ -110,6 +109,7 @@ watch(
                 :element="element"
                 :work="works.find((w) => w.id === element.number)"
                 :is-focused="focusedElement?.number === element.number"
+                :show-question="true"
                 @click="handleElementClick(element)"
               />
             </div>

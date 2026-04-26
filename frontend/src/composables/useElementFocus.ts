@@ -3,10 +3,10 @@ import type { Ref } from "vue";
 import type { PeriodicElement } from "../types/periodicElement";
 import { useDevice } from "./useDevice";
 
-export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalRef: Ref<HTMLElement | null> ) {
+export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalRef: Ref<HTMLElement | null>, containerRef: Ref<HTMLElement | null>) {
   const { isMobile } = useDevice();
 
-  const GAP = 25    
+  const GAP = 25
   const PADDING = 8
 
   const focusedElement = ref<PeriodicElement | undefined>(undefined);
@@ -19,33 +19,56 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
 
   const modalPosition = computed(() => {
     if (!focusedElement.value) return { x: 0, y: 0 }
+
     const anchor = elementRefs.get(focusedElement.value.number)
     if (!anchor) return { x: 0, y: 0 }
+
     const anchorRect = anchor.getBoundingClientRect()
-    const modalW = modalRef.value?.offsetWidth  ?? 280
+    const modalW = modalRef.value?.offsetWidth ?? 280
     const modalH = modalRef.value?.offsetHeight ?? 56
+
+    // position: fixed → coordinate relative alla viewport, getBoundingClientRect() è già perfetto
     let x = anchorRect.left + anchorRect.width / 2 - modalW / 2
-    let y = anchorRect.bottom + GAP
     x = Math.max(PADDING, Math.min(x, window.innerWidth - modalW - PADDING))
-    if (y + modalH > window.innerHeight - PADDING) {
+
+    const spaceBelow = window.innerHeight - anchorRect.bottom - GAP
+    const spaceAbove = anchorRect.top - GAP
+
+    let y: number
+
+
+    console.log('modalW:', modalW, 'anchorRect:', anchorRect)
+
+    if (spaceBelow >= modalH + PADDING) {
+      // Caso preferito: sotto l'elemento
+      y = anchorRect.bottom + GAP
+    } else if (spaceAbove >= modalH + PADDING) {
+      // Fallback: sopra l'elemento
       y = anchorRect.top - modalH - GAP
+    } else if (spaceBelow >= spaceAbove) {
+      // Sotto ma clampato al bordo viewport
+      y = Math.min(anchorRect.bottom + GAP, window.innerHeight - modalH - PADDING)
+    } else {
+      // Sopra ma clampato al bordo viewport
+      y = Math.max(anchorRect.top - modalH - GAP, PADDING)
     }
+
     return { x, y }
   })
 
   const findCenteredElement = () => {
-  const centerX = window.innerWidth / 2
-  const centerY = window.innerHeight / 2
+    const centerX = window.innerWidth / 2
+    const centerY = window.innerHeight / 2
 
-  for (const [number, el] of elementRefs) {
-    const { left, right, top, bottom } = el.getBoundingClientRect()
-    if (centerX >= left && centerX <= right && centerY >= top && centerY <= bottom) {
-      focusedElement.value = periodicElements.value.find(e => e.number === number)
-      return
+    for (const [number, el] of elementRefs) {
+      const { left, right, top, bottom } = el.getBoundingClientRect()
+      if (centerX >= left && centerX <= right && centerY >= top && centerY <= bottom) {
+        focusedElement.value = periodicElements.value.find(e => e.number === number)
+        return
+      }
     }
+    focusedElement.value = undefined
   }
-  focusedElement.value = undefined
-}
 
   const scheduleUpdate = () => {
     if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
@@ -63,14 +86,14 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     animationFrameId = requestAnimationFrame(findCenteredElement);
   };
 
-const handleElementClick = (element: PeriodicElement) => {
-  focusedElement.value = element
-  if (isMobile.value) {
-    elementRefs.get(element.number)?.scrollIntoView({
-      behavior: 'smooth', block: 'center', inline: 'center'
-    })
+  const handleElementClick = (element: PeriodicElement) => {
+    focusedElement.value = element
+    if (isMobile.value) {
+      elementRefs.get(element.number)?.scrollIntoView({
+        behavior: 'smooth', block: 'center', inline: 'center'
+      })
+    }
   }
-}
 
   const registerElement = (number: number, el: HTMLElement | null) => {
     if (el) elementRefs.set(number, el);

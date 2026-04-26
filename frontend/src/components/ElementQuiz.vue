@@ -4,13 +4,19 @@ import windowSvg from "../assets/window.svg?url";
 import { computed } from "vue";
 import type { Work } from "../types/work";
 import WorkBubble from "./WorkBubble.vue";
+import AppModal from "./AppModal.vue";
+import GameIntro from "./GameIntro.vue";
 import { useQuiz } from "../composables/useQuiz";
 import { WorkMemoryQuestion } from "../types/questions";
+import { useDevice } from "../composables/useDevice";
+
+const { isKiosk } = useDevice();
 
 const props = defineProps<{
   element: PeriodicElement;
   work?: Work;
   isFocused?: boolean;
+  showQuestion?: boolean;
 }>();
 
 defineEmits<{
@@ -51,7 +57,10 @@ const isHidden = computed(() => {
       :work="work"
       :is-focused="isFocused"
       :is-hidden="isHidden"
-    />
+      :show-question="isFocused"
+    >
+    <GameIntro></GameIntro>
+  </WorkBubble>
     <div
       :class="[
         'u-w-gameTile aspect-square flex flex-col justify-between relative box-border overflow-hidden',
