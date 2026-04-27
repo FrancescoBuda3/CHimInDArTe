@@ -19,6 +19,7 @@ export class ClassicQuestion implements ClassicQuestionData, Question {
 
   constructor(data: ClassicQuestionData) {
     Object.assign(this, data);
+    this.answer = Number(this.answer);
   }
 
   tryAnswer(answer: number): boolean {

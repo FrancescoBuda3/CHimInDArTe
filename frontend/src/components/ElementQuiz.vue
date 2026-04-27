@@ -5,10 +5,10 @@ import { computed } from "vue";
 import type { Work } from "../types/work";
 import WorkBubble from "./WorkBubble.vue";
 import AppModal from "./AppModal.vue";
-import GameIntro from "./GameIntro.vue";
 import { useQuiz } from "../composables/useQuiz";
 import { WorkMemoryQuestion } from "../types/questions";
 import { useDevice } from "../composables/useDevice";
+import DialogContent from "./DialogContent.vue";
 
 const { isKiosk } = useDevice();
 
@@ -23,7 +23,7 @@ defineEmits<{
   click: [];
 }>();
 
-const { gameElements, gameQuestions, gameCursor, gameElements: gameElementsList } = useQuiz();
+const { gameElements, gameQuestions, gameCursor, gameElements: gameElementsList, gameState } = useQuiz();
 
 const zoneColors: Record<number, string> = {
   1: "#FFD201",
@@ -57,9 +57,9 @@ const isHidden = computed(() => {
       :work="work"
       :is-focused="isFocused"
       :is-hidden="isHidden"
-      :show-question="isFocused"
+      :show-question="isFocused && gameElements[gameCursor]?.number === element.number && gameState === 'showingQuestion'"
     >
-    <GameIntro></GameIntro>
+    <DialogContent/>
   </WorkBubble>
     <div
       :class="[

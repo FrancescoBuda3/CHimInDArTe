@@ -77,14 +77,14 @@ export function useQuiz(rand: randFn = Math.random) {
         }
         options[0] = correctWork;
         const otherWorks = works.value.filter(work => work.id !== element.number);
-        while (Object.keys(options).length < MEMORY_QUESTIONS_NUMBER) {
+        while (Object.keys(options).length < 4) {
             const randomWork = otherWorks[randInt(0, otherWorks.length)];
             if (!randomWork) continue;
             if (!Object.values(options).some(work => work.id === randomWork.id)) {
                 options[Object.keys(options).length] = randomWork;
             }
         }
-        return new WorkMemoryQuestion({ options, answer: randInt(0, MEMORY_QUESTIONS_NUMBER) });
+        return new WorkMemoryQuestion({ options, answer: 0 });
     }
 
     /**

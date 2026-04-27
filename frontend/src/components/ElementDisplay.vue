@@ -61,7 +61,7 @@ const categoryClass = computed(() => getColorBackground(props.element));
       </div>
 
       <div v-if="!alternativeText" class="text-white text-center font-medium font-light u-text-xs">
-        {{ element.name }}
+        {{ element.nameIT }}
       </div>
   </div>
 </template>

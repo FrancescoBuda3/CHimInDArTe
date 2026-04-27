@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, useSlots, computed } from "vue";
+import { ref, useSlots, computed, Fragment, type VNode } from "vue";
 
 withDefaults(
   defineProps<{
@@ -20,7 +20,19 @@ const emit = defineEmits<{
 
 const slots = useSlots();
 const current = ref<number>(0);
-const slides = computed(() => slots.default?.() ?? []);
+
+// FIX 1: appiattisce i Fragment per ottenere i VNode figli diretti
+const slides = computed<VNode[]>(() => {
+  const vnodes = slots.default?.() ?? [];
+  return vnodes.flatMap((vnode) => {
+    if (vnode.type === Fragment) {
+      return (vnode.children as VNode[]) ?? [];
+    }
+    return [vnode];
+  })
+  .filter((vnode) => vnode.type !== Comment);
+});
+
 const total = computed<number>(() => slides.value.length);
 
 function goTo(i: number): void {
@@ -47,7 +59,8 @@ function next(loop: boolean): void {
   <div class="relative overflow-hidden w-full">
     <template v-for="(slide, i) in slides" :key="i">
       <div v-show="i === current">
-        <component :is="slide" />
+        <!-- FIX 2: () => slide lo tratta come componente funzionale -->
+        <component :is="() => slide" />
       </div>
     </template>
 

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed, ref, watch, nextTick } from "vue";
 import type { Work } from "../types/work";
+import { useDevice } from "../composables/useDevice";
 
 const baseUrl = computed(() => import.meta.env.BASE_URL);
+const { isKiosk } = useDevice();
 
 const props = defineProps<{
   work: Work;
@@ -20,7 +22,7 @@ const position = ref({ top: 0, left: 0 });
 const scale = ref({ x: 1, y: 1 });
 
 async function openModal() {
-  if (!bubbleRef.value) return;
+  if (!bubbleRef.value || !isKiosk.value) return;
   const rect = bubbleRef.value.getBoundingClientRect();
 
   isClosing.value = false;

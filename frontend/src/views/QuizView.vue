@@ -10,7 +10,7 @@ import { ref, watch } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
 import SvgOverlay from "../components/SvgOverlay.vue";
 import castleSvg from "../assets/castle.svg?url";
-import GameIntro from "../components/GameIntro.vue";
+import DialogContent from "../components/DialogContent.vue";
 
 const { elements: periodicElements, elementQuestions, isLoading } = useData();
 const works = useData().works;
@@ -42,7 +42,7 @@ const {
 } = useQuiz();
 
 // Avvia il gioco solo quando i dati sono caricati
-watch(
+/* watch(
   () => isLoading.value,
   (loading) => {
     if (!loading && elementQuestions.value.length > 0) {
@@ -50,27 +50,23 @@ watch(
     }
   },
   { immediate: true }
-);
+); */
 </script>
 
 <template>
   <Transition name="fade" mode="out-in">
     <div
-      v-if="
-        (isKiosk || showNavigation) &&
-        focusedElement &&
-        works.find((w) => w.id === focusedElement?.number) &&
-        gameElements[gameCursor]?.number == focusedElement.number
-      "
+      v-if="gameState === 'starting' || gameState === 'showingSuccess' || gameState === 'showingFailure' ||
+      (gameState === 'showingQuestion' && focusedElement?.number === gameElements[gameCursor]?.number && !isKiosk)"
       ref="modalRef"
       :class="
         isKiosk
-          ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20'
-          : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-20 p-3 w-full'
+          ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50'
+          : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-50 p-3 w-full'
       "
     >
       <QuizModal> 
-        <GameIntro></GameIntro>
+        <DialogContent/>
       </QuizModal>
     </div>
   </Transition>

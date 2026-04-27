@@ -49,7 +49,7 @@ const {
     >
       <AppModal>
         <span class="text-white u-text-sm u-pstart-lg font-medium">{{
-          focusedElement?.name
+          focusedElement?.nameIT
         }}</span>
         <div :class="isKiosk ? 'u-w-md' : 'w-full'" />
         <button

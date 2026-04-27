@@ -1,5 +1,6 @@
 export type PeriodicElementData = {
   name: string;
+  nameIT: string;
   atomic_mass: number;
   category: string;
   colorGroup: string;
@@ -23,6 +24,7 @@ export type PeriodicElementData = {
 
 export class PeriodicElement implements PeriodicElementData {
   name!: string;
+  nameIT!: string;
   atomic_mass!: number;
   category!: string;
   colorGroup!: string;
