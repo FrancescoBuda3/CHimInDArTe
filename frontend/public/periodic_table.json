@@ -2,6 +2,7 @@
   "elements": [
     {
       "name": "Hydrogen",
+      "nameIT": "Idrogeno",
       "appearance": "colorless gas",
       "atomic_mass": 1.008,
       "boil": 20.271,
@@ -43,6 +44,7 @@
     },
     {
       "name": "Helium",
+      "nameIT": "Elio",
       "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
       "atomic_mass": 4.0026022,
       "boil": 4.222,
@@ -84,6 +86,7 @@
     },
     {
       "name": "Lithium",
+      "nameIT": "Litio",
       "appearance": "silvery-white",
       "atomic_mass": 6.94,
       "boil": 1603,
@@ -125,6 +128,7 @@
     },
     {
       "name": "Beryllium",
+      "nameIT": "Berillio",
       "appearance": "white-gray metallic",
       "atomic_mass": 9.01218315,
       "boil": 2742,
@@ -166,6 +170,7 @@
     },
     {
       "name": "Boron",
+      "nameIT": "Boro",
       "appearance": "black-brown",
       "atomic_mass": 10.81,
       "boil": 4200,
@@ -207,6 +212,7 @@
     },
     {
       "name": "Carbon",
+      "nameIT": "Carbonio",
       "appearance": null,
       "atomic_mass": 12.011,
       "boil": null,
@@ -248,6 +254,7 @@
     },
     {
       "name": "Nitrogen",
+      "nameIT": "Azoto",
       "appearance": "colorless gas, liquid or solid",
       "atomic_mass": 14.007,
       "boil": 77.355,
@@ -291,6 +298,7 @@
     },
     {
       "name": "Oxygen",
+      "nameIT": "Ossigeno",
       "appearance": null,
       "atomic_mass": 15.999,
       "boil": 90.188,
@@ -334,6 +342,7 @@
     },
     {
       "name": "Fluorine",
+      "nameIT": "Fluoro",
       "appearance": null,
       "atomic_mass": 18.9984031636,
       "boil": 85.03,
@@ -377,6 +386,7 @@
     },
     {
       "name": "Neon",
+      "nameIT": "Neon",
       "appearance": "colorless gas exhibiting an orange-red glow when placed in a high voltage electric field",
       "atomic_mass": 20.17976,
       "boil": 27.104,
@@ -421,6 +431,7 @@
     },
     {
       "name": "Sodium",
+      "nameIT": "Sodio",
       "appearance": "silvery white metallic",
       "atomic_mass": 22.989769282,
       "boil": 1156.09,
@@ -465,6 +476,7 @@
     },
     {
       "name": "Magnesium",
+      "nameIT": "Magnesio",
       "appearance": "shiny grey solid",
       "atomic_mass": 24.305,
       "boil": 1363,
@@ -509,6 +521,7 @@
     },
     {
       "name": "Aluminium",
+      "nameIT": "Alluminio",
       "appearance": "silvery gray metallic",
       "atomic_mass": 26.98153857,
       "boil": 2743,
@@ -553,6 +566,7 @@
     },
     {
       "name": "Silicon",
+      "nameIT": "Silicio",
       "appearance": "crystalline, reflective with bluish-tinged faces",
       "atomic_mass": 28.085,
       "boil": 3538,
@@ -597,6 +611,7 @@
     },
     {
       "name": "Phosphorus",
+      "nameIT": "Fosforo",
       "appearance": "colourless, waxy white, yellow, scarlet, red, violet, black",
       "atomic_mass": 30.9737619985,
       "boil": null,
@@ -641,6 +656,7 @@
     },
     {
       "name": "Sulfur",
+      "nameIT": "Zolfo",
       "appearance": "lemon yellow sintered microcrystals",
       "atomic_mass": 32.06,
       "boil": 717.8,
@@ -685,6 +701,7 @@
     },
     {
       "name": "Chlorine",
+      "nameIT": "Cloro",
       "appearance": "pale yellow-green gas",
       "atomic_mass": 35.45,
       "boil": 239.11,
@@ -729,6 +746,7 @@
     },
     {
       "name": "Argon",
+      "nameIT": "Argon",
       "appearance": "colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field",
       "atomic_mass": 39.9481,
       "boil": 87.302,
@@ -773,6 +791,7 @@
     },
     {
       "name": "Potassium",
+      "nameIT": "Potassio",
       "appearance": "silvery gray",
       "atomic_mass": 39.09831,
       "boil": 1032,
@@ -817,6 +836,7 @@
     },
     {
       "name": "Calcium",
+      "nameIT": "Calcio",
       "appearance": null,
       "atomic_mass": 40.0784,
       "boil": 1757,
@@ -861,6 +881,7 @@
     },
     {
       "name": "Scandium",
+      "nameIT": "Scandio",
       "appearance": "silvery white",
       "atomic_mass": 44.9559085,
       "boil": 3109,
@@ -906,6 +927,7 @@
     },
     {
       "name": "Titanium",
+      "nameIT": "Titanio",
       "appearance": "silvery grey-white metallic",
       "atomic_mass": 47.8671,
       "boil": 3560,
@@ -951,6 +973,7 @@
     },
     {
       "name": "Vanadium",
+      "nameIT": "Vanadio",
       "appearance": "blue-silver-grey metal",
       "atomic_mass": 50.94151,
       "boil": 3680,
@@ -996,6 +1019,7 @@
     },
     {
       "name": "Chromium",
+      "nameIT": "Cromo",
       "appearance": "silvery metallic",
       "atomic_mass": 51.99616,
       "boil": 2944,
@@ -1041,6 +1065,7 @@
     },
     {
       "name": "Manganese",
+      "nameIT": "Manganese",
       "appearance": "silvery metallic",
       "atomic_mass": 54.9380443,
       "boil": 2334,
@@ -1086,6 +1111,7 @@
     },
     {
       "name": "Iron",
+      "nameIT": "Ferro",
       "appearance": "lustrous metallic with a grayish tinge",
       "atomic_mass": 55.8452,
       "boil": 3134,
@@ -1131,6 +1157,7 @@
     },
     {
       "name": "Cobalt",
+      "nameIT": "Cobalto",
       "appearance": "hard lustrous gray metal",
       "atomic_mass": 58.9331944,
       "boil": 3200,
@@ -1176,6 +1203,7 @@
     },
     {
       "name": "Nickel",
+      "nameIT": "Nichel",
       "appearance": "lustrous, metallic, and silver with a gold tinge",
       "atomic_mass": 58.69344,
       "boil": 3003,
@@ -1221,6 +1249,7 @@
     },
     {
       "name": "Copper",
+      "nameIT": "Rame",
       "appearance": "red-orange metallic luster",
       "atomic_mass": 63.5463,
       "boil": 2835,
@@ -1266,6 +1295,7 @@
     },
     {
       "name": "Zinc",
+      "nameIT": "Zinco",
       "appearance": "silver-gray",
       "atomic_mass": 65.382,
       "boil": 1180,
@@ -1311,6 +1341,7 @@
     },
     {
       "name": "Gallium",
+      "nameIT": "Gallio",
       "appearance": "silver-white",
       "atomic_mass": 69.7231,
       "boil": 2673,
@@ -1352,6 +1383,7 @@
     },
     {
       "name": "Germanium",
+      "nameIT": "Germanio",
       "appearance": "grayish-white",
       "atomic_mass": 72.6308,
       "boil": 3106,
@@ -1393,6 +1425,7 @@
     },
     {
       "name": "Arsenic",
+      "nameIT": "Arsenico",
       "appearance": "metallic grey",
       "atomic_mass": 74.9215956,
       "boil": null,
@@ -1434,6 +1467,7 @@
     },
     {
       "name": "Selenium",
+      "nameIT": "Selenio",
       "appearance": "black, red, and gray (not pictured) allotropes",
       "atomic_mass": 78.9718,
       "boil": 958,
@@ -1475,6 +1509,7 @@
     },
     {
       "name": "Bromine",
+      "nameIT": "Bromo",
       "appearance": null,
       "atomic_mass": 79.904,
       "boil": 332,
@@ -1518,6 +1553,7 @@
     },
     {
       "name": "Krypton",
+      "nameIT": "Kripton",
       "appearance": "colorless gas, exhibiting a whitish glow in a high electric field",
       "atomic_mass": 83.7982,
       "boil": 119.93,
@@ -1564,6 +1600,7 @@
     },
     {
       "name": "Rubidium",
+      "nameIT": "Rubidio",
       "appearance": "grey white",
       "atomic_mass": 85.46783,
       "boil": 961,
@@ -1607,6 +1644,7 @@
     },
     {
       "name": "Strontium",
+      "nameIT": "Stronzio",
       "appearance": null,
       "atomic_mass": 87.621,
       "boil": 1650,
@@ -1650,6 +1688,7 @@
     },
     {
       "name": "Yttrium",
+      "nameIT": "Ittrio",
       "appearance": "silvery white",
       "atomic_mass": 88.905842,
       "boil": 3203,
@@ -1694,6 +1733,7 @@
     },
     {
       "name": "Zirconium",
+      "nameIT": "Zirconio",
       "appearance": "silvery white",
       "atomic_mass": 91.2242,
       "boil": 4650,
@@ -1735,6 +1775,7 @@
     },
     {
       "name": "Niobium",
+      "nameIT": "Niobio",
       "appearance": "gray metallic, bluish when oxidized",
       "atomic_mass": 92.906372,
       "boil": 5017,
@@ -1776,6 +1817,7 @@
     },
     {
       "name": "Molybdenum",
+      "nameIT": "Molibdeno",
       "appearance": "gray metallic",
       "atomic_mass": 95.951,
       "boil": 4912,
@@ -1822,6 +1864,7 @@
     },
     {
       "name": "Technetium",
+      "nameIT": "Tecnezio",
       "appearance": "shiny gray metal",
       "atomic_mass": 98,
       "boil": 4538,
@@ -1863,6 +1906,7 @@
     },
     {
       "name": "Ruthenium",
+      "nameIT": "Rutenio",
       "appearance": "silvery white metallic",
       "atomic_mass": 101.072,
       "boil": 4423,
@@ -1904,6 +1948,7 @@
     },
     {
       "name": "Rhodium",
+      "nameIT": "Rodio",
       "appearance": "silvery white metallic",
       "atomic_mass": 102.905502,
       "boil": 3968,
@@ -1945,6 +1990,7 @@
     },
     {
       "name": "Palladium",
+      "nameIT": "Palladio",
       "appearance": "silvery white",
       "atomic_mass": 106.421,
       "boil": 3236,
@@ -1986,6 +2032,7 @@
     },
     {
       "name": "Silver",
+      "nameIT": "Argento",
       "appearance": "lustrous white metal",
       "atomic_mass": 107.86822,
       "boil": 2435,
@@ -2027,6 +2074,7 @@
     },
     {
       "name": "Cadmium",
+      "nameIT": "Cadmio",
       "appearance": "silvery bluish-gray metallic",
       "atomic_mass": 112.4144,
       "boil": 1040,
@@ -2068,6 +2116,7 @@
     },
     {
       "name": "Indium",
+      "nameIT": "Indio",
       "appearance": "silvery lustrous gray",
       "atomic_mass": 114.8181,
       "boil": 2345,
@@ -2109,6 +2158,7 @@
     },
     {
       "name": "Tin",
+      "nameIT": "Stagno",
       "appearance": "silvery-white (beta, β) or gray (alpha, α)",
       "atomic_mass": 118.7107,
       "boil": 2875,
@@ -2150,6 +2200,7 @@
     },
     {
       "name": "Antimony",
+      "nameIT": "Antimonio",
       "appearance": "silvery lustrous gray",
       "atomic_mass": 121.7601,
       "boil": 1908,
@@ -2191,6 +2242,7 @@
     },
     {
       "name": "Tellurium",
+      "nameIT": "Tellurio",
       "appearance": null,
       "atomic_mass": 127.603,
       "boil": 1261,
@@ -2232,6 +2284,7 @@
     },
     {
       "name": "Iodine",
+      "nameIT": "Iodio",
       "appearance": "lustrous metallic gray, violet as a gas",
       "atomic_mass": 126.904473,
       "boil": 457.4,
@@ -2273,6 +2326,7 @@
     },
     {
       "name": "Xenon",
+      "nameIT": "Xenon",
       "appearance": "colorless gas, exhibiting a blue glow when placed in a high voltage electric field",
       "atomic_mass": 131.2936,
       "boil": 165.051,
@@ -2314,6 +2368,7 @@
     },
     {
       "name": "Cesium",
+      "nameIT": "Cesio",
       "appearance": "silvery gold",
       "atomic_mass": 132.905451966,
       "boil": 944,
@@ -2355,6 +2410,7 @@
     },
     {
       "name": "Barium",
+      "nameIT": "Bario",
       "appearance": null,
       "atomic_mass": 137.3277,
       "boil": 2118,
@@ -2396,6 +2452,7 @@
     },
     {
       "name": "Lanthanum",
+      "nameIT": "Lantanio",
       "appearance": "silvery white",
       "atomic_mass": 138.905477,
       "boil": 3737,
@@ -2437,6 +2494,7 @@
     },
     {
       "name": "Cerium",
+      "nameIT": "Cerio",
       "appearance": "silvery white",
       "atomic_mass": 140.1161,
       "boil": 3716,
@@ -2478,6 +2536,7 @@
     },
     {
       "name": "Praseodymium",
+      "nameIT": "Praseodimio",
       "appearance": "grayish white",
       "atomic_mass": 140.907662,
       "boil": 3403,
@@ -2519,6 +2578,7 @@
     },
     {
       "name": "Neodymium",
+      "nameIT": "Neodimio",
       "appearance": "silvery white",
       "atomic_mass": 144.2423,
       "boil": 3347,
@@ -2560,6 +2620,7 @@
     },
     {
       "name": "Promethium",
+      "nameIT": "Promezio",
       "appearance": "metallic",
       "atomic_mass": 145,
       "boil": 3273,
@@ -2601,6 +2662,7 @@
     },
     {
       "name": "Samarium",
+      "nameIT": "Samario",
       "appearance": "silvery white",
       "atomic_mass": 150.362,
       "boil": 2173,
@@ -2642,6 +2704,7 @@
     },
     {
       "name": "Europium",
+      "nameIT": "Europio",
       "appearance": null,
       "atomic_mass": 151.9641,
       "boil": 1802,
@@ -2683,6 +2746,7 @@
     },
     {
       "name": "Gadolinium",
+      "nameIT": "Gadolinio",
       "appearance": "silvery white",
       "atomic_mass": 157.253,
       "boil": 3273,
@@ -2724,6 +2788,7 @@
     },
     {
       "name": "Terbium",
+      "nameIT": "Terbio",
       "appearance": "silvery white",
       "atomic_mass": 158.925352,
       "boil": 3396,
@@ -2765,6 +2830,7 @@
     },
     {
       "name": "Dysprosium",
+      "nameIT": "Disprosio",
       "appearance": "silvery white",
       "atomic_mass": 162.5001,
       "boil": 2840,
@@ -2806,6 +2872,7 @@
     },
     {
       "name": "Holmium",
+      "nameIT": "Olmio",
       "appearance": "silvery white",
       "atomic_mass": 164.930332,
       "boil": 2873,
@@ -2847,6 +2914,7 @@
     },
     {
       "name": "Erbium",
+      "nameIT": "Erbio",
       "appearance": "silvery white",
       "atomic_mass": 167.2593,
       "boil": 3141,
@@ -2888,6 +2956,7 @@
     },
     {
       "name": "Thulium",
+      "nameIT": "Tulio",
       "appearance": "silvery gray",
       "atomic_mass": 168.934222,
       "boil": 2223,
@@ -2929,6 +2998,7 @@
     },
     {
       "name": "Ytterbium",
+      "nameIT": "Itterbio",
       "appearance": null,
       "atomic_mass": 173.0451,
       "boil": 1469,
@@ -2970,6 +3040,7 @@
     },
     {
       "name": "Lutetium",
+      "nameIT": "Lutezio",
       "appearance": "silvery white",
       "atomic_mass": 174.96681,
       "boil": 3675,
@@ -3011,6 +3082,7 @@
     },
     {
       "name": "Hafnium",
+      "nameIT": "Afnio",
       "appearance": "steel gray",
       "atomic_mass": 178.492,
       "boil": 4876,
@@ -3052,6 +3124,7 @@
     },
     {
       "name": "Tantalum",
+      "nameIT": "Tantalio",
       "appearance": "gray blue",
       "atomic_mass": 180.947882,
       "boil": 5731,
@@ -3093,6 +3166,7 @@
     },
     {
       "name": "Tungsten",
+      "nameIT": "Tungsteno",
       "appearance": "grayish white, lustrous",
       "atomic_mass": 183.841,
       "boil": 6203,
@@ -3134,6 +3208,7 @@
     },
     {
       "name": "Rhenium",
+      "nameIT": "Renio",
       "appearance": "silvery-grayish",
       "atomic_mass": 186.2071,
       "boil": 5869,
@@ -3175,6 +3250,7 @@
     },
     {
       "name": "Osmium",
+      "nameIT": "Osmio",
       "appearance": "silvery, blue cast",
       "atomic_mass": 190.233,
       "boil": 5285,
@@ -3216,6 +3292,7 @@
     },
     {
       "name": "Iridium",
+      "nameIT": "Iridio",
       "appearance": "silvery white",
       "atomic_mass": 192.2173,
       "boil": 4403,
@@ -3257,6 +3334,7 @@
     },
     {
       "name": "Platinum",
+      "nameIT": "Platino",
       "appearance": "silvery white",
       "atomic_mass": 195.0849,
       "boil": 4098,
@@ -3298,6 +3376,7 @@
     },
     {
       "name": "Gold",
+      "nameIT": "Oro",
       "appearance": "metallic yellow",
       "atomic_mass": 196.9665695,
       "boil": 3243,
@@ -3339,6 +3418,7 @@
     },
     {
       "name": "Mercury",
+      "nameIT": "Mercurio",
       "appearance": "silvery",
       "atomic_mass": 200.5923,
       "boil": 629.88,
@@ -3380,6 +3460,7 @@
     },
     {
       "name": "Thallium",
+      "nameIT": "Tallio",
       "appearance": "silvery white",
       "atomic_mass": 204.38,
       "boil": 1746,
@@ -3421,6 +3502,7 @@
     },
     {
       "name": "Lead",
+      "nameIT": "Piombo",
       "appearance": "metallic gray",
       "atomic_mass": 207.21,
       "boil": 2022,
@@ -3462,6 +3544,7 @@
     },
     {
       "name": "Bismuth",
+      "nameIT": "Bismuto",
       "appearance": "lustrous silver",
       "atomic_mass": 208.980401,
       "boil": 1837,
@@ -3503,6 +3586,7 @@
     },
     {
       "name": "Polonium",
+      "nameIT": "Polonio",
       "appearance": "silvery",
       "atomic_mass": 209,
       "boil": 1235,
@@ -3544,6 +3628,7 @@
     },
     {
       "name": "Astatine",
+      "nameIT": "Astato",
       "appearance": "unknown, probably metallic",
       "atomic_mass": 210,
       "boil": 610,
@@ -3585,6 +3670,7 @@
     },
     {
       "name": "Radon",
+      "nameIT": "Radon",
       "appearance": "colorless gas, occasionally glows green or red in discharge tubes",
       "atomic_mass": 222,
       "boil": 211.5,
@@ -3626,6 +3712,7 @@
     },
     {
       "name": "Francium",
+      "nameIT": "Francio",
       "appearance": null,
       "atomic_mass": 223,
       "boil": 950,
@@ -3667,6 +3754,7 @@
     },
     {
       "name": "Radium",
+      "nameIT": "Radio",
       "appearance": "silvery white metallic",
       "atomic_mass": 226,
       "boil": 2010,
@@ -3708,6 +3796,7 @@
     },
     {
       "name": "Actinium",
+      "nameIT": "Attinio",
       "appearance": null,
       "atomic_mass": 227,
       "boil": 3500,
@@ -3749,6 +3838,7 @@
     },
     {
       "name": "Thorium",
+      "nameIT": "Torio",
       "appearance": "silvery, often with black tarnish",
       "atomic_mass": 232.03774,
       "boil": 5061,
@@ -3790,6 +3880,7 @@
     },
     {
       "name": "Protactinium",
+      "nameIT": "Protoattinio",
       "appearance": "bright, silvery metallic luster",
       "atomic_mass": 231.035882,
       "boil": 4300,
@@ -3831,6 +3922,7 @@
     },
     {
       "name": "Uranium",
+      "nameIT": "Uranio",
       "appearance": null,
       "atomic_mass": 238.028913,
       "boil": 4404,
@@ -3872,6 +3964,7 @@
     },
     {
       "name": "Neptunium",
+      "nameIT": "Nettunio",
       "appearance": "silvery metallic",
       "atomic_mass": 237,
       "boil": 4447,
@@ -3913,6 +4006,7 @@
     },
     {
       "name": "Plutonium",
+      "nameIT": "Plutonio",
       "appearance": "silvery white, tarnishing to dark gray in air",
       "atomic_mass": 244,
       "boil": 3505,
@@ -3954,6 +4048,7 @@
     },
     {
       "name": "Americium",
+      "nameIT": "Americio",
       "appearance": "silvery white",
       "atomic_mass": 243,
       "boil": 2880,
@@ -3995,6 +4090,7 @@
     },
     {
       "name": "Curium",
+      "nameIT": "Curio",
       "appearance": "silvery metallic, glows purple in the dark",
       "atomic_mass": 247,
       "boil": 3383,
@@ -4036,6 +4132,7 @@
     },
     {
       "name": "Berkelium",
+      "nameIT": "Berkelio",
       "appearance": "silvery",
       "atomic_mass": 247,
       "boil": 2900,
@@ -4077,6 +4174,7 @@
     },
     {
       "name": "Californium",
+      "nameIT": "Californio",
       "appearance": "silvery",
       "atomic_mass": 251,
       "boil": 1743,
@@ -4118,6 +4216,7 @@
     },
     {
       "name": "Einsteinium",
+      "nameIT": "Einsteinio",
       "appearance": "silver-colored",
       "atomic_mass": 252,
       "boil": 1269,
@@ -4159,6 +4258,7 @@
     },
     {
       "name": "Fermium",
+      "nameIT": "Fermio",
       "appearance": null,
       "atomic_mass": 257,
       "boil": null,
@@ -4200,6 +4300,7 @@
     },
     {
       "name": "Mendelevium",
+      "nameIT": "Mendelevio",
       "appearance": null,
       "atomic_mass": 258,
       "boil": null,
@@ -4241,6 +4342,7 @@
     },
     {
       "name": "Nobelium",
+      "nameIT": "Nobelio",
       "appearance": null,
       "atomic_mass": 259,
       "boil": null,
@@ -4282,6 +4384,7 @@
     },
     {
       "name": "Lawrencium",
+      "nameIT": "Laurenzio",
       "appearance": null,
       "atomic_mass": 266,
       "boil": null,
@@ -4323,6 +4426,7 @@
     },
     {
       "name": "Rutherfordium",
+      "nameIT": "Rutherfordio",
       "appearance": null,
       "atomic_mass": 267,
       "boil": 5800,
@@ -4364,6 +4468,7 @@
     },
     {
       "name": "Dubnium",
+      "nameIT": "Dubnio",
       "appearance": null,
       "atomic_mass": 268,
       "boil": null,
@@ -4405,6 +4510,7 @@
     },
     {
       "name": "Seaborgium",
+      "nameIT": "Seaborgio",
       "appearance": null,
       "atomic_mass": 269,
       "boil": null,
@@ -4446,6 +4552,7 @@
     },
     {
       "name": "Bohrium",
+      "nameIT": "Bohrio",
       "appearance": null,
       "atomic_mass": 270,
       "boil": null,
@@ -4487,6 +4594,7 @@
     },
     {
       "name": "Hassium",
+      "nameIT": "Hassio",
       "appearance": null,
       "atomic_mass": 269,
       "boil": null,
@@ -4528,6 +4636,7 @@
     },
     {
       "name": "Meitnerium",
+      "nameIT": "Meitnerio",
       "appearance": null,
       "atomic_mass": 278,
       "boil": null,
@@ -4569,6 +4678,7 @@
     },
     {
       "name": "Darmstadtium",
+      "nameIT": "Darmstadtio",
       "appearance": null,
       "atomic_mass": 281,
       "boil": null,
@@ -4610,6 +4720,7 @@
     },
     {
       "name": "Roentgenium",
+      "nameIT": "Roentgenio",
       "appearance": null,
       "atomic_mass": 282,
       "boil": null,
@@ -4651,6 +4762,7 @@
     },
     {
       "name": "Copernicium",
+      "nameIT": "Copernicio",
       "appearance": null,
       "atomic_mass": 285,
       "boil": 3570,
@@ -4692,6 +4804,7 @@
     },
     {
       "name": "Nihonium",
+      "nameIT": "Nihonio",
       "appearance": null,
       "atomic_mass": 286,
       "boil": 1430,
@@ -4733,6 +4846,7 @@
     },
     {
       "name": "Flerovium",
+      "nameIT": "Flerovio",
       "appearance": null,
       "atomic_mass": 289,
       "boil": 420,
@@ -4774,6 +4888,7 @@
     },
     {
       "name": "Moscovium",
+      "nameIT": "Moscovio",
       "appearance": null,
       "atomic_mass": 289,
       "boil": 1400,
@@ -4815,6 +4930,7 @@
     },
     {
       "name": "Livermorium",
+      "nameIT": "Livermorio",
       "appearance": null,
       "atomic_mass": 293,
       "boil": 1085,
@@ -4856,6 +4972,7 @@
     },
     {
       "name": "Tennessine",
+      "nameIT": "Tennesso",
       "appearance": null,
       "atomic_mass": 294,
       "boil": 883,
@@ -4897,6 +5014,7 @@
     },
     {
       "name": "Oganesson",
+      "nameIT": "Oganesson",
       "appearance": null,
       "atomic_mass": 294,
       "boil": 350,
