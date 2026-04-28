@@ -6,7 +6,7 @@ import { useQuiz } from "../composables/useQuiz";
 import AppHeader from "../components/AppHeader.vue";
 import QuizModal from "../components/QuizModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
 import SvgOverlay from "../components/SvgOverlay.vue";
 import castleSvg from "../assets/castle.svg?url";
