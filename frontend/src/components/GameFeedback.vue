@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import AppCarousel from "./AppCarousel.vue";
-import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 import { GameState } from "../composables/useQuiz";
 import type { ClassicQuestion } from "../types/questions";
+import { WorkMemoryQuestion } from "../types/questions";
 import { computed } from "vue";
 
-const { isKiosk } = useDevice();
 const { gameQuestions, gameCursor, gameState, handleInput } = useQuiz();
 
 const currentQuestion = computed(() => {
@@ -15,6 +14,10 @@ const currentQuestion = computed(() => {
 
 const isClassicQuestion = computed(() => {
   return currentQuestion.value && "question" in currentQuestion.value;
+});
+
+const isWorkMemoryQuestion = computed(() => {
+  return currentQuestion.value instanceof WorkMemoryQuestion;
 });
 
 const correctAnswer = computed(() => {
@@ -42,11 +45,18 @@ const isFailure = computed(() => gameState.value === GameState.ShowingFailure);
             <p class="text-xl font-semibold text-white">{{ correctAnswer }}</p>
           </div>
         </div>
+        <button
+          v-if="isWorkMemoryQuestion"
+          @click="handleInput()"
+          class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+        >
+          Avanti →
+        </button>
       </div>
 
 
-      <div class="flex flex-col items-center justify-center gap-6 p-6 min-h-96">
-        <div v-if="isClassicQuestion" class="w-full">
+      <div v-if="isClassicQuestion" class="flex flex-col items-center justify-center gap-6 p-6 min-h-96">
+        <div class="w-full">
           <div class="bg-gray-600 rounded-lg p-6 mb-6">
             <p class="text-lg text-white leading-relaxed">
               {{ (currentQuestion as ClassicQuestion).curiosity }}

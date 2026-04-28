@@ -12,7 +12,7 @@ import SvgOverlay from "../components/SvgOverlay.vue";
 import castleSvg from "../assets/castle.svg?url";
 import DialogContent from "../components/DialogContent.vue";
 
-const { elements: periodicElements, elementQuestions, isLoading } = useData();
+const { elements: periodicElements} = useData();
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
@@ -21,43 +21,30 @@ const containerRef = ref<HTMLElement | null>(null);
 const {
   focusedElement,
   isScrolling,
-  showNavigation,
   handleElementClick,
   registerElement,
 } = useElementFocus(periodicElements, modalRef, containerRef);
 
 const {
-  gameQuestions,
   gameCursor,
-  gameConqueredElements,
-  gameZones,
   gameElements,
-  gamePathPositions,
   gameState,
-  QUESTIONS_NUMBER,
-  MEMORY_QUESTIONS_NUMBER,
-  handleInput,
-  startGame,
-  resetGame,
 } = useQuiz();
-
-// Avvia il gioco solo quando i dati sono caricati
-/* watch(
-  () => isLoading.value,
-  (loading) => {
-    if (!loading && elementQuestions.value.length > 0) {
-      startGame();
-    }
-  },
-  { immediate: true }
-); */
 </script>
 
 <template>
   <Transition name="fade" mode="out-in">
     <div
-      v-if="gameState === 'starting' || gameState === 'showingSuccess' || gameState === 'showingFailure' ||
-      (gameState === 'showingQuestion' && focusedElement?.number === gameElements[gameCursor]?.number && !isKiosk)"
+      v-if="
+        gameState === 'starting' ||
+        gameState === 'showingSuccess' ||
+        gameState === 'showingFailure' ||
+        gameState === 'showingZoneSummary' ||
+        gameState === 'gameOver' ||
+        (gameState === 'showingQuestion' &&
+          focusedElement?.number === gameElements[gameCursor]?.number &&
+          !isKiosk)
+      "
       ref="modalRef"
       :class="
         isKiosk
@@ -65,8 +52,8 @@ const {
           : 'fixed bottom-0 left-1/2 -translate-x-1/2 z-50 p-3 w-full'
       "
     >
-      <QuizModal> 
-        <DialogContent/>
+      <QuizModal>
+        <DialogContent />
       </QuizModal>
     </div>
   </Transition>

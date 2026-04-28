@@ -4,13 +4,9 @@ import windowSvg from "../assets/window.svg?url";
 import { computed } from "vue";
 import type { Work } from "../types/work";
 import WorkBubble from "./WorkBubble.vue";
-import AppModal from "./AppModal.vue";
 import { useQuiz } from "../composables/useQuiz";
 import { WorkMemoryQuestion } from "../types/questions";
-import { useDevice } from "../composables/useDevice";
 import DialogContent from "./DialogContent.vue";
-
-const { isKiosk } = useDevice();
 
 const props = defineProps<{
   element: PeriodicElement;

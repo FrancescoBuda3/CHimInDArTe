@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import AppCarousel from "./AppCarousel.vue";
-import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 import type { ClassicQuestion, WorkMemoryQuestion } from "../types/questions";
 
-const { isKiosk } = useDevice();
 const { gameQuestions, gameCursor, handleInput } = useQuiz();
 const baseUrl = computed(() => import.meta.env.BASE_URL);
 

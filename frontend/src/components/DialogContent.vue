@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AppCarousel from "./AppCarousel.vue";
-import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 import GameIntro from "./GameIntro.vue";
 import GameQuestion from "./GameQuestion.vue";
@@ -8,7 +6,6 @@ import GameZoneSummary from "./GameZoneSummary.vue";
 import GameOver from "./GameOver.vue";
 import GameFeedback from "./GameFeedback.vue";
 
-const { isKiosk } = useDevice();
 const { gameState } = useQuiz();
 </script>
 

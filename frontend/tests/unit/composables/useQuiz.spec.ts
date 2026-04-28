@@ -109,6 +109,18 @@ describe('useQuiz', () => {
         expect(gameZones).toStrictEqual(gameZones.slice().sort((a, b) => a - b))
     })
 
+    it('chooses at least two questions for each zone', () => {
+        quiz.startGame()
+        const gameZones = quiz.gameZones.value
+        const zoneCounts: Record<number, number> = {}
+        for (const zone of gameZones) {
+            zoneCounts[zone] = (zoneCounts[zone] || 0) + 1
+        }
+        for (const zone in zoneCounts) {
+            expect(zoneCounts[zone]).toBeGreaterThanOrEqual(2)
+        }
+    })
+
     it('goes to GameState.ShowingSuccess after a correct answer', () => {
         quiz.startGame()
         answerCurrentQuestionCorrectly()
@@ -174,6 +186,9 @@ describe('useQuiz', () => {
         for (let i = 0; i < totalQuestions; i++) {
             answerCurrentQuestionCorrectly()
             quiz.handleInput()
+            if (quiz.gameState.value === GameState.ShowingZoneSummary) {
+                quiz.handleInput()
+            }
         }
         quiz.handleInput()
         expect(quiz.gameState.value).toBe(GameState.GameOver)
