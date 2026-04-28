@@ -3,7 +3,7 @@ import type { Ref } from "vue";
 import type { PeriodicElement } from "../types/periodicElement";
 import { useDevice } from "./useDevice";
 
-export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalRef: Ref<HTMLElement | null>, containerRef: Ref<HTMLElement | null>) {
+export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalRef: Ref<HTMLElement | null>) {
   const { isMobile } = useDevice();
 
   const GAP = 25

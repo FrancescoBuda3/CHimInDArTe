@@ -16,14 +16,13 @@ const { elements: periodicElements} = useData();
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
-const containerRef = ref<HTMLElement | null>(null);
 
 const {
   focusedElement,
   isScrolling,
   handleElementClick,
   registerElement,
-} = useElementFocus(periodicElements, modalRef, containerRef);
+} = useElementFocus(periodicElements, modalRef);
 
 const {
   gameCursor,
@@ -74,7 +73,6 @@ const {
   >
     <div
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
-      ref="containerRef"
     >
       <div class="relative w-fit">
         <div class="u-p-2x">

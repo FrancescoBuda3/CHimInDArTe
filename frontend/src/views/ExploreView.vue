@@ -15,7 +15,6 @@ const periodicElements = useData().elements;
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
-const containerRef = ref<HTMLElement | null>(null);
 
 const {
   focusedElement,
@@ -24,7 +23,7 @@ const {
   modalPosition,
   handleElementClick,
   registerElement,
-} = useElementFocus(periodicElements, modalRef, containerRef);
+} = useElementFocus(periodicElements, modalRef);
 </script>
 
 <template>
@@ -79,7 +78,6 @@ const {
     <div
       class="w-fit h-fit"
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
-      ref="containerRef"
     >
       <GridLayout :columns="18" :rows="7">
         <div

@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import AppCarousel from "./AppCarousel.vue";
-import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 
-const { isKiosk } = useDevice();
 const { handleInput } = useQuiz();
 </script>
 
