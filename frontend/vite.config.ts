@@ -8,5 +8,14 @@ export default defineConfig({
     environment: 'happy-dom',
   },
   base: '/CHimInDArTe/',
-  plugins: [vue(), tailwindcss()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag === 'model-viewer',
+        },
+      },
+    }),
+    tailwindcss(),
+  ],
 });

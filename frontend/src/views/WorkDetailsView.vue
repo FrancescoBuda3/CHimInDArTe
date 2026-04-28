@@ -19,15 +19,24 @@ const element = computed(() =>
   elements.value.find((e) => e.number === Number(props.id)),
 );
 const description = ref("Nessuna descrizione disponibile.");
+const modelSrc = ref("");
+const iosSrc = ref("");
 
 watch(
   () => work.value,
   async (newWork) => {
     if (!newWork) {
       description.value = "Nessuna descrizione disponibile.";
+      modelSrc.value = "";
+      iosSrc.value = "";
       return;
     }
 
+    // Update model URLs
+    modelSrc.value = `${baseUrl.value}models/${newWork.model_file}`;
+    iosSrc.value = `${baseUrl.value}models/${newWork.model_file}`;
+
+    // Load description
     try {
       const response = await fetch(
         `${import.meta.env.BASE_URL}descriptions/${newWork.description_file}`,
@@ -39,6 +48,7 @@ watch(
       description.value = "Nessuna descrizione disponibile.";
     }
   },
+  { immediate: true },
 );
 </script>
 
@@ -51,14 +61,14 @@ watch(
     <div class="u-size-3x flex items-center justify-center">
       <model-viewer
         v-if="element"
-        :src="`${baseUrl}models/${work?.model_file}`"
+        :src="modelSrc"
         :alt="element.name"
         auto-rotate
         camera-controls
         loading="lazy"
         ar
         ar-modes="webxr scene-viewer quick-look"
-        :ios-src="`${baseUrl}models/${work?.model_file}`"
+        :ios-src="iosSrc"
         style="width: 100%; height: 100%;"
       ></model-viewer>
     </div>

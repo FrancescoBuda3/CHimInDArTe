@@ -36,9 +36,6 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
 
     let y: number
 
-
-    console.log('modalW:', modalW, 'anchorRect:', anchorRect)
-
     if (spaceBelow >= modalH + PADDING) {
       // Caso preferito: sotto l'elemento
       y = anchorRect.bottom + GAP
