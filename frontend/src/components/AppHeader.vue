@@ -39,7 +39,7 @@ const props = defineProps<{
         </div>
       </div>
       <h1
-        class="u-h-lg u-px-sm bg-white/90 rounded-full items-center justify-center flex text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]"
+        class="u-h-lg u-px-sm bg-white/90 rounded-full items-center justify-center flex text-[clamp(0.4rem,calc(var(--u)*0.20),4rem)]"
       >
         {{ props.title || "CHIMINDARTE" }}
       </h1>

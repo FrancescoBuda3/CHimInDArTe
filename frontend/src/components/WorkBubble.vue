@@ -2,14 +2,17 @@
 import { computed, ref, watch, nextTick } from "vue";
 import type { Work } from "../types/work";
 import { useDevice } from "../composables/useDevice";
+import { useQuiz } from "../composables/useQuiz";
 
 const baseUrl = computed(() => import.meta.env.BASE_URL);
 const { isKiosk } = useDevice();
+const { gameElements, gameElementIsConquered, gameCursor } = useQuiz();
 
 const props = defineProps<{
   work: Work;
   isFocused: boolean;
   isHidden?: boolean;
+  isConquered?: boolean;
   showQuestion: boolean;
 }>();
 
@@ -20,6 +23,37 @@ const isClosing = ref(false);
 const isReady = ref(false);
 const position = ref({ top: 0, left: 0 });
 const scale = ref({ x: 1, y: 1 });
+
+const elementIndex = computed(() => {
+  const element = gameElements.value.find(el => el.number === props.work.id);
+  return element ? gameElements.value.indexOf(element) : -1;
+});
+
+const isCurrent = computed(() => elementIndex.value === gameCursor.value);
+
+const isAnswered = computed(() => {
+  return elementIndex.value >= 0 && elementIndex.value < gameCursor.value;
+});
+
+const shouldHide = computed(() => {
+  if (isAnswered.value && gameElementIsConquered.value[elementIndex.value]) {
+    return false;
+  }
+  return props.isHidden ?? false;
+});
+
+const bubbleColor = computed(() => {
+  if (!isAnswered.value) {
+    return "bg-gray-700";
+  }
+  if (props.isConquered && gameElementIsConquered.value[elementIndex.value]) {
+    return "bg-green-600";
+  }
+  if (!props.isConquered && !gameElementIsConquered.value[elementIndex.value]) {
+    return "bg-red-600";
+  }
+  return "bg-gray-700";
+});
 
 async function openModal() {
   if (!bubbleRef.value || !isKiosk.value) return;
@@ -82,10 +116,14 @@ const overlayStyle = computed(() => ({
     >
       <div
         ref="bubbleRef"
-        class="relative u-w-gameTile u-h-lg u-p-xs bg-gray-700 rounded-2xl shadow-lg flex items-center justify-center"
+        :class="[
+          'relative u-w-gameTile u-h-lg u-p-xs rounded-2xl shadow-lg flex items-center justify-center',
+          bubbleColor,
+          (isCurrent && !isOpen) ? 'bounce-animation' : '',
+        ]"
       >
         <img
-          v-if="!isHidden"
+          v-if="!shouldHide"
           :src="`${baseUrl}pictures/${work.picture_file}`"
           :alt="work.title"
           class="w-full h-full object-contain"
@@ -94,12 +132,16 @@ const overlayStyle = computed(() => ({
 
         <div
           class="absolute left-1/2 -translate-x-1/2 w-0 h-0"
-          style="
-            bottom: -12px;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-top: 13px solid rgb(55 65 81 / 0.9);
-          "
+          :style="{
+            bottom: '-12px',
+            borderLeft: '12px solid transparent',
+            borderRight: '12px solid transparent',
+            borderTop: `13px solid ${
+              bubbleColor === 'bg-green-600' ? 'rgb(22 163 74 / 0.9)' :
+              bubbleColor === 'bg-red-600' ? 'rgb(220 38 38 / 0.9)' :
+              'rgb(55 65 81 / 0.9)'
+            }`,
+          }"
         ></div>
       </div>
     </div>
@@ -113,7 +155,8 @@ const overlayStyle = computed(() => ({
   >
     <div
       :class="[
-        'bg-gray-700 rounded-2xl shadow-lg',
+        'rounded-2xl shadow-lg',
+        bubbleColor,
         isReady && !isClosing ? 'scale-in-bottom' : '',
         isClosing ? 'scale-out-bottom' : '',
       ]"
@@ -179,5 +222,24 @@ const overlayStyle = computed(() => ({
 @keyframes fade-out {
   0%   { opacity: 1; }
   100% { opacity: 0; }
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 </style>

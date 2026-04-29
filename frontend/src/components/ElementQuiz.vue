@@ -19,7 +19,7 @@ defineEmits<{
   click: [];
 }>();
 
-const { gameElements, gameQuestions, gameCursor, gameElements: gameElementsList, gameState } = useQuiz();
+const { gameElements, gameQuestions, gameCursor, gameElements: gameElementsList, gameElementIsConquered, gameState } = useQuiz();
 
 const zoneColors: Record<number, string> = {
   1: "#FFD201",
@@ -53,10 +53,12 @@ const isHidden = computed(() => {
       :work="work"
       :is-focused="isFocused"
       :is-hidden="isHidden"
+      :is-conquered="gameElements.some(el => el.number === element.number && gameElementIsConquered[gameElements.indexOf(el)])"
       :show-question="isFocused && gameElements[gameCursor]?.number === element.number && gameState === 'showingQuestion'"
+      :class="isInGame ? 'fade-in' : 'fade-out'"
     >
-    <DialogContent/>
-  </WorkBubble>
+      <DialogContent/>
+    </WorkBubble>
     <div
       :class="[
         'u-w-gameTile aspect-square flex flex-col justify-between relative box-border overflow-hidden',
@@ -67,7 +69,7 @@ const isHidden = computed(() => {
       @click="$emit('click')"
     >
       <div class="text-center u-p-xs">
-        <img v-if="isInGame" :src="windowSvg" alt="window" class="w-full h-full object-contain" />
+        <img v-if="isInGame" :src="windowSvg" alt="window" class="w-full h-full object-contain" :class="isInGame ? 'fade-in' : 'fade-out'" />
       </div>
     </div>
   </div>

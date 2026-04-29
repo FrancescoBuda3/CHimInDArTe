@@ -22,6 +22,7 @@ const gameQuestions = ref<Question[]>([]);
 const gameElements = ref<PeriodicElement[]>([]);
 const gameZones = ref<number[]>([]);
 const gamePathPositions = ref<number[]>([]);
+const gameElementIsConquered = ref<boolean[]>([]);
 const gameCursor = ref(0);
 const gameConqueredElements = ref<PeriodicElement[]>([]);
 
@@ -44,6 +45,7 @@ export function useQuiz(rand: randFn = Math.random) {
         gameElements.value = [];
         gamePathPositions.value = [];
         gameQuestions.value = [];
+        gameElementIsConquered.value = [];
     }
 
     /**
@@ -119,6 +121,8 @@ export function useQuiz(rand: randFn = Math.random) {
         const final = [...selected].sort((a, b) => a.game_order - b.game_order);
         const memorySet = new Set([...final].sort(() => rand() - 0.5).slice(0, MEMORY_QUESTIONS_NUMBER));
 
+        gameElementIsConquered.value = new Array(final.length).fill(false);
+
         for (const eq of final) {
             const element = elements.value.find(e => e.number === eq.element_id);
             if (!element) continue;
@@ -144,8 +148,10 @@ export function useQuiz(rand: randFn = Math.random) {
             gameState.value = GameState.ShowingSuccess;
             const conqueredElement = gameElements.value[gameCursor.value];
             conqueredElement ? gameConqueredElements.value.push(conqueredElement) : null;
+            gameElementIsConquered.value[gameCursor.value] = true;
         } else {
             gameState.value = GameState.ShowingFailure;
+            gameElementIsConquered.value[gameCursor.value] = false;
         }
     }
 
@@ -214,6 +220,7 @@ export function useQuiz(rand: randFn = Math.random) {
         gameZones: readonly(gameZones),
         gameElements: readonly(gameElements),
         gamePathPositions: readonly(gamePathPositions),
+        gameElementIsConquered: readonly(gameElementIsConquered),
         gameState: readonly(gameState),
         works: readonly(works),
         QUESTIONS_NUMBER,

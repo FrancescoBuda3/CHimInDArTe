@@ -27,7 +27,6 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     const modalW = modalRef.value?.offsetWidth ?? 280
     const modalH = modalRef.value?.offsetHeight ?? 56
 
-    // position: fixed → coordinate relative alla viewport, getBoundingClientRect() è già perfetto
     let x = anchorRect.left + anchorRect.width / 2 - modalW / 2
     x = Math.max(PADDING, Math.min(x, window.innerWidth - modalW - PADDING))
 
@@ -37,16 +36,12 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     let y: number
 
     if (spaceBelow >= modalH + PADDING) {
-      // Caso preferito: sotto l'elemento
       y = anchorRect.bottom + GAP
     } else if (spaceAbove >= modalH + PADDING) {
-      // Fallback: sopra l'elemento
       y = anchorRect.top - modalH - GAP
     } else if (spaceBelow >= spaceAbove) {
-      // Sotto ma clampato al bordo viewport
       y = Math.min(anchorRect.bottom + GAP, window.innerHeight - modalH - PADDING)
     } else {
-      // Sopra ma clampato al bordo viewport
       y = Math.max(anchorRect.top - modalH - GAP, PADDING)
     }
 
@@ -97,6 +92,19 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     else elementRefs.delete(number);
   };
 
+  const scrollIntoElementNumber = (number: number) => {
+    const element = periodicElements.value.find(e => e.number === number);
+    if (element) {
+      focusedElement.value = element;
+      if (isMobile.value) {
+        const el = elementRefs.get(number);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        }
+      }
+    }
+  }
+
   onMounted(() => {
     window.addEventListener("scroll", scheduleUpdate);
     window.addEventListener("resize", findCenteredElement);
@@ -119,5 +127,7 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     modalPosition,
     handleElementClick,
     registerElement,
+    
+    scrollIntoElementNumber
   };
 }

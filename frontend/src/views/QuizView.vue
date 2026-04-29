@@ -6,10 +6,11 @@ import { useQuiz } from "../composables/useQuiz";
 import AppHeader from "../components/AppHeader.vue";
 import QuizModal from "../components/QuizModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
-import { ref } from "vue";
+import { onMounted, ref, nextTick } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
 import SvgOverlay from "../components/SvgOverlay.vue";
 import castleSvg from "../assets/castle.svg?url";
+import pathSvg from "../assets/path.svg?url";
 import DialogContent from "../components/DialogContent.vue";
 
 const { elements: periodicElements} = useData();
@@ -22,6 +23,7 @@ const {
   isScrolling,
   handleElementClick,
   registerElement,
+  scrollIntoElementNumber,
 } = useElementFocus(periodicElements, modalRef);
 
 const {
@@ -29,6 +31,12 @@ const {
   gameElements,
   gameState,
 } = useQuiz();
+
+onMounted(async () => {
+  await nextTick();
+  await new Promise(resolve => setTimeout(resolve, 100));
+  scrollIntoElementNumber(88);
+});
 </script>
 
 <template>
@@ -69,7 +77,7 @@ const {
 
   <div
     class="w-screen h-screen overflow-auto hide-scrollbar items-center justify-center"
-    :class="isMobile ? '' : 'flex u-pt-2x'"
+    :class="isMobile ? '' : 'flex pt-[calc(var(--u)*1.4)]'"
   >
     <div
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
@@ -102,6 +110,9 @@ const {
         </div>
         <SvgOverlay :reference-width="2011.89" :reference-height="1218.22">
           <image :href="castleSvg" x="0" y="2" width="2011.89" />
+          <Transition name="fade">
+            <image v-if="gameState !== 'starting'" :href="pathSvg" x="0" y="2" width="2011.89" />
+          </Transition>
         </SvgOverlay>
       </div>
     </div>
