@@ -107,7 +107,7 @@ const submitAnswer = () => {
           <img
             :src="`${baseUrl}pictures/${work.picture_file}`"
             :alt="work.title"
-            class="w-32 h-32 object-contain"
+            class="u-w-tile u-h-tile object-contain"
           />
           <div
             class="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center"

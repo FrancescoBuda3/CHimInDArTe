@@ -34,7 +34,7 @@ const {
 
 onMounted(async () => {
   await nextTick();
-  await new Promise(resolve => setTimeout(resolve, 100));
+  await new Promise(resolve => setTimeout(resolve, 300));
   scrollIntoElementNumber(88);
 });
 </script>
