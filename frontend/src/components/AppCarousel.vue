@@ -1,57 +1,33 @@
 <script setup lang="ts">
 import { ref, useSlots, computed, Fragment, type VNode } from "vue";
+import arrowIcon from "../assets/arrow.svg";
+import SimpleButton from "./SimpleButton.vue";
 
-withDefaults(
-  defineProps<{
-    loop?: boolean;
-    showDots?: boolean;
-    showArrows?: boolean;
-  }>(),
-  {
-    loop: true,
-    showDots: true,
-    showArrows: true,
-  },
-);
-
-const emit = defineEmits<{
-  change: [index: number];
+const props = defineProps<{
+  lastLabel: string;
+  onFinish: () => void;
+  isFinishButtonEnabled?: boolean;
 }>();
 
 const slots = useSlots();
-const current = ref<number>(0);
+const current = ref(0);
 
-// FIX 1: appiattisce i Fragment per ottenere i VNode figli diretti
-const slides = computed<VNode[]>(() => {
-  const vnodes = slots.default?.() ?? [];
-  return vnodes.flatMap((vnode) => {
-    if (vnode.type === Fragment) {
-      return (vnode.children as VNode[]) ?? [];
-    }
-    return [vnode];
-  })
-  .filter((vnode) => vnode.type !== Comment);
-});
+const slides = computed<VNode[]>(() =>
+  (slots.default?.() ?? [])
+    .flatMap((vnode) =>
+      vnode.type === Fragment ? (vnode.children as VNode[]) : [vnode]
+    )
+    .filter((vnode) => vnode.type !== Comment)
+);
 
-const total = computed<number>(() => slides.value.length);
+const isLast = computed(() => current.value === slides.value.length - 1);
 
-function goTo(i: number): void {
-  current.value = i;
-  emit("change", i);
-}
-
-function prev(loop: boolean): void {
-  goTo(current.value === 0 ? (loop ? total.value - 1 : 0) : current.value - 1);
-}
-
-function next(loop: boolean): void {
-  goTo(
-    current.value === total.value - 1
-      ? loop
-        ? 0
-        : total.value - 1
-      : current.value + 1,
-  );
+function next() {
+  if (isLast.value) {
+    props.onFinish();
+  } else {
+    current.value++;
+  }
 }
 </script>
 
@@ -59,38 +35,15 @@ function next(loop: boolean): void {
   <div class="relative overflow-hidden w-full">
     <template v-for="(slide, i) in slides" :key="i">
       <div v-show="i === current">
-        <!-- FIX 2: () => slide lo tratta come componente funzionale -->
         <component :is="() => slide" />
       </div>
     </template>
-
-    <template v-if="showArrows">
-      <button
-        class="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/65 text-white rounded-full w-10 h-10 text-2xl flex items-center justify-center disabled:opacity-30"
-        :disabled="!loop && current === 0"
-        aria-label="Precedente"
-        @click="prev(loop ?? true)"
-      >
-        &#8249;
-      </button>
-      <button
-        class="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/65 text-white rounded-full w-10 h-10 text-2xl flex items-center justify-center disabled:opacity-30"
-        :disabled="!loop && current === total - 1"
-        aria-label="Successivo"
-        @click="next(loop ?? true)"
-      >
-        &#8250;
-      </button>
-    </template>
-
-    <div v-if="showDots" class="flex justify-center gap-2 pt-3">
-      <button
-        v-for="i in total"
-        :key="i"
-        class="w-2 h-2 rounded-full transition-all duration-200"
-        :class="i - 1 === current ? 'bg-gray-800 scale-125' : 'bg-gray-300'"
-        :aria-label="`Vai alla slide ${i}`"
-        @click="goTo(i - 1)"
+    <div class="flex justify-end pt-3 u-p-xs">
+      <SimpleButton
+        :label="isLast ? lastLabel : 'Avanti'"
+        :icon="arrowIcon"
+        :disabled="isLast && props.isFinishButtonEnabled === false"
+        @click="next"
       />
     </div>
   </div>

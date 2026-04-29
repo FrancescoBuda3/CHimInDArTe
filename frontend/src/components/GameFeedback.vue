@@ -31,45 +31,41 @@ const isFailure = computed(() => gameState.value === GameState.ShowingFailure);
 </script>
 
 <template>
-  <div class="w-full h-full flex items-center justify-center">
-    <AppCarousel :loop="false" :show-dots="true">
-
-      <div v-show="isSuccess || isFailure" class="flex flex-col items-center justify-center gap-6 p-6 min-h-96">
-        <div v-if="isSuccess" class="text-center">
-          <p class="text-4xl font-bold text-green-400 mb-4">✓ Risposta Corretta!</p>
-        </div>
-        <div v-else-if="isFailure" class="text-center">
-          <p class="text-3xl font-bold text-red-400 mb-4">✗ Risposta Sbagliata</p>
-          <div v-if="correctAnswer" class="mt-6 p-4 bg-gray-600 rounded-lg">
-            <p class="text-gray-300 mb-2">La risposta corretta era:</p>
-            <p class="text-xl font-semibold text-white">{{ correctAnswer }}</p>
+    <AppCarousel lastLabel="Avanti" :isFinishButtonEnabled=true :onFinish="handleInput">
+      <template v-if="isClassicQuestion">
+        <div v-if="isSuccess || isFailure" class="flex flex-col items-center justify-center">
+          <div v-if="isSuccess" class="text-center u-p-md">
+            <p class="u-text-md text-white">Risposta Corretta!</p>
+          </div>
+          <div v-else-if="isFailure" class="text-center u-p-md">
+            <p class="u-text-md text-white">Risposta Sbagliata</p>
+            <div v-if="correctAnswer" class="mt-6 bg-gray-600">
+              <p class="text-gray-300 mb-2">La risposta corretta era:</p>
+              <p class="u-text-sm font-semibold text-white">{{ correctAnswer }}</p>
+            </div>
           </div>
         </div>
-        <button
-          v-if="isWorkMemoryQuestion"
-          @click="handleInput()"
-          class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-        >
-          Avanti →
-        </button>
-      </div>
 
-
-      <div v-if="isClassicQuestion" class="flex flex-col items-center justify-center gap-6 p-6 min-h-96">
-        <div class="w-full">
-          <div class="bg-gray-600 rounded-lg p-6 mb-6">
-            <p class="text-lg text-white leading-relaxed">
-              {{ (currentQuestion as ClassicQuestion).curiosity }}
-            </p>
+        <div class="flex flex-col items-center justify-center">
+          <div class="w-full">
+            <div class="bg-gray-600  u-p-sm">
+              <p class="text-lg text-white leading-relaxed">
+                {{ (currentQuestion as ClassicQuestion).curiosity }}
+              </p>
+            </div>
           </div>
-          <button
-            @click="handleInput()"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-          >
-            Avanti →
-          </button>
         </div>
-      </div>
+      </template>
+
+      <template v-else-if="isWorkMemoryQuestion">
+        <div v-if="isSuccess || isFailure" class="flex flex-col items-center justify-center">
+          <div v-if="isSuccess" class="text-center u-p-md">
+            <p class="u-text-md text-white">Risposta Corretta!</p>
+          </div>
+          <div v-else-if="isFailure" class="text-center u-p-md">
+            <p class="u-text-md text-white">Risposta Sbagliata</p>
+          </div>
+        </div>
+      </template>
     </AppCarousel>
-  </div>
 </template>

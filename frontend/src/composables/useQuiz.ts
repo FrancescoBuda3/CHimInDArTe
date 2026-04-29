@@ -215,6 +215,7 @@ export function useQuiz(rand: randFn = Math.random) {
         gameElements: readonly(gameElements),
         gamePathPositions: readonly(gamePathPositions),
         gameState: readonly(gameState),
+        works: readonly(works),
         QUESTIONS_NUMBER,
         MEMORY_QUESTIONS_NUMBER,
         handleInput,

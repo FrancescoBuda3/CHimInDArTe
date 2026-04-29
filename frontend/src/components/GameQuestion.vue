@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useQuiz } from "../composables/useQuiz";
+import AppCarousel from "./AppCarousel.vue";
 import type { ClassicQuestion, WorkMemoryQuestion } from "../types/questions";
 
-const { gameQuestions, gameCursor, handleInput } = useQuiz();
+const { gameQuestions, gameElements, gameCursor, handleInput } = useQuiz();
 const baseUrl = computed(() => import.meta.env.BASE_URL);
 
 const selectedAnswer = ref<string | number | null>(null);
@@ -58,20 +59,20 @@ const isAnswerSelected = computed(() => selectedAnswer.value !== null);
 const submitAnswer = () => {
   if (selectedAnswer.value !== null) {
     handleInput(Number(selectedAnswer.value));
-    
     selectedAnswer.value = null;
   }
 };
+
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center gap-6">
-    <div v-if="isClassicQuestion" class="w-full max-w-md">
-      <p class="text-xl text-white text-center mb-6">
+  <AppCarousel lastLabel="Invia" :isFinishButtonEnabled="isAnswerSelected" :onFinish="submitAnswer">
+    <div v-if="isClassicQuestion" class="w-full h-full flex flex-col items-center justify-center gap-6 px-4 py-2">
+      <p class="text-xl text-white text-center">
         {{ (currentQuestion as ClassicQuestion).question }}
       </p>
 
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-2 gap-3 w-full">
         <button
           v-for="[optionKey, optionText] in shuffledOptions"
           :key="optionKey"
@@ -86,25 +87,12 @@ const submitAnswer = () => {
           {{ optionText }}
         </button>
       </div>
-
-      <button
-        @click="submitAnswer"
-        :disabled="!isAnswerSelected"
-        :class="[
-          'w-full mt-6 py-2 px-4 rounded-lg font-bold transition-colors',
-          isAnswerSelected
-            ? 'bg-green-600 hover:bg-green-700 text-white cursor-pointer'
-            : 'bg-gray-400 text-gray-600 cursor-not-allowed',
-        ]"
-      >
-        Invia
-      </button>
     </div>
 
-    <div v-else-if="isWorkMemoryQuestion" class="w-full max-w-2xl">
-      <p class="text-xl text-white text-center mb-6">Quale opera è questa?</p>
+    <div v-else-if="isWorkMemoryQuestion" class="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-6">
+      <p class="text-xl text-white text-center">Quale dei seguenti è il trofeo dell'elemento {{ gameElements[gameCursor]?.nameIT }}?</p>
 
-      <div class="flex gap-4 px-4 justify-center">
+      <div class="flex gap-4 justify-center flex-wrap w-full">
         <button
           v-for="[optionKey, work] in shuffledWorkOptions"
           :key="optionKey"
@@ -128,19 +116,6 @@ const submitAnswer = () => {
           </div>
         </button>
       </div>
-
-      <button
-        @click="submitAnswer"
-        :disabled="!isAnswerSelected"
-        :class="[
-          'w-full mt-6 py-2 px-4 rounded-lg font-bold transition-colors',
-          isAnswerSelected
-            ? 'bg-green-600 hover:bg-green-700 text-white cursor-pointer'
-            : 'bg-gray-400 text-gray-600 cursor-not-allowed',
-        ]"
-      >
-        Invia
-      </button>
     </div>
-  </div>
+  </AppCarousel>
 </template>

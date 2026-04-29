@@ -17,7 +17,7 @@ const bubbleRef = ref<HTMLElement | null>(null);
 const overlayRef = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
 const isClosing = ref(false);
-const isReady = ref(false); // evita il flash prima che la posizione sia calcolata
+const isReady = ref(false);
 const position = ref({ top: 0, left: 0 });
 const scale = ref({ x: 1, y: 1 });
 
@@ -29,14 +29,11 @@ async function openModal() {
   isReady.value = false;
   isOpen.value = true;
 
-  // Aspetta che il DOM renderizzi l'overlay con il suo contenuto reale
   await nextTick();
 
   if (overlayRef.value) {
     const overlayRect = overlayRef.value.getBoundingClientRect();
 
-    // Bordo inferiore del modale coincide con quello della bolla,
-    // centrato orizzontalmente rispetto ad essa
     position.value = {
       top: rect.bottom - overlayRect.height,
       left: rect.left + rect.width / 2 - overlayRect.width / 2,
@@ -47,7 +44,7 @@ async function openModal() {
       y: rect.height / overlayRect.height,
     };
 
-    isReady.value = true; // ora possiamo mostrare e animare
+    isReady.value = true;
   }
 }
 
@@ -95,7 +92,6 @@ const overlayStyle = computed(() => ({
         />
         <span v-else class="text-white u-text-md">?</span>
 
-        <!-- Triangolino: rimane invariato -->
         <div
           class="absolute left-1/2 -translate-x-1/2 w-0 h-0"
           style="
@@ -109,7 +105,6 @@ const overlayStyle = computed(() => ({
     </div>
   </Transition>
 
-  <!-- Modale animato, fixed nel viewport, si espande verso l'alto -->
   <div
     v-if="isOpen"
     ref="overlayRef"
