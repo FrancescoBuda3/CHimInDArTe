@@ -31,12 +31,9 @@ watch(
       iosSrc.value = "";
       return;
     }
-
-    // Update model URLs
     modelSrc.value = `${baseUrl.value}models/${newWork.model_file}`;
     iosSrc.value = `${baseUrl.value}models/${newWork.model_file}`;
 
-    // Load description
     try {
       const response = await fetch(
         `${import.meta.env.BASE_URL}descriptions/${newWork.description_file}`,
@@ -63,6 +60,7 @@ watch(
         v-if="element"
         :src="modelSrc"
         :alt="element.name"
+        :poster="`${baseUrl}pictures/${work?.picture_file}`"
         auto-rotate
         camera-controls
         loading="lazy"
@@ -82,7 +80,14 @@ watch(
           {{ work?.author }}
         </p>
       </div>
-      <div class="u-p-sm" />
+      <div>
+        <p
+          :class="isKiosk ? 'text-[clamp(0.6rem,calc(var(--u)*0.2),4rem)]' : 'text-[clamp(0.3rem,calc(var(--u)*0.15),2rem)]'"
+          class="font-normal italic u-pstart-xs u-pt-xs u-pb-xs"
+        >
+          {{ Array.isArray(work?.materials) ? work.materials.join(', ') : work?.materials || 'Non disponibile' }}
+        </p>
+      </div>
       <Description
         :text="description"
         :colorGroup="element?.colorGroup || ''"
