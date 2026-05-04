@@ -5,6 +5,7 @@ import { useDevice } from "../composables/useDevice";
 const { isKiosk } = useDevice();
 const props = defineProps<{
   title?: string;
+  hideBack?: boolean;
 }>();
 </script>
 
@@ -14,6 +15,7 @@ const props = defineProps<{
       class="w-[100vw] flex items-center u-px-xs u-py-md text-black font-medium transition-colors justify-center gap-2"
     >
       <div
+        v-if="!props.hideBack"
         class="bg-white/90 rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
         @click="$router.back()"
       >
@@ -32,10 +34,15 @@ const props = defineProps<{
     >
       <div class="flex-1">
         <div
+          v-if="!props.hideBack"
           class="bg-white/90 rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
           @click="$router.back()"
         >
-          <img :src="back" alt="arrow" class="u-size-sm -ml-[calc(var(--u)*0.04)]" />
+          <img
+            :src="back"
+            alt="arrow"
+            class="u-size-sm -ml-[calc(var(--u)*0.04)]"
+          />
         </div>
       </div>
       <h1
