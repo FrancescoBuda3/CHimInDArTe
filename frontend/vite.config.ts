@@ -22,7 +22,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Chimindapp - Esplora gli Elementi',
+        name: 'Chimindapp',
         short_name: 'Chimindapp',
         description: 'Web app interattiva per la mostra ChimInDArTe. Scopri gli elementi chimici, gioca ai quiz e esplora le opere d\'arte.',
         theme_color: '#ffffff',
@@ -43,12 +43,6 @@ export default defineConfig({
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any'
-          },
-          {
-            src: '/CHimInDArTe/icon-512-maskable.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable'
           }
         ]
       },
@@ -67,5 +61,5 @@ export default defineConfig({
         ]
       }
     })
-  ],
+  ]
 });

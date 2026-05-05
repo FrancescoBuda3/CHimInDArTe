@@ -7,23 +7,20 @@ interface BeforeInstallPromptEvent extends Event {
 
 export function usePWAInstall() {
   const deferredPrompt = ref<BeforeInstallPromptEvent | null>(null)
-  const canInstallNatively = ref(false)   // Android/Chrome: prompt automatico disponibile
-  const isIOS = ref(false)                // iOS: mostrare istruzioni manuali
-  const isInstalled = ref(false)          // App già installata (standalone mode)
+  const canInstallNatively = ref(false)
+  const isIOS = ref(false)
+  const isInstalled = ref(false)
 
   function detectPlatform() {
-    // Rileva se l'app è già in modalità standalone (già installata)
     isInstalled.value =
       window.matchMedia('(display-mode: standalone)').matches ||
       (navigator as any).standalone === true
 
-    // Rileva iOS (iPhone, iPad, iPod)
     isIOS.value = /iphone|ipad|ipod/i.test(navigator.userAgent) &&
       !(window as any).MSStream
   }
 
   function handleBeforeInstallPrompt(e: Event) {
-    // Blocca il prompt automatico del browser
     e.preventDefault()
     deferredPrompt.value = e as BeforeInstallPromptEvent
     canInstallNatively.value = true

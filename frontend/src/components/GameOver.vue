@@ -17,7 +17,7 @@ const conqueredWorks = computed(() => {
 
 const handleGoHome = () => {
   resetGame();
-  router.push("/");
+  router.push("/home");
 };
 </script>
 

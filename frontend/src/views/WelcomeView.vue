@@ -42,14 +42,8 @@ function closeIOSModal() {
     </div>
 
     <div v-if="isInstalled" class="welcome-content w-full max-w-sm space-y-6">
-      <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-        <p class="text-green-700 font-medium">✅ App già installata!</p>
-        <p class="text-sm text-green-600 mt-1">
-          Stai utilizzando la versione installata
-        </p>
-      </div>
       <button
-        class="w-full px-6 py-3 bg-gradient-to-r from-zone-1 to-zone-2 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"
+        class="w-full px-6 py-3 bg-zone-3 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"
         @click="navigateToBrowser()"
       >
         Entra nell'app
@@ -112,7 +106,7 @@ function closeIOSModal() {
                 Tocca l'icona <strong>Condividi</strong>
               </p>
               <p class="text-sm text-gray-500">
-                in basso nella barra di Safari
+                La trovi nel menù in basso a destra
               </p>
             </div>
           </li>
@@ -126,7 +120,7 @@ function closeIOSModal() {
             <div>
               <p>
                 Scorri e tocca
-                <strong>"Aggiungi a schermata Home"</strong>
+                <strong>"Aggiungi alla schermata Home"</strong>
               </p>
             </div>
           </li>
