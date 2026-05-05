@@ -31,7 +31,6 @@ export function usePWAInstall() {
     deferredPrompt.value.prompt()
     const { outcome } = await deferredPrompt.value.userChoice
     deferredPrompt.value = null
-    canInstallNatively.value = false
     return outcome === 'accepted'
   }
 

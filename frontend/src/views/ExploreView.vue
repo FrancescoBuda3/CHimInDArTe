@@ -9,6 +9,7 @@ import AppModal from "../components/AppModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import type { PeriodicElement } from "../types/periodicElement";
 
 const router = useRouter();
 const periodicElements = useData().elements;
@@ -24,6 +25,14 @@ const {
   handleElementClick,
   registerElement,
 } = useElementFocus(periodicElements, modalRef);
+
+const handleClick = (element: PeriodicElement) => {
+  if (focusedElement?.value?.number === element.number) {
+    router.push(`/works/${element.number}`);
+  } else {
+    handleElementClick(element);
+  }
+};
 </script>
 
 <template>
@@ -92,7 +101,7 @@ const {
             :element="element"
             :work="works.find((w) => w.id === element.number)"
             :is-focused="focusedElement?.number === element.number"
-            @click="handleElementClick(element)"
+            @click="handleClick(element)"
           />
         </div>
         <div :style="{ gridColumn: 3, gridRow: 6 }">

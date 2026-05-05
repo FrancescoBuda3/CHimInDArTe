@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { usePWAInstall } from "../composables/usePWAInstall";
 import { useDevice } from "../composables/useDevice";
@@ -8,6 +8,12 @@ const router = useRouter();
 const { isKiosk } = useDevice();
 const { canInstallNatively, isIOS, isInstalled, triggerInstall } =
   usePWAInstall();
+
+onMounted(() => {
+  if (isKiosk.value) {
+    router.push("/home");
+  }
+});
 
 const showIOSModal = ref(false);
 

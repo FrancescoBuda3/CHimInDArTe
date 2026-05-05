@@ -22,11 +22,11 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Chimindapp',
-        short_name: 'Chimindapp',
+        name: 'Chimindarte',
+        short_name: 'Chimindarte',
         description: 'Web app interattiva per la mostra ChimInDArTe. Scopri gli elementi chimici, gioca ai quiz e esplora le opere d\'arte.',
         theme_color: '#ffffff',
-        background_color: '#f9fafb',
+        background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait-primary',
         scope: '/CHimInDArTe/',
@@ -48,7 +48,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB per gestire immagini grandi
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
