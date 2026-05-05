@@ -56,6 +56,7 @@ const isHidden = computed(() => {
       :is-conquered="gameElements.some(el => el.number === element.number && gameElementIsConquered[gameElements.indexOf(el)])"
       :show-question="isFocused && gameElements[gameCursor]?.number === element.number && gameState === 'showingQuestion'"
       :class="isInGame ? 'fade-in' : 'fade-out'"
+      @click="$emit('click')"
     >
       <DialogContent/>
     </WorkBubble>

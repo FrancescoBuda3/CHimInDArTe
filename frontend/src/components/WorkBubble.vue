@@ -16,6 +16,10 @@ const props = defineProps<{
   showQuestion: boolean;
 }>();
 
+defineEmits<{
+  click: [];
+}>();
+
 const bubbleRef = ref<HTMLElement | null>(null);
 const overlayRef = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
@@ -117,10 +121,11 @@ const overlayStyle = computed(() => ({
       <div
         ref="bubbleRef"
         :class="[
-          'relative u-w-gameTile u-h-lg u-p-xs rounded-2xl shadow-lg flex items-center justify-center',
+          'relative u-w-gameTile u-h-lg u-p-xs rounded-2xl shadow-lg flex items-center justify-center cursor-pointer pointer-events-auto',
           bubbleColor,
           (isCurrent && !isOpen) ? 'bounce-animation' : '',
         ]"
+        @click="$emit('click')"
       >
         <img
           v-if="!shouldHide"
