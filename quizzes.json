@@ -17,7 +17,7 @@
                     "curiosity": "L'idrogeno, quando si trova sotto forma di molecole H₂, è così leggero che è stato utilizzato per riempire i primi palloni aerostatici e dirigibili"
                 },
                 {
-                    "question": "2. In quale composto si trova comunemente l'idrogeno?",
+                    "question": "In quale composto si trova comunemente l'idrogeno?",
                     "options": {
                         "1": "Sale marino",
                         "2": "Acqua",
@@ -539,7 +539,7 @@
                     "curiosity": "Il nome “tecnezio” deriva dal greco technetos, che significa “artificiale”, proprio perché è stato il primo elemento prodotto dall'uomo in laboratorio."
                 },
                 {
-                    "question": "2. Il tecnezio è utilizzato soprattutto in",
+                    "question": "Il tecnezio è utilizzato soprattutto in",
                     "options": {
                         "1": "Industria tessile",
                         "2": "Medicina nucleare",
