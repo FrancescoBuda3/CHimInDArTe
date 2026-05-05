@@ -26,7 +26,7 @@ export default defineConfig({
         short_name: 'Chimindarte',
         description: 'Web app interattiva per la mostra ChimInDArTe. Scopri gli elementi chimici, gioca ai quiz e esplora le opere d\'arte.',
         theme_color: '#ffffff',
-        background_color: '#ffffff',
+        background_color: 'transparent',
         display: 'standalone',
         orientation: 'portrait-primary',
         scope: '/CHimInDArTe/',
