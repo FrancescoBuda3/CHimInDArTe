@@ -1,4 +1,5 @@
 import { defineConfig } from "vitest/config";
+import { VitePWA } from "vite-plugin-pwa";
 import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -17,5 +18,54 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
+      manifest: {
+        name: 'Chimindapp - Esplora gli Elementi',
+        short_name: 'Chimindapp',
+        description: 'Web app interattiva per la mostra ChimInDArTe. Scopri gli elementi chimici, gioca ai quiz e esplora le opere d\'arte.',
+        theme_color: '#ffffff',
+        background_color: '#f9fafb',
+        display: 'standalone',
+        orientation: 'portrait-primary',
+        scope: '/CHimInDArTe/',
+        start_url: '/CHimInDArTe/',
+        icons: [
+          {
+            src: '/CHimInDArTe/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: '/CHimInDArTe/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: '/CHimInDArTe/icon-512-maskable.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
+          }
+        ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB per gestire immagini grandi
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-cache',
+              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 }
+            }
+          }
+        ]
+      }
+    })
   ],
 });

@@ -4,6 +4,7 @@ import {
   type RouteRecordRaw,
 } from "vue-router";
 
+import WelcomeView from "../views/WelcomeView.vue";
 import HomeView from "../views/HomeView.vue";
 import ExploreView from "../views/ExploreView.vue";
 import NotFoundView from "../views/NotFoundView.vue";
@@ -13,6 +14,11 @@ import WorkDetailsView from "../views/WorkDetailsView.vue";
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
+    name: "Welcome",
+    component: WelcomeView,
+  },
+  {
+    path: "/home",
     name: "Home",
     component: HomeView,
   },
