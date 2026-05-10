@@ -16,7 +16,7 @@
       "author": "Francesco Armieri",
       "author_class": "5Q",
       "description_file": "pm_description.txt",
-      "materials": ["Terracotta", "Ferro", "Pasta modellabile"],
+      "materials": ["Terracotta", "Ferro", "Piume"],
       "picture_file": "pm_picture.png",
       "model_file": "pm_model.glb"
     },
@@ -154,7 +154,7 @@
     },
     {
       "id": 92,
-      "title": "Urano",
+      "title": "Uranio",
       "author": "Susanna Rizzo",
       "author_class": "5Q",
       "description_file": "u_description.txt",
@@ -335,10 +335,10 @@
     {
       "id": 26,
       "title": "Ferro",
-      "author": "Sconosciuto",
-      "author_class": "4E",
+      "author": "Renzetti Arianna",
+      "author_class": "5Q",
       "description_file": "fe_description.txt",
-      "materials": ["Sconosciuto"],
+      "materials": ["Terracotta patinata"],
       "picture_file": "fe_picture.png",
       "model_file": "fe_model.glb"
     }
