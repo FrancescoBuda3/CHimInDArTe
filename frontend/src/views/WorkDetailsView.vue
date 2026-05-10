@@ -64,7 +64,6 @@ watch(
         auto-rotate
         camera-controls
         loading="lazy"
-        ar
         ar-modes="webxr scene-viewer quick-look"
         :ios-src="iosSrc"
         style="width: 100%; height: 100%;"
