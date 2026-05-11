@@ -8,7 +8,7 @@ import AppHeader from "../components/AppHeader.vue";
 import AppModal from "../components/AppModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
 import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import type { PeriodicElement } from "../types/periodicElement";
 
 const router = useRouter();
@@ -24,6 +24,7 @@ const {
   modalPosition,
   handleElementClick,
   registerElement,
+  scrollIntoElementNumber
 } = useElementFocus(periodicElements, modalRef);
 
 const handleClick = (element: PeriodicElement) => {
@@ -61,10 +62,10 @@ const handleClick = (element: PeriodicElement) => {
         }}</span>
         <div :class="isKiosk ? 'u-w-md' : 'w-full'" />
         <button
-          class="bg-white rounded-full p-8 flex-shrink-0 hover:bg-gray-200 transition-colors cursor-pointer"
+          class="bg-white rounded-full p-5 flex-shrink-0 hover:bg-gray-200 transition-colors cursor-pointer"
           @click="router.push(`/works/${focusedElement?.number}`)"
         >
-          <img :src="arrowIcon" alt="arrow" class="w-7 h-7" />
+          <img :src="arrowIcon" alt="arrow" class="w-5 h-5" />
         </button>
       </AppModal>
     </div>

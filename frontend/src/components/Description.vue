@@ -14,41 +14,66 @@ const isModalOpen = ref(false);
 
 const { isKiosk } = useDevice();
 const { colorBackgroundMap } = useElementCategory();
-const backgroundClass = computed(() => colorBackgroundMap[props.colorGroup] || 'bg-gray-200');
+const backgroundClass = computed(
+  () => colorBackgroundMap[props.colorGroup] || "bg-gray-200",
+);
 
 const isTruncated = computed(() => props.text.length > MAX_LENGTH.value);
 
 const displayText = computed(() =>
   isTruncated.value
-    ? props.text.slice(0, MAX_LENGTH.value).trimEnd() + '…'
-    : props.text
+    ? props.text.slice(0, MAX_LENGTH.value).trimEnd() + "…"
+    : props.text,
 );
 
-function open() { isModalOpen.value = true; }
-function close() { isModalOpen.value = false; }
+function open() {
+  isModalOpen.value = true;
+}
+function close() {
+  isModalOpen.value = false;
+}
 </script>
 
 <template>
   <div
     :class="[
       backgroundClass,
-      'u-rounded-sm u-p-sm text-white relative',
-      isKiosk ? 'u-w-7x' : '',
+      ' u-p-sm text-white relative',
+      isKiosk ? 'u-w-10x rounded-[1.5rem]' : 'u-rounded-sm',
     ]"
   >
-    <h3 class="font-medium text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]">
+    <h3
+      class="font-medium"
+      :class="
+        isKiosk
+          ? 'text-[clamp(0.4rem,calc(var(--u)*0.45),4rem)]'
+          : 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]'
+      "
+    >
       Descrizione dell'opera
     </h3>
-    <p>{{ displayText }}</p>
+    <p :class="isKiosk ? 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]' : ''">
+      {{ displayText }}
+    </p>
 
     <button
       v-if="isTruncated"
       @click="open"
       aria-label="Leggi descrizione completa"
-      class="absolute bottom-2 right-2 flex items-center justify-center w-6 h-6 rounded-full bg-white/20 hover:bg-white/40 transition-colors"
+      class="absolute bottom-2 right-2 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors"
+      :class="isKiosk ? 'w-10 h-10' : 'w-6 h-6'"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="text-white"
+        :class="isKiosk ? 'w-6 h-6' : 'w-4 h-4'"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <polyline points="6 9 12 15 18 9" />
       </svg>
     </button>
@@ -62,20 +87,45 @@ function close() { isModalOpen.value = false; }
         @click.self="close"
       >
         <div
-          :class="[backgroundClass, 'u-rounded-sm u-p-sm text-white relative max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl']"
+          :class="[
+            backgroundClass,
+            'u-rounded-sm u-p-sm text-white relative max-w-xl w-full max-h-[80vh] overflow-y-auto shadow-2xl',
+          ]"
         >
-          <h3 class="font-medium text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)] pr-8">
+          <h3
+            class="font-medium pr-8"
+            :class="
+              isKiosk
+                ? 'text-[clamp(0.4rem,calc(var(--u)*0.45),4rem)]'
+                : 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]'
+            "
+          >
             Descrizione dell'opera
           </h3>
-          <p class="mt-2 leading-relaxed">{{ text }}</p>
+          <p
+            class="mt-2 leading-relaxed"
+            :class="
+              isKiosk ? 'text-[clamp(0.4rem,calc(var(--u)*0.25),4rem)]' : ''
+            "
+          >
+            {{ text }}
+          </p>
 
           <button
             @click="close"
             aria-label="Chiudi"
             class="absolute top-2 right-2 flex items-center justify-center w-7 h-7 rounded-full bg-white/20 hover:bg-white/40 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>

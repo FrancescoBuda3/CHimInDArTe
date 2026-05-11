@@ -4,6 +4,10 @@ import type { Work } from "../types/work";
 import { useDevice } from "../composables/useDevice";
 import { useQuiz } from "../composables/useQuiz";
 
+defineOptions({
+  inheritAttrs: false,
+});
+
 const baseUrl = computed(() => import.meta.env.BASE_URL);
 const { isKiosk } = useDevice();
 const { gameElements, gameElementIsConquered, gameCursor } = useQuiz();
@@ -123,7 +127,7 @@ const overlayStyle = computed(() => ({
         :class="[
           'relative u-w-gameTile u-h-lg u-p-xs rounded-2xl shadow-lg flex items-center justify-center cursor-pointer pointer-events-auto',
           bubbleColor,
-          (isCurrent && !isOpen) ? 'bounce-animation' : '',
+          (isCurrent && !isOpen) ? 'bounce-animation border-4 border-white' : '',
         ]"
         @click="$emit('click')"
       >

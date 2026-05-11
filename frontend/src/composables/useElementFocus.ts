@@ -127,7 +127,6 @@ export function useElementFocus(periodicElements: Ref<PeriodicElement[]>, modalR
     modalPosition,
     handleElementClick,
     registerElement,
-    
     scrollIntoElementNumber
   };
 }

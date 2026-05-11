@@ -3,7 +3,6 @@ import { WorkFactory, type Work } from "../types/work";
 import { ElementFactory, type PeriodicElement } from "../types/periodicElement";
 import { ElementQuestionsFactory, type ElementQuestions } from "../types/questions";
 
-// Ref globali (singleton pattern)
 const elements = ref<PeriodicElement[]>([]);
 const works = ref<Work[]>([]);
 const elementQuestions = ref<ElementQuestions[]>([]);
@@ -12,7 +11,6 @@ const error = ref<string | null>(null);
 let isInitialized = false;
 
 export function useData() {
-  // Esegui il caricamento solo la prima volta
   onMounted(async () => {
     if (isInitialized) return;
     isInitialized = true;

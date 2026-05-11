@@ -33,6 +33,9 @@ module.exports = {
         "5x": "5",
         "6x": "6",
         "7x": "7",
+        "8x": "8",
+        "9x": "9",
+        "10x": "10",
       },
       backgroundImage: {
         "element-nonmetal": "linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%)",
