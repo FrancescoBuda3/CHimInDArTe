@@ -8,7 +8,7 @@ import AppHeader from "../components/AppHeader.vue";
 import AppModal from "../components/AppModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
 import { useRouter } from "vue-router";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import type { PeriodicElement } from "../types/periodicElement";
 
 const router = useRouter();
@@ -24,7 +24,6 @@ const {
   modalPosition,
   handleElementClick,
   registerElement,
-  scrollIntoElementNumber
 } = useElementFocus(periodicElements, modalRef);
 
 const handleClick = (element: PeriodicElement) => {
