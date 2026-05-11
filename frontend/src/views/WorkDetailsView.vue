@@ -21,9 +21,9 @@ const element = computed(() =>
 const modelSrc = computed(() =>
   work.value ? `${baseUrl.value}models/${work.value.model_file}` : "",
 );
-const iosSrc = computed(() =>
+/* const iosSrc = computed(() =>
   work.value ? `${baseUrl.value}models/${work.value.model_file}` : "",
-);
+); */
 const description = ref("Nessuna descrizione disponibile.");
 
 watch(
