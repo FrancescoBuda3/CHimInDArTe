@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     environment: 'happy-dom',
   },
-  base: '/CHimInDArTe/',
+  base: '/',
   plugins: [
     vue({
       template: {
@@ -29,17 +29,17 @@ export default defineConfig({
         background_color: 'transparent',
         display: 'standalone',
         orientation: 'portrait-primary',
-        scope: '/CHimInDArTe/',
-        start_url: '/CHimInDArTe/',
+        scope: '/',
+        start_url: '/',
         icons: [
           {
-            src: '/CHimInDArTe/icons/icon-192.png',
+            src: '/icons/icon-192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: '/CHimInDArTe/icons/icon-512.png',
+            src: '/icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any'
