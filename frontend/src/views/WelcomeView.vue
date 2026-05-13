@@ -109,10 +109,7 @@ function closeIOSModal() {
             </span>
             <div>
               <p>
-                Tocca l'icona <strong>Condividi</strong>
-              </p>
-              <p class="text-sm text-gray-500">
-                La trovi nel menù in basso a destra
+                Trova e clicca l'icona <strong>Condividi</strong> nel browser
               </p>
             </div>
           </li>
@@ -125,7 +122,7 @@ function closeIOSModal() {
             </span>
             <div>
               <p>
-                Scorri e tocca
+                Scorri e clicca su
                 <strong>"Aggiungi alla schermata Home"</strong>
               </p>
             </div>
@@ -138,7 +135,7 @@ function closeIOSModal() {
               3
             </span>
             <div>
-              <p>Tocca <strong>"Aggiungi"</strong> in alto a destra</p>
+              <p>Clicca su <strong>"Aggiungi"</strong> in alto a destra</p>
             </div>
           </li>
         </ol>

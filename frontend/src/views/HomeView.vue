@@ -61,7 +61,7 @@ const { isKiosk } = useDevice();
         :src="castelloButtonImage"
         alt="Castello"
         class="absolute top-0 m-4 translate-x-1"
-        :class="isKiosk ? 'h-[11vh]' : 'h-[18vh]'"
+        :class="isKiosk ? 'h-[10vh]' : 'h-[18vh]'"
       />
       <div
         class="absolute bottom-0 inset-x-0 text-center text-[#18967e] font-semibold text-2xl z-10 pb-3 leading-none"
