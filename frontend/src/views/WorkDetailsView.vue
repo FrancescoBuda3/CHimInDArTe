@@ -24,6 +24,7 @@ const modelSrc = computed(() =>
 /* const iosSrc = computed(() =>
   work.value ? `${baseUrl.value}models/${work.value.model_file}` : "",
 ); */
+const modelScale = "0.4 0.4 0.4"; // Scala del modello (60% della dimensione originale)
 const description = ref("Nessuna descrizione disponibile.");
 let animationId: number | null = null;
 let resumeTimeoutId: ReturnType<typeof setTimeout> | null = null;
@@ -135,6 +136,7 @@ watch(
         :src="work?.has_model ? modelSrc : null"
         :alt="element.name"
         :poster="`${baseUrl}pictures/${work?.picture_file}`"
+        :scale="modelScale"
         ar-modes="webxr scene-viewer quick-look"
         ar
         camera-controls

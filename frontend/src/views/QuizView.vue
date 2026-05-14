@@ -6,7 +6,6 @@ import { useQuiz } from "../composables/useQuiz";
 import AppHeader from "../components/AppHeader.vue";
 import QuizModal from "../components/QuizModal.vue";
 import { useElementFocus } from "../composables/useElementFocus";
-import { useZoom } from "../composables/useZoom";
 import { onMounted, ref, nextTick } from "vue";
 import ElementQuiz from "../components/ElementQuiz.vue";
 import SvgOverlay from "../components/SvgOverlay.vue";
@@ -18,12 +17,6 @@ const { elements: periodicElements} = useData();
 const works = useData().works;
 const { isKiosk, isMobile } = useDevice();
 const modalRef = ref<HTMLElement | null>(null);
-
-const {
-  zoomLevel,
-  handlePinch,
-  handleTouchEnd,
-} = useZoom();
 
 const {
   focusedElement,
@@ -85,13 +78,11 @@ onMounted(async () => {
   <div
     class="w-screen h-screen overflow-auto hide-scrollbar items-center justify-center"
     :class="isMobile ? '' : 'flex pt-[calc(var(--u)*1.4)]'"
-    @touchmove="isMobile ? handlePinch : null"
-    @touchend="isMobile ? handleTouchEnd : null"
   >
     <div
       :class="isMobile ? `py-[calc(50vh-1.5rem)] px-[calc(50vw-1.5rem)]` : ``"
     >
-      <div class="relative w-fit" :style="{ transform: `scale(${zoomLevel})`, transformOrigin: 'top center', transition: 'transform 0.2s ease-out' }">
+      <div class="relative w-fit">
         <div class="u-p-2x">
           <GridLayout :columns="18" :rows="7" :gap="0.2">
             <div
