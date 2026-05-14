@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, onMounted, onUnmounted } from "vue";
 import { useData } from "../composables/useData";
 import AppHeader from "../components/AppHeader.vue";
 import Description from "../components/Description.vue";
@@ -25,6 +25,76 @@ const modelSrc = computed(() =>
   work.value ? `${baseUrl.value}models/${work.value.model_file}` : "",
 ); */
 const description = ref("Nessuna descrizione disponibile.");
+let animationId: number | null = null;
+let resumeTimeoutId: ReturnType<typeof setTimeout> | null = null;
+let isUserInteracting = false;
+
+const startRotation = () => {
+  const viewer = document.querySelector("model-viewer") as any;
+  if (!viewer || isUserInteracting) return;
+
+  let angle = 0;
+  const rotate = () => {
+    angle += 1;
+    viewer.cameraOrbit = `${angle}deg 75deg 105%`;
+    animationId = requestAnimationFrame(rotate);
+  };
+  rotate();
+};
+
+const stopRotation = () => {
+  if (animationId !== null) {
+    cancelAnimationFrame(animationId);
+    animationId = null;
+  }
+};
+
+const handleUserInteraction = () => {
+  isUserInteracting = true;
+  stopRotation();
+
+  if (resumeTimeoutId !== null) {
+    clearTimeout(resumeTimeoutId);
+  }
+
+  resumeTimeoutId = setTimeout(() => {
+    isUserInteracting = false;
+    startRotation();
+  }, 6000);
+};
+
+const setupInteractionListeners = () => {
+  const viewer = document.querySelector("model-viewer");
+  if (!viewer) return;
+
+  viewer.addEventListener("pointerdown", handleUserInteraction);
+  viewer.addEventListener("touchstart", handleUserInteraction);
+  viewer.addEventListener("wheel", handleUserInteraction);
+};
+
+const removeInteractionListeners = () => {
+  const viewer = document.querySelector("model-viewer");
+  if (!viewer) return;
+
+  viewer.removeEventListener("pointerdown", handleUserInteraction);
+  viewer.removeEventListener("touchstart", handleUserInteraction);
+  viewer.removeEventListener("wheel", handleUserInteraction);
+};
+
+onMounted(() => {
+  setTimeout(() => {
+    setupInteractionListeners();
+    startRotation();
+  }, 100);
+});
+
+onUnmounted(() => {
+  stopRotation();
+  removeInteractionListeners();
+  if (resumeTimeoutId !== null) {
+    clearTimeout(resumeTimeoutId);
+  }
+});
 
 watch(
   () => work.value,
@@ -62,10 +132,11 @@ watch(
     >
       <model-viewer
         v-if="element"
-        :src="modelSrc"
+        :src="work?.has_model ? modelSrc : null"
         :alt="element.name"
         :poster="`${baseUrl}pictures/${work?.picture_file}`"
-        auto-rotate
+        ar-modes="webxr scene-viewer quick-look"
+        ar
         camera-controls
         loading="lazy"
         style="width: 100%; height: 100%"
@@ -124,4 +195,4 @@ watch(
   </div>
 </template>
 
-<style></style>
+<style scoped></style>
