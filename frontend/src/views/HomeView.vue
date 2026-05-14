@@ -20,7 +20,7 @@ const { isKiosk } = useDevice();
     class="fixed top-0 right-0 h-[100vh] object-cover -z-10"
   />
   <div class="fixed top-0 left-1/2 -translate-x-1/2 z-20">
-    <AppHeader :title="'Home'" :hideBack="true" />
+    <AppHeader :showBackground="true" :title="'Home'" :hideBack="true" />
   </div>
   <div class="u-p-sm u-pt-lg flex justify-center items-center flex-col gap-4">
     <img
@@ -61,7 +61,7 @@ const { isKiosk } = useDevice();
         :src="castelloButtonImage"
         alt="Castello"
         class="absolute top-0 m-4 translate-x-1"
-        :class="isKiosk ? 'h-[11vh]' : 'h-[18vh]'"
+        :class="isKiosk ? 'h-[10vh]' : 'h-[18vh]'"
       />
       <div
         class="absolute bottom-0 inset-x-0 text-center text-[#18967e] font-semibold text-2xl z-10 pb-3 leading-none"

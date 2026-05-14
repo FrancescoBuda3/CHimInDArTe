@@ -71,7 +71,7 @@ onMounted(async () => {
       key="header"
       class="fixed top-0 left-1/2 -translate-x-1/2 z-20"
     >
-      <AppHeader :title="'Il Castello degli elementi'" />
+      <AppHeader :showBackground="true" :title="'Il Castello degli elementi'" />
     </div>
   </Transition>
 

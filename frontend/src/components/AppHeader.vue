@@ -6,6 +6,7 @@ const { isKiosk } = useDevice();
 const props = defineProps<{
   title?: string;
   hideBack?: boolean;
+  showBackground?: boolean;
 }>();
 </script>
 
@@ -16,12 +17,14 @@ const props = defineProps<{
     >
       <div
         v-if="!props.hideBack"
-        class="bg-white/90 rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
+        :class="showBackground ? 'bg-white/90' : 'bg-transparent'"
+        class="rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
         @click="$router.back()"
       >
         <img :src="back" alt="arrow" class="u-size-md" />
       </div>
       <h1
+        :class="showBackground ? 'bg-white/90' : 'bg-transparent'"
         class="u-h-lg u-px-sm bg-white/90 rounded-full items-center justify-center flex u-text-lg"
       >
         {{ props.title || "CHIMINDARTE" }}
@@ -35,7 +38,8 @@ const props = defineProps<{
       <div class="flex-1">
         <div
           v-if="!props.hideBack"
-          class="bg-white/90 rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
+          :class="showBackground ? 'bg-white/90' : 'bg-transparent'"
+          class="rounded-full u-size-btn cursor-pointer hover:bg-gray-700 transition-colors items-center justify-center flex"
           @click="$router.back()"
         >
           <img
@@ -46,7 +50,8 @@ const props = defineProps<{
         </div>
       </div>
       <h1
-        class="u-h-lg u-px-sm bg-white/90 rounded-full items-center justify-center flex text-[clamp(0.4rem,calc(var(--u)*0.20),4rem)]"
+        :class="showBackground ? 'bg-white/90' : 'bg-transparent'"
+        class="u-h-lg u-px-sm rounded-full items-center justify-center flex text-[clamp(0.4rem,calc(var(--u)*0.20),4rem)]"
       >
         {{ props.title || "CHIMINDARTE" }}
       </h1>

@@ -8,7 +8,8 @@
       "description_file": "bi_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "bi_picture.png",
-      "model_file": "bi_model.glb"
+      "model_file": "bi_model.glb",
+      "has_model": true
     },
     {
       "id": 61,
@@ -18,7 +19,8 @@
       "description_file": "pm_description.txt",
       "materials": ["Terracotta", "Ferro", "Piume"],
       "picture_file": "pm_picture.png",
-      "model_file": "pm_model.glb"
+      "model_file": "pm_model.glb",
+      "has_model": true
     },
     {
       "id": 80,
@@ -28,7 +30,8 @@
       "description_file": "hg_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "hg_picture.png",
-      "model_file": "hg_model.glb"
+      "model_file": "hg_model.glb",
+      "has_model": false
     },
     {
       "id": 27,
@@ -38,7 +41,8 @@
       "description_file": "co_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "co_picture.png",
-      "model_file": "co_model.glb"
+      "model_file": "co_model.glb",
+      "has_model": true
     },
     {
       "id": 33,
@@ -48,7 +52,8 @@
       "description_file": "as_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "as_picture.png",
-      "model_file": "as_model.glb"
+      "model_file": "as_model.glb",
+      "has_model": true
     },
     {
       "id": 13,
@@ -58,7 +63,8 @@
       "description_file": "al_description.txt",
       "materials": ["Terracotta patinata", "Fogli di alluminio"],
       "picture_file": "al_picture.png",
-      "model_file": "al_model.glb"
+      "model_file": "al_model.glb",
+      "has_model": false
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "description_file": "n_description.txt",
       "materials": ["Terracotta patinata", "Fiori secchi"],
       "picture_file": "n_picture.png",
-      "model_file": "n_model.glb"
+      "model_file": "n_model.glb",
+      "has_model": true
     },
     {
       "id": 10,
@@ -78,7 +85,8 @@
       "description_file": "ne_description.txt",
       "materials": ["Terracotta"],
       "picture_file": "ne_picture.png",
-      "model_file": "ne_model.glb"
+      "model_file": "ne_model.glb",
+      "has_model": true
     },
     {
       "id": 77,
@@ -88,7 +96,8 @@
       "description_file": "ir_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "ir_picture.png",
-      "model_file": "ir_model.glb"
+      "model_file": "ir_model.glb",
+      "has_model": true
     },
     {
       "id": 79,
@@ -98,7 +107,8 @@
       "description_file": "au_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "au_picture.png",
-      "model_file": "au_model.glb"
+      "model_file": "au_model.glb",
+      "has_model": false
     },
     {
       "id": 12,
@@ -108,7 +118,8 @@
       "description_file": "mg_description.txt",
       "materials": ["Terracotta patinata", "Ferro", "Fili di cotone"],
       "picture_file": "mg_picture.png",
-      "model_file": "mg_model.glb"
+      "model_file": "mg_model.glb",
+      "has_model": true
     },
     {
       "id": 1,
@@ -118,7 +129,8 @@
       "description_file": "h_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "h_picture.png",
-      "model_file": "h_model.glb"
+      "model_file": "h_model.glb",
+      "has_model": true
     },
     {
       "id": 24,
@@ -128,7 +140,8 @@
       "description_file": "cr_description.txt",
       "materials": ["Materiali misti"],
       "picture_file": "cr_picture.png",
-      "model_file": "cr_model.glb"
+      "model_file": "cr_model.glb",
+      "has_model": true
     },
     {
       "id": 16,
@@ -139,7 +152,8 @@
       "description_file": "s_description.txt",
       "materials": ["Materiali misti"],
       "picture_file": "s_picture.png",
-      "model_file": "s_model.glb"
+      "model_file": "s_model.glb",
+      "has_model": false
     },
     {
       "id": 29,
@@ -150,7 +164,8 @@
       "description_file": "cu_description.txt",
       "materials": ["Fili di rame", "Fili di cotone"],
       "picture_file": "cu_picture.png",
-      "model_file": "cu_model.glb"
+      "model_file": "cu_model.glb",
+      "has_model": false
     },
     {
       "id": 92,
@@ -160,7 +175,8 @@
       "description_file": "u_description.txt",
       "materials": ["Terracotta"],
       "picture_file": "u_picture.png",
-      "model_file": "u_model.glb"
+      "model_file": "u_model.glb",
+      "has_model": true
     },
     {
       "id": 28,
@@ -170,7 +186,8 @@
       "description_file": "ni_description.txt",
       "materials": ["Gesso lucidato", "Orecchini in metallo"],
       "picture_file": "ni_picture.png",
-      "model_file": "ni_model.glb"
+      "model_file": "ni_model.glb",
+      "has_model": true
     },
     {
       "id": 20,
@@ -180,7 +197,8 @@
       "description_file": "ca_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "ca_picture.png",
-      "model_file": "ca_model.glb"
+      "model_file": "ca_model.glb",
+      "has_model": true
     },
     {
       "id": 23,
@@ -190,7 +208,8 @@
       "description_file": "v_description.txt",
       "materials": ["Materiali misti"],
       "picture_file": "v_picture.png",
-      "model_file": "v_model.glb"
+      "model_file": "v_model.glb",
+      "has_model": true
     },
     {
       "id": 74,
@@ -200,7 +219,8 @@
       "description_file": "w_description.txt",
       "materials": ["Ceramica smaltata"],
       "picture_file": "w_picture.png",
-      "model_file": "w_model.glb"
+      "model_file": "w_model.glb",
+      "has_model": true
     },
     {
       "id": 6,
@@ -210,7 +230,8 @@
       "description_file": "c_description.txt",
       "materials": ["Argilla", "Vetro"],
       "picture_file": "c_picture.png",
-      "model_file": "c_model.glb"
+      "model_file": "c_model.glb",
+      "has_model": true
     },
     {
       "id": 35,
@@ -220,7 +241,8 @@
       "description_file": "br_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "br_picture.png",
-      "model_file": "br_model.glb"
+      "model_file": "br_model.glb",
+      "has_model": true
     },
     {
       "id": 53,
@@ -230,7 +252,8 @@
       "description_file": "i_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "i_picture.png",
-      "model_file": "i_model.glb"
+      "model_file": "i_model.glb",
+      "has_model": true
     },
     {
       "id": 82,
@@ -240,7 +263,8 @@
       "description_file": "pb_description.txt",
       "materials": ["Terracotta patinata", "Ferro"],
       "picture_file": "pb_picture.png",
-      "model_file": "pb_model.glb"
+      "model_file": "pb_model.glb",
+      "has_model": true
     },
     {
       "id": 58,
@@ -250,7 +274,8 @@
       "description_file": "ce_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "ce_picture.png",
-      "model_file": "ce_model.glb"
+      "model_file": "ce_model.glb",
+      "has_model": false
     },
     {
       "id": 43,
@@ -260,7 +285,8 @@
       "description_file": "tc_description.txt",
       "materials": ["Gesso", "Terracotta patinata", "Fili elettrici"],
       "picture_file": "tc_picture.png",
-      "model_file": "tc_model.glb"
+      "model_file": "tc_model.glb",
+      "has_model": true
     },
     {
       "id": 8,
@@ -270,7 +296,8 @@
       "description_file": "o_description.txt",
       "materials": ["Argilla", "Resina"],
       "picture_file": "o_picture.png",
-      "model_file": "o_model.glb"
+      "model_file": "o_model.glb",
+      "has_model": true
     },
     {
       "id": 88,
@@ -280,7 +307,8 @@
       "description_file": "ra_description.txt",
       "materials": ["Ceramica smaltata"],
       "picture_file": "ra_picture.png",
-      "model_file": "ra_model.glb"
+      "model_file": "ra_model.glb",
+      "has_model": true
     },
     {
       "id": 86,
@@ -290,7 +318,8 @@
       "description_file": "rn_description.txt",
       "materials": ["Terracotta bianca e nera"],
       "picture_file": "rn_picture.png",
-      "model_file": "rn_model.glb"
+      "model_file": "rn_model.glb",
+      "has_model": true
     },
     {
       "id": 31,
@@ -300,7 +329,8 @@
       "description_file": "ga_description.txt",
       "materials": ["Terracotta smaltata a freddo con acrilico"],
       "picture_file": "ga_picture.png",
-      "model_file": "ga_model.glb"
+      "model_file": "ga_model.glb",
+      "has_model": false
     },
     {
       "id": 47,
@@ -310,7 +340,8 @@
       "description_file": "ag_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "ag_picture.png",
-      "model_file": "ag_model.glb"
+      "model_file": "ag_model.glb",
+      "has_model": false
     },
     {
       "id": 34,
@@ -320,7 +351,8 @@
       "description_file": "se_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "se_picture.png",
-      "model_file": "se_model.glb"
+      "model_file": "se_model.glb",
+      "has_model": true
     },
     {
       "id": 87,
@@ -330,7 +362,8 @@
       "description_file": "fr_description.txt",
       "materials": ["Ceramica con cristallina"],
       "picture_file": "fr_picture.png",
-      "model_file": "fr_model.glb"
+      "model_file": "fr_model.glb",
+      "has_model": false
     },
     {
       "id": 26,
@@ -340,7 +373,8 @@
       "description_file": "fe_description.txt",
       "materials": ["Terracotta patinata"],
       "picture_file": "fe_picture.png",
-      "model_file": "fe_model.glb"
+      "model_file": "fe_model.glb",
+      "has_model": true
     }
   ]
 }

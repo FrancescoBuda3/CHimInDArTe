@@ -6,7 +6,7 @@ import { computed } from "vue";
 const { gameZones, gameCursor, handleInput } = useQuiz();
 
 const zoneNames: Record<number, string> = {
-  1: "la Torre Alcalina-Terrosa",
+  1: "la Torre Alcalino-Terrosa",
   2: "la Corte dei metalli di transizione",
   3: "il Mastio dei gas nobili",
   4: "le Segrete del blocco f",

@@ -7,6 +7,7 @@ export type WorkData = {
     materials: [string];
     picture_file: string;
     model_file: string;
+    has_model: boolean;
 };
 
 export class Work implements WorkData {
@@ -18,6 +19,7 @@ export class Work implements WorkData {
     materials!: [string];
     picture_file!: string;
     model_file!: string;
+    has_model!: boolean;
   
 
   constructor(data: WorkData) {
