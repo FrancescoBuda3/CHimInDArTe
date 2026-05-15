@@ -27,7 +27,10 @@ const {
 } = useElementFocus(periodicElements, modalRef);
 
 const handleClick = (element: PeriodicElement) => {
-  if (focusedElement?.value?.number === element.number) {
+  if (
+    focusedElement?.value?.number === element.number &&
+    works.value.find((w) => w.id === element.number) !== undefined
+  ) {
     router.push(`/works/${element.number}`);
   } else {
     handleElementClick(element);
